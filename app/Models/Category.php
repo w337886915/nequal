@@ -20,14 +20,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * 分类模型
- *
- * Class Category
- * @package Wanglelecc\Laracms\Models
  */
 class Category extends \Wanglelecc\Laracms\Models\Category
 {
-   public function __construct(array $attributes = [])
-   {
-       $this->fillable = array_merge($this->fillable, ['en_name']);
-   }
+
+    protected $fillable = ['id','name','en_name', 'keywords', 'description', 'parent', 'order', 'path', 'type', 'link', 'template', ];
+
 }
