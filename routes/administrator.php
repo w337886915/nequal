@@ -43,4 +43,8 @@ Route::group(['domain' => config('administrator.domain'), 'prefix' => config('ad
     Route::get('example', 'ExampleController@index')->name('administrator.example');
 
     #Append Route
+    Route::get('categorys/create/{type}/{parent}','CategorysController@create')->name('administrator.category.create');
+    Route::get('categorys/{category}/edit/{type}','CategorysController@edit')->name('administrator.category.edit');
+    Route::put('categorys/{category}/{type}','CategorysController@update')->name('administrator.category.update');
+    Route::post('categorys/{type}','CategorysController@store')->name('administrator.category.store');
 });
