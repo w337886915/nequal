@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddEnNameToCategorysTable extends Migration
+class AddEnNameEmailAndTelToCategorysTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,6 +15,8 @@ class AddEnNameToCategorysTable extends Migration
     {
         Schema::table('categorys', function (Blueprint $table) {
             $table->string('en_name')->after('name')->nullable()->comment('英文标题');
+            $table->string('email')->after('template')->nullable()->comment('联系邮箱');
+            $table->string('tel', 50)->after('email')->nullable()->comment('联系电话');
         });
     }
 
@@ -27,6 +29,8 @@ class AddEnNameToCategorysTable extends Migration
     {
         Schema::table('categorys', function (Blueprint $table) {
             $table->dropColumn('en_name');
+            $table->dropColumn('email');
+            $table->dropColumn('tel');
         });
     }
 }

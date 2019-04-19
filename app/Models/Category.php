@@ -24,6 +24,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Category extends \Wanglelecc\Laracms\Models\Category
 {
 
-    protected $fillable = ['id','name','en_name', 'keywords', 'description', 'parent', 'order', 'path', 'type', 'link', 'template', ];
+    protected $fillable = ['id','name','en_name', 'keywords', 'description', 'parent', 'order', 'path', 'type', 'link', 'template', 'email', 'tel'];
 
 }

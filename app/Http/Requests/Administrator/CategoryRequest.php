@@ -36,6 +36,8 @@ class CategoryRequest extends ParentCategoryRequest
             'type' => 'required|alpha_dash|min:1|max:30',
             'link' => 'nullable|url|max:255',
             'template' => 'nullable|alpha_dash|max:255',
+            'email' => 'nullable|email|min:1|max:255',
+            'tel' => 'nullable|min:1|max:50'
         ];
     }
 
