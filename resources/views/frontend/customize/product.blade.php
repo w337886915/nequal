@@ -232,6 +232,6 @@
     </div>
 @endsection
 @section('script')
-    <script type="text/javascript" src="{{asset('vendor/nequal/js/about.js')}}"></script>
+    <script type="text/javascript" src="{{asset('vendor/nequal/js/product.js')}}"></script>
 @endsection
 

@@ -31,6 +31,7 @@ Route::group([ 'middleware' => ['laracms.frontend'], ], function () {
     Route::get('/', 'IndexController@index')->name('index');
     Route::get('/products', 'ProductController@index')->name('index');
     Route::get('/services', 'ServerController@index')->name('index');
+    Route::get('/solutions', 'SolutionsController@index')->name('index');
 
 
     # 前台需要用户认证路由

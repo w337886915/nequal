@@ -7,7 +7,7 @@
                 <li class="divider">|</li>
                 <li><a href="./services">服务</a></li>
                 <li class="divider">|</li>
-                <li><a href="./solutions_retail">行业解决方案</a></li>
+                <li><a href="./solutions">行业解决方案</a></li>
                 <li class="divider">|</li>
                 <li><a href="./aboutus">关于我们</a></li>
             </ul>
