@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="137px" height="143px" viewBox="0 0 137 143" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>高效自动化地掌控内容与流程</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="PRODUCTS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Hyper-Experience-Cloud" transform="translate(-1032.000000, -1459.000000)" stroke="#29ABE2">
+            <g id="高效自动化地掌控内容与流程" transform="translate(1033.000000, 1460.000000)">
+                <g id="Group-47">
+                    <path d="M68.5492958,141.098592 C105.303457,141.098592 135.098592,111.303457 135.098592,74.5492958 C135.098592,37.7951346 105.303457,8 68.5492958,8 C31.7951346,8 2,37.7951346 2,74.5492958 C2,111.303457 31.7951346,141.098592 68.5492958,141.098592 Z" id="Oval-12" stroke-dasharray="6,3,1,3"></path>
+                    <path d="M68.6619718,123.591549 C95.4983435,123.591549 117.253521,101.836372 117.253521,75 C117.253521,48.1636284 95.4983435,26.4084507 68.6619718,26.4084507 C41.8256002,26.4084507 20.0704225,48.1636284 20.0704225,75 C20.0704225,101.836372 41.8256002,123.591549 68.6619718,123.591549 Z" id="Oval-12" stroke-dasharray="10,6"></path>
+                    <g id="Group-46" transform="translate(36.971831, 43.309859)">
+                        <g id="Group-44" transform="translate(13.468310, 11.883803)">
+                            <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="0" y="0" width="35.6514085" height="39.6126761"></rect>
+                            <g id="Group-45" transform="translate(7.922535, 8.714789)">
+                                <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="0" y="0" width="6.33802817" height="3.16901408" rx="1.58450704"></rect>
+                                <path d="M0,9.50704225 L19.806338,9.50704225" id="Shape"></path>
+                                <path d="M0,15.8450704 L19.806338,15.8450704" id="Shape"></path>
+                                <path d="M0,22.1830986 L19.806338,22.1830986" id="Shape"></path>
+                            </g>
+                        </g>
+                        <circle id="Oval-11" cx="31.6901408" cy="31.6901408" r="31.6901408"></circle>
+                    </g>
+                    <circle id="Oval-12" fill="#FFFFFF" cx="68.6619718" cy="43.3098592" r="2.11267606"></circle>
+                    <circle id="Oval-12" fill="#FFFFFF" cx="68.4507042" cy="8.45070423" r="8.45070423"></circle>
+                    <polygon id="Triangle" transform="translate(69.000000, 8.500000) rotate(90.000000) translate(-69.000000, -8.500000) " points="69 6 72 11 66 11"></polygon>
+                    <circle id="Oval-12" fill="#FFFFFF" transform="translate(103.250000, 131.090689) scale(-1, 1) translate(-103.250000, -131.090689) " cx="103.25" cy="131.090689" r="6"></circle>
+                    <circle id="Oval-12" fill="#FFFFFF" cx="117.253521" cy="75" r="4.22535211"></circle>
+                    <circle id="Oval-12" fill="#FFFFFF" cx="2.11267606" cy="75" r="2.11267606"></circle>
+                </g>
+                <polyline id="Path-31" fill="#FFFFFF" points="100.25 131.5 102.25 133.5 106.25 129.5"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

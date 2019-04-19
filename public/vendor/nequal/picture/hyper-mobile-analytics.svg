@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Hyper Mobile Analytics</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="0%" cy="0%" fx="0%" fy="0%" r="141.421356%" id="radialGradient-1">
+            <stop stop-color="#7AE9FF" offset="0%"></stop>
+            <stop stop-color="#0095B3" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Hyper-Mobile-Analytics" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M35.6066017,14.3933983 C29.7487373,8.53553391 20.2512627,8.53553391 14.3933983,14.3933983 C8.53553391,20.2512627 8.53553391,29.7487373 14.3933983,35.6066017 C19.0115792,40.2247827 25.8918933,41.2021154 31.467532,38.5385998 L21.4676025,28.5386703 C19.5118446,26.5829124 19.5118446,23.4170876 21.4644661,21.4644661 C23.4170876,19.5118446 26.5829124,19.5118446 28.5355339,21.4644661 L38.5385998,31.467532 C41.2021154,25.8918933 40.2247827,19.0115792 35.6066017,14.3933983 Z M42.6776695,42.6776695 C32.9145622,52.4407768 17.0854378,52.4407768 7.32233047,42.6776695 C-2.44077682,32.9145622 -2.44077682,17.0854378 7.32233047,7.32233047 C17.0854378,-2.44077682 32.9145622,-2.44077682 42.6776695,7.32233047 C52.4407768,17.0854378 52.4407768,32.9145622 42.6776695,42.6776695 Z" id="HMA" fill="url(#radialGradient-1)"></path>
+    </g>
+</svg>

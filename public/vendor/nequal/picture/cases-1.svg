@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="116px" height="130px" viewBox="0 0 116 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>掌控并激活数据</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="PRODUCTS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PRODUCTS-MAIN-PAGE" transform="translate(-486.000000, -2083.000000)" stroke="#29ABE2">
+            <g id="掌控并激活数据" transform="translate(476.000000, 2084.000000)">
+                <g>
+                    <ellipse id="Oval-22" cx="68" cy="65" rx="25" ry="63"></ellipse>
+                    <ellipse id="Oval-22" transform="translate(68.000000, 65.000000) rotate(60.000000) translate(-68.000000, -65.000000) " cx="68" cy="65" rx="25" ry="63"></ellipse>
+                    <ellipse id="Oval-22" transform="translate(68.000000, 65.000000) scale(-1, 1) rotate(60.000000) translate(-68.000000, -65.000000) " cx="68" cy="65" rx="25" ry="63"></ellipse>
+                    <circle id="Oval-23" fill="#FFFFFF" cx="68" cy="2" r="2"></circle>
+                    <circle id="Oval-23" fill="#FFFFFF" cx="13" cy="96" r="2"></circle>
+                    <circle id="Oval-23" fill="#FFFFFF" cx="123" cy="96" r="2"></circle>
+                    <circle id="Oval-23" fill="#FFFFFF" cx="92" cy="79" r="2"></circle>
+                    <circle id="Oval-23" fill="#FFFFFF" cx="44" cy="51" r="2"></circle>
+                    <path d="M68,80 C76.2842712,80 83,73.2842712 83,65 C83,56.7157288 76.2842712,50 68,50 C59.7157288,50 53,56.7157288 53,65" id="Oval-24" stroke-linecap="round" stroke-linejoin="round" transform="translate(68.000000, 65.000000) rotate(270.000000) translate(-68.000000, -65.000000) "></path>
+                    <path d="M71.4496058,71.0382966 C73.0409426,69.5760763 74.0382966,67.4775405 74.0382966,65.1460601 C74.0382966,60.7277821 70.4565746,57.1460601 66.0382966,57.1460601 C63.5467018,57.1460601 61.3211451,58.2851044 59.8539399,60.0708796" id="Oval-24" stroke-linecap="round" stroke-linejoin="round" transform="translate(66.946118, 64.092178) rotate(270.000000) translate(-66.946118, -64.092178) "></path>
+                    <path d="M80,65 C80,65 76,69 68,77" id="Line-8" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(74.000000, 71.000000) scale(1, -1) translate(-74.000000, -71.000000) "></path>
+                    <polyline id="Path-27" stroke-linecap="round" stroke-linejoin="round" points="77 65 68 65 68 74"></polyline>
+                    <circle id="Oval-23" fill="#FFFFFF" cx="92" cy="79" r="2"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="131px" height="130px" viewBox="0 0 131 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>highlight_media_04</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="PRODUCTS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PRODUCTS-MAIN-PAGE" transform="translate(-883.000000, -2371.000000)">
+            <g id="highlight_media_04" transform="translate(873.000000, 2360.000000)">
+                <g>
+                    <rect id="Rectangle-path" transform="translate(75.000000, 75.000000) rotate(-180.000000) translate(-75.000000, -75.000000) " x="0" y="0" width="150" height="150"></rect>
+                    <polygon id="Shape" stroke="#29ABE2" points="105 50 75 110 45 50"></polygon>
+                    <polygon id="Shape" stroke="#29ABE2" points="69.27 65 80.73 65 75 76.46"></polygon>
+                    <polyline id="Shape" stroke="#29ABE2" points="85 90 99.59 90 75.84 137.5"></polyline>
+                    <path d="M60,80 L12.7,80" id="Shape" stroke="#29ABE2"></path>
+                    <path d="M137.51,70 L95.01,70" id="Shape" stroke="#29ABE2"></path>
+                    <circle id="Oval" stroke="#29ABE2" cx="75.0019053" cy="74.9980947" r="62.5"></circle>
+                    <path d="M65.31,50 L86.37,13.53" id="Shape" stroke="#29ABE2"></path>
+                    <circle id="Oval" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" cx="65.31" cy="50" r="2"></circle>
+                    <circle id="Oval" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" cx="95.01" cy="70" r="2"></circle>
+                    <circle id="Oval" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" cx="12.7" cy="80" r="2"></circle>
+                    <circle id="Oval" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" cx="137.51" cy="70" r="2"></circle>
+                    <circle id="Oval" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" cx="60" cy="80" r="2"></circle>
+                    <circle id="Oval" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" cx="85.11" cy="90" r="2"></circle>
+                    <circle id="Oval" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" cx="75.84" cy="137.51" r="2"></circle>
+                    <circle id="Oval" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" cx="86.37" cy="13.53" r="2"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

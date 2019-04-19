@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Hyper Video Analytics</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="101.999998%" y2="100.999999%" id="linearGradient-1">
+            <stop stop-color="#EA3797" offset="0%"></stop>
+            <stop stop-color="#880061" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Hyper-Video-Analytics" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M25,50 C11.1928813,50 0,38.8071187 0,25 C0,11.1928813 11.1928813,0 25,0 C38.8071187,0 50,11.1928813 50,25 C50,38.8071187 38.8071187,50 25,50 Z M33.2651054,19.6597447 L25.3151531,15.0877033 C20.1677759,12.1274312 16,14.5470121 16,20.4884429 L16,29.547083 C16,35.4941013 20.1705361,37.9062419 25.3151531,34.9472298 L33.2651054,30.3746825 C38.4124826,27.4140829 38.4097224,22.6184294 33.2651054,19.6597447 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

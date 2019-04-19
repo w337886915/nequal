@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Hyper Web Analytics</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="0%" cy="0%" fx="0%" fy="0%" r="141.421356%" id="radialGradient-1">
+            <stop stop-color="#B4EC51" offset="0%"></stop>
+            <stop stop-color="#429321" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Hyper-Web-Analytics" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M13,32.0000908 C13,33.2797024 13.4881554,34.559314 14.4644661,35.5356247 C16.3933429,37.4645015 19.5060964,37.4879574 21.4637661,35.6059925 L21.4644661,35.6066925 L25.00035,32.0704585 L28.5362339,35.6059925 C30.4939036,37.4879574 33.6066571,37.4645015 35.5355339,35.5356247 C37.4644107,33.6067479 37.4878666,30.4939944 35.6066017,28.5356247 L32.0703678,24.9997408 L35.6059017,21.4638568 C37.4878666,19.5061872 37.4644107,16.3934337 35.5355339,14.4645569 C34.5514445,13.4804675 33.259202,12.9923431 31.9693217,13.0000908 L18,13.0000908 C16.7203884,13.0000908 15.4407768,13.4882462 14.4644661,14.4645569 C13.4881554,15.4408676 13,16.7204792 13,18.0000908 L13,32.0000908 Z M25,50 C11.1928813,50 0,38.8071187 0,25 C0,11.1928813 11.1928813,0 25,0 C38.8071187,0 50,11.1928813 50,25 C50,38.8071187 38.8071187,50 25,50 Z" id="Combined-Shape" fill="url(#radialGradient-1)"></path>
+    </g>
+</svg>

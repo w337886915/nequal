@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="132px" height="132px" viewBox="0 0 132 132" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 43</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="PRODUCTS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Hyper-Experience-Cloud" transform="translate(-259.000000, -1448.000000)" stroke="#29ABE2">
+            <g id="Group-43" transform="translate(260.000000, 1449.000000)">
+                <circle id="Oval-20" cx="65" cy="65" r="15"></circle>
+                <g id="Group-38" transform="translate(48.000000, 0.000000)">
+                    <g id="Group-37">
+                        <circle id="Oval-10" cx="17" cy="2" r="2"></circle>
+                        <circle id="Oval-10" cx="2" cy="15" r="2"></circle>
+                        <circle id="Oval-10" cx="32" cy="15" r="2"></circle>
+                        <path d="M17,4 L17,50" id="Line-10"></path>
+                        <path d="M32,17 L32,25 C32,33.2842712 25.2842712,40 17,40 L17,40 C8.71572875,40 2,33.2842712 2,25 L2,17" id="Rectangle-18"></path>
+                    </g>
+                    <g id="Group-37" transform="translate(17.000000, 105.000000) scale(1, -1) translate(-17.000000, -105.000000) translate(0.000000, 80.000000)">
+                        <circle id="Oval-10" cx="17" cy="2" r="2"></circle>
+                        <circle id="Oval-10" cx="2" cy="15" r="2"></circle>
+                        <circle id="Oval-10" cx="32" cy="15" r="2"></circle>
+                        <path d="M17,4 L17,50" id="Line-10"></path>
+                        <path d="M32,17 L32,25 C32,33.2842712 25.2842712,40 17,40 L17,40 C8.71572875,40 2,33.2842712 2,25 L2,17" id="Rectangle-18"></path>
+                    </g>
+                </g>
+                <g id="Group-42" transform="translate(17.000000, 17.000000)">
+                    <g id="Group-37" transform="translate(76.284271, 19.715729) rotate(45.000000) translate(-76.284271, -19.715729) translate(74.284271, -5.284271)">
+                        <circle id="Oval-10" cx="2" cy="2" r="2"></circle>
+                        <path d="M2,4 L2,50" id="Line-10"></path>
+                    </g>
+                    <g id="Group-37" transform="translate(19.715729, 76.284271) scale(1, -1) rotate(-45.000000) translate(-19.715729, -76.284271) translate(17.715729, 51.284271)">
+                        <circle id="Oval-10" cx="2" cy="2" r="2"></circle>
+                        <path d="M2,4 L2,50" id="Line-10"></path>
+                    </g>
+                </g>
+                <g id="Group-42" transform="translate(65.000000, 65.000000) scale(-1, 1) translate(-65.000000, -65.000000) translate(17.000000, 17.000000)">
+                    <g id="Group-37" transform="translate(76.284271, 19.715729) rotate(45.000000) translate(-76.284271, -19.715729) translate(74.284271, -5.284271)">
+                        <circle id="Oval-10" cx="2" cy="2" r="2"></circle>
+                        <path d="M2,4 L2,50" id="Line-10"></path>
+                    </g>
+                    <g id="Group-37" transform="translate(19.715729, 76.284271) scale(1, -1) rotate(-45.000000) translate(-19.715729, -76.284271) translate(17.715729, 51.284271)">
+                        <circle id="Oval-10" cx="2" cy="2" r="2"></circle>
+                        <path d="M2,4 L2,50" id="Line-10"></path>
+                    </g>
+                </g>
+                <g id="Group-38" transform="translate(65.000000, 65.000000) rotate(90.000000) translate(-65.000000, -65.000000) translate(48.000000, 0.000000)">
+                    <g id="Group-37">
+                        <circle id="Oval-10" cx="17" cy="2" r="2"></circle>
+                        <circle id="Oval-10" cx="2" cy="15" r="2"></circle>
+                        <circle id="Oval-10" cx="32" cy="15" r="2"></circle>
+                        <path d="M17,4 L17,50" id="Line-10"></path>
+                        <path d="M32,17 L32,25 C32,33.2842712 25.2842712,40 17,40 L17,40 C8.71572875,40 2,33.2842712 2,25 L2,17" id="Rectangle-18"></path>
+                    </g>
+                    <g id="Group-37" transform="translate(17.000000, 105.000000) scale(1, -1) translate(-17.000000, -105.000000) translate(0.000000, 80.000000)">
+                        <circle id="Oval-10" cx="17" cy="2" r="2"></circle>
+                        <circle id="Oval-10" cx="2" cy="15" r="2"></circle>
+                        <circle id="Oval-10" cx="32" cy="15" r="2"></circle>
+                        <path d="M17,4 L17,50" id="Line-10"></path>
+                        <path d="M32,17 L32,25 C32,33.2842712 25.2842712,40 17,40 L17,40 C8.71572875,40 2,33.2842712 2,25 L2,17" id="Rectangle-18"></path>
+                    </g>
+                </g>
+                <g id="Group-41" transform="translate(65.000000, 65.000000) rotate(45.000000) translate(-65.000000, -65.000000) translate(56.000000, 56.000000)">
+                    <circle id="Oval-20" cx="9" cy="9" r="9"></circle>
+                    <circle id="Oval-20" cx="9" cy="9" r="2"></circle>
+                    <path d="M9,0 L9,7" id="Line-7"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

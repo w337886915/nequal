@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Hyper SCRM</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="1.72254642e-14%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#10B0CC" offset="0%"></stop>
+            <stop stop-color="#2575FC" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Hyper-SCRM" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M25,0 C38.8071187,0 50,11.1928813 50,25 C50,38.8071187 38.8071187,50 25,50 C11.1928813,50 0,38.8071187 0,25 C7.10542736e-15,11.1928813 11.1928813,-7.10542736e-15 25,0 Z M25,30 C22.2385763,30 20,27.7614237 20,25 C20,22.2385763 22.2385763,20 25,20 C27.7614237,20 30,17.7614237 30,15 C30,12.2385763 27.7614237,10 25,10 C21.1611652,10 17.3223305,11.4644661 14.3933983,14.3933983 C8.53553391,20.2512627 8.53553391,29.7487373 14.3933983,35.6066017 C17.3223305,38.5355339 21.1611652,40 25,40 C27.7614237,40 30,37.7614237 30,35 C30,32.2385763 27.7614237,30 25,30 Z M35,20 C32.2385763,20 30,22.2385763 30,25 C30,27.7614237 32.2385763,30 35,30 C37.7614237,30 40,27.7614237 40,25 C40,22.2385763 37.7614237,20 35,20 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="194px" height="195px" viewBox="0 0 194 195" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 41</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M97.2928932,185.707107 C144.237097,185.707107 182.292893,147.651311 182.292893,100.707107 C182.292893,53.762903 144.237097,15.7071068 97.2928932,15.7071068 C50.3486895,15.7071068 12.2928932,53.762903 12.2928932,100.707107 C12.2928932,147.651311 50.3486895,185.707107 97.2928932,185.707107 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="170" height="170" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M97.2928932,164.292893 C133.191402,164.292893 162.292893,135.191402 162.292893,99.2928932 C162.292893,63.3943845 133.191402,34.2928932 97.2928932,34.2928932 C61.3943845,34.2928932 32.2928932,63.3943845 32.2928932,99.2928932 C32.2928932,135.191402 61.3943845,164.292893 97.2928932,164.292893 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="130" height="130" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="PRODUCTS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="SERVICES" transform="translate(-482.000000, -1903.000000)" stroke="#29ABE2">
+            <g id="Group-41" transform="translate(482.000000, 1903.000000)">
+                <circle id="Oval-27" cx="97" cy="100" r="54.5"></circle>
+                <circle id="Oval-27" cx="97" cy="100" r="94.5"></circle>
+                <g id="Group-39" transform="translate(143.250000, 182.607350) rotate(-30.000000) translate(-143.250000, -182.607350) translate(138.250000, 177.607350)" fill="#FFFFFF">
+                    <circle id="Oval-11" cx="5" cy="5" r="4.5"></circle>
+                    <circle id="Oval-11" cx="5" cy="5" r="1.5"></circle>
+                </g>
+                <use id="Oval-27" mask="url(#mask-2)" stroke-width="2" stroke-linejoin="round" stroke-dasharray="9,6" xlink:href="#path-1"></use>
+                <g id="Group-39" transform="translate(157.396970, 41.310137) rotate(-45.000000) translate(-157.396970, -41.310137) translate(154.896970, 38.810137)" fill="#FFFFFF">
+                    <circle id="Oval-11" cx="2.5" cy="2.5" r="2"></circle>
+                </g>
+                <g id="Group-39" transform="translate(92.000000, 0.000000)" fill="#FFFFFF">
+                    <circle id="Oval-11" cx="5" cy="5" r="4.5"></circle>
+                    <circle id="Oval-11" cx="5" cy="5" r="1.5"></circle>
+                </g>
+                <use id="Oval-27" mask="url(#mask-4)" stroke-width="2" stroke-linejoin="round" stroke-dasharray="8,2,1,2" xlink:href="#path-3"></use>
+                <g id="Group-39" transform="translate(146.436815, 141.365747) rotate(45.000000) translate(-146.436815, -141.365747) translate(141.936815, 137.365747)" fill="#FFFFFF">
+                    <circle id="Oval-11" transform="translate(4.500000, 3.843146) rotate(45.000000) translate(-4.500000, -3.843146) " cx="4.5" cy="3.84314575" r="2"></circle>
+                </g>
+                <g id="Group-40" transform="translate(97.000000, 100.000000) scale(1, -1) rotate(45.000000) translate(-97.000000, -100.000000) translate(47.000000, 50.000000)">
+                    <g id="Group-37" transform="translate(50.000000, 50.000000) scale(1, -1) translate(-50.000000, -50.000000) " fill="#FFFFFF">
+                        <path d="M99.5,51.590098 L99.5,48.409902 L93.4902903,47.20796 C93.3288574,47.1756734 93.16463,47.1594117 93,47.1594117 C92.1523827,47.1594117 91.3776234,47.5839244 90.9166517,48.2769227 L90.7682641,48.5 L39.5,48.5 L39.5,47 C39.5,44.5147186 37.4852814,42.5 35,42.5 L5,42.5 C2.51471863,42.5 0.5,44.5147186 0.5,47 L0.5,53 C0.5,55.4852814 2.51471863,57.5 5,57.5 L35,57.5 C37.4852814,57.5 39.5,55.4852814 39.5,53 L39.5,51.5 L90.7679092,51.5 L90.9162739,51.7233517 C91.473274,52.5619066 92.4862003,52.992858 93.4902903,52.79204 L99.5,51.590098 Z" id="Combined-Shape"></path>
+                        <path d="M46.5,1.16513866 C42.926427,2.57982673 40.5,6.05499328 40.5,10 C40.5,13.812548 42.7664343,17.2094663 46.2001858,18.7097362 L46.5,18.8407306 L46.5,81.1592694 L46.2001858,81.2902638 C42.7664343,82.7905337 40.5,86.187452 40.5,90 C40.5,93.9450067 42.926427,97.4201733 46.5,98.8348613 L46.5,90 C46.5,88.0670034 48.0670034,86.5 50,86.5 C51.9329966,86.5 53.5,88.0670034 53.5,90 L53.5,98.8348613 C57.073573,97.4201733 59.5,93.9450067 59.5,90 C59.5,86.187452 57.2335657,82.7905337 53.7998142,81.2902638 L53.5,81.1592694 L53.5,18.8407306 L53.7998142,18.7097362 C57.2335657,17.2094663 59.5,13.812548 59.5,10 C59.5,6.05499328 57.073573,2.57982673 53.5,1.16513866 L53.5,10 C53.5,11.9329966 51.9329966,13.5 50,13.5 C48.0670034,13.5 46.5,11.9329966 46.5,10 L46.5,1.16513866 Z" id="Combined-Shape"></path>
+                    </g>
+                    <g id="Group-38" transform="translate(1.000000, 45.000000)" stroke-linecap="round">
+                        <path d="M0,1 L28,1" id="Path-35"></path>
+                        <path d="M0,9 L28,9" id="Path-36"></path>
+                        <path d="M0,5 L28,5" id="Path-36"></path>
+                    </g>
+                </g>
+                <circle id="Oval-27" cx="97.7071068" cy="99.7071068" r="74.5"></circle>
+                <g id="Group-39" transform="translate(42.881205, 44.174098)" fill="#FFFFFF">
+                    <circle id="Oval-11" cx="2.5" cy="2.5" r="2"></circle>
+                    <circle id="Oval-11" cx="148.5" cy="55.5" r="2"></circle>
+                </g>
+                <g id="Group-39" transform="translate(0.000000, 98.000000)" fill="#FFFFFF">
+                    <circle id="Oval-11" cx="2.5" cy="2.5" r="2"></circle>
+                </g>
+                <g id="Group-39" transform="translate(41.000000, 148.000000)" fill="#FFFFFF">
+                    <circle id="Oval-11" cx="5" cy="5" r="4.5"></circle>
+                    <circle id="Oval-11" cx="5" cy="5" r="1.5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

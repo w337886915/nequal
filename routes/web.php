@@ -27,11 +27,16 @@ Route::group([ 'middleware' => ['laracms.frontend'], ], function () {
 
     # 前端示例路由
     Route::get('example', 'ExampleController@index')->name('example');
+    Route::get('aboutus', 'AboutUsController@index')->name('aboutus');
+    Route::get('/', 'IndexController@index')->name('index');
+    Route::get('/products', 'ProductController@index')->name('index');
+    Route::get('/services', 'ServerController@index')->name('index');
+
 
     # 前台需要用户认证路由
     Route::group(['middleware' => ['auth']], function(){
 
-       
+
 
     });
 

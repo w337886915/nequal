@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="146px" height="126px" viewBox="0 0 146 126" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>highlight_media_02</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="PRODUCTS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PRODUCTS-MAIN-PAGE" transform="translate(-875.000000, -2086.000000)">
+            <g id="highlight_media_02" transform="translate(873.000000, 2074.000000)">
+                <g>
+                    <polygon id="Shape" stroke="#29ABE2" points="75 12.5 2.83 137.5 147.17 137.5"></polygon>
+                    <polygon id="Shape" stroke="#29ABE2" points="58.83 112 75 84 91.17 112"></polygon>
+                    <path d="M91.17,112 L147.17,137.5" id="Shape" stroke="#29ABE2"></path>
+                    <path d="M58.83,112 L2.83,137.5" id="Shape" stroke="#29ABE2"></path>
+                    <path d="M75,84 L75,12.5" id="Shape" stroke="#29ABE2"></path>
+                    <circle id="Oval" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" cx="59.41" cy="111.77" r="2"></circle>
+                    <circle id="Oval" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" cx="75" cy="84" r="2"></circle>
+                    <circle id="Oval" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" cx="91.03" cy="111.77" r="2"></circle>
+                    <rect id="Rectangle-path" x="0" y="0" width="150" height="150"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

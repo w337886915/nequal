@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="130px" viewBox="0 0 128 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>全生命周期洞察</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="PRODUCTS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PRODUCTS-MAIN-PAGE" transform="translate(-480.000000, -2655.000000)" stroke="#29ABE2">
+            <g id="全生命周期洞察" transform="translate(481.000000, 2655.000000)">
+                <g>
+                    <path d="M63,129 C97.7939392,129 126,100.793939 126,66 C126,31.2060608 97.7939392,3 63,3 C28.2060608,3 0,31.2060608 0,66 C0,98.3560493 24.3919326,125.015057 55.7907922,128.592019" id="Oval-18" transform="translate(63.000000, 66.000000) scale(-1, -1) translate(-63.000000, -66.000000) "></path>
+                    <path d="M63,84 C75.8866442,84 87.5533108,78.1666667 98,66.5 C87.5533108,54.8333333 75.8866442,49 63,49 C50.1133558,49 38.4466892,54.8333333 28,66.5 C38.4466892,78.1666667 50.1133558,84 63,84 Z" id="Oval-18" stroke-linejoin="round"></path>
+                    <circle id="Oval-19" cx="63" cy="66" r="10"></circle>
+                    <polyline id="Path-25" stroke-linecap="round" points="60 0 63 3 60 6"></polyline>
+                    <path d="M63,24 L63,39" id="Line-9" stroke-linecap="round"></path>
+                    <path d="M63,94 L63,109" id="Line-9" stroke-linecap="round"></path>
+                    <path d="M112,61.5 L112,71.5" id="Line-9" stroke-linecap="round" transform="translate(112.000000, 66.500000) rotate(90.000000) translate(-112.000000, -66.500000) "></path>
+                    <path d="M14,61.5 L14,71.5" id="Line-9" stroke-linecap="round" transform="translate(14.000000, 66.500000) rotate(90.000000) translate(-14.000000, -66.500000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

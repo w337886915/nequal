@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="139px" height="140px" viewBox="0 0 139 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>highlight_retail_04</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="PRODUCTS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PRODUCTS-MAIN-PAGE" transform="translate(-879.000000, -2651.000000)">
+            <g id="highlight_retail_04" transform="translate(873.000000, 2646.000000)">
+                <g>
+                    <rect id="Rectangle-path" x="0" y="0" width="150" height="150"></rect>
+                    <path d="M45.43,113.93 C45.43,97.3614575 58.8614575,83.93 75.43,83.93" id="Shape" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <circle id="Oval" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" cx="36.5" cy="75" r="30"></circle>
+                    <circle id="Oval" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" cx="75.43" cy="36.07" r="30"></circle>
+                    <circle id="Oval" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" cx="114.36" cy="75" r="30"></circle>
+                    <path d="M104.36,67 C104.36,61.4771525 108.837153,57 114.36,57 C119.882847,57 124.36,61.4771525 124.36,67" id="Shape" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <rect id="Rectangle-path" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" x="99.36" y="67" width="30" height="20"></rect>
+                    <path d="M75.43,83.93 C91.9985425,83.93 105.43,97.3614575 105.43,113.93 C105.43,130.498542 91.9985425,143.93 75.43,143.93 C58.8614575,143.93 45.43,130.498542 45.43,113.93" id="Shape" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M16.5,75 C16.5,63.954305 25.454305,55 36.5,55" id="Shape" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M56.5,75 C56.5,86.045695 47.545695,95 36.5,95" id="Shape" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <polygon id="Shape" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" points="14.5 74.39 18.5 74.39 16.5 78.39"></polygon>
+                    <polygon id="Shape" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" points="54.5 75 58.5 75 56.5 71"></polygon>
+                    <polygon id="Shape" stroke="#29ABE2" fill="#FFFFFF" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" points="75.43 122.16 83.56 126.43 82 117.39 88.58 110.98 79.5 109.66 75.43 101.43 71.37 109.66 62.29 110.98 68.86 117.39 67.31 126.43"></polygon>
+                    <path d="M75.43,25.92 C72.3040683,22.7940683 67.2359317,22.7940683 64.11,25.92 C60.9840683,29.0459317 60.9840683,34.1140683 64.11,37.24 L75.43,48.57 L86.76,37.24 C88.7821233,35.2160904 89.5708994,32.267131 88.8292039,29.503966 C88.0875084,26.7408011 85.9280226,24.5832213 83.1642038,23.843966 C80.4003851,23.1047107 77.4521232,23.8960904 75.43,25.92 Z" id="Shape" stroke="#29ABE2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

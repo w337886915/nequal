@@ -104,7 +104,7 @@ return [
 
         'block'         => 10,
         'navigation'    => 10,
-        'template'      => 10,
+        'template'      => 0,
         'settings'      => 10,
 
         'page'          => 10,

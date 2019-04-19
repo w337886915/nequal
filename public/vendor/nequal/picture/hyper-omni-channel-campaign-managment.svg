@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Hyper Omni-channel Campaign Managment</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="94.5571661%" x2="0%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#00D2B1" offset="0%"></stop>
+            <stop stop-color="#00EDC3" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Hyper-Omni-channel-Campaign-Managment" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-26">
+            <circle id="Combined-Shape" fill="url(#linearGradient-1)" cx="25" cy="25" r="25"></circle>
+            <g id="Group-21" transform="translate(10.000000, 10.000000)" fill="#FFFFFF">
+                <rect id="Rectangle-13" x="12.5" y="0" width="5" height="9" rx="2.5"></rect>
+                <rect id="Rectangle-13" x="12.5" y="21" width="5" height="9" rx="2.5"></rect>
+                <rect id="Rectangle-13" transform="translate(25.500000, 15.000000) rotate(90.000000) translate(-25.500000, -15.000000) " x="23" y="10.5" width="5" height="9" rx="2.5"></rect>
+                <rect id="Rectangle-13" transform="translate(4.500000, 15.000000) rotate(90.000000) translate(-4.500000, -15.000000) " x="2" y="10.5" width="5" height="9" rx="2.5"></rect>
+                <rect id="Rectangle-13" transform="translate(22.424621, 22.424621) rotate(135.000000) translate(-22.424621, -22.424621) " x="19.9246212" y="17.9246212" width="5" height="9" rx="2.5"></rect>
+                <rect id="Rectangle-13" transform="translate(7.575379, 7.575379) rotate(135.000000) translate(-7.575379, -7.575379) " x="5.0753788" y="3.0753788" width="5" height="9" rx="2.5"></rect>
+                <rect id="Rectangle-13" transform="translate(7.575379, 22.424621) scale(-1, 1) rotate(135.000000) translate(-7.575379, -22.424621) " x="5.0753788" y="17.9246212" width="5" height="9" rx="2.5"></rect>
+                <rect id="Rectangle-13" transform="translate(22.424621, 7.575379) scale(-1, 1) rotate(135.000000) translate(-22.424621, -7.575379) " x="19.9246212" y="3.0753788" width="5" height="9" rx="2.5"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

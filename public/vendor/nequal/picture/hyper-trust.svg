@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Hyper Trust</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="-14.9278938%" cy="-16.2782018%" fx="-14.9278938%" fy="-16.2782018%" r="163.490186%" id="radialGradient-1">
+            <stop stop-color="#E6DEE9" offset="0%"></stop>
+            <stop stop-color="#BDC2E8" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Hyper-Trust" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-17">
+            <circle id="Combined-Shape" fill="url(#radialGradient-1)" cx="25" cy="25" r="25"></circle>
+            <path d="M19.7790695,13.5 L30.7845994,13.5 C32.7372229,13.5 34.5677159,14.4501715 35.6914379,16.0470396 L36.2740767,16.875 C37.7024441,18.9047853 37.7208411,21.6079744 36.3202326,23.6570127 L27.6257672,36.3766935 C26.6907891,37.7445319 24.8239874,38.0954345 23.456149,37.1604563 C23.1484809,36.9501515 22.882691,36.6843616 22.6723862,36.3766935 L14.0475062,23.7588135 C12.6162882,21.6649946 12.6908542,18.8889682 14.2324101,16.875 L15.0145925,15.8531164 C16.1499013,14.3698904 17.9112136,13.5 19.7790695,13.5 Z" id="Rectangle-10" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

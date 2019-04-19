@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Hyper Data Lab</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="97.3807803%" y1="90.9299396%" x2="0%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#D600FF" offset="0%"></stop>
+            <stop stop-color="#FFA7FC" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Hyper-Data-Lab" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-18">
+            <circle id="Combined-Shape" fill="url(#linearGradient-1)" cx="25" cy="25" r="25"></circle>
+            <path d="M25,28.75 L20,28.75 C17.9289322,28.75 16.25,27.0710678 16.25,25 C16.25,22.9289322 17.9289322,21.25 20,21.25 L25.0000029,21.25 C26.0355339,21.25 26.875,20.4105339 26.875,19.375 C26.875,18.3394661 26.0355339,17.5 25,17.5 L20,17.5 C17.9289322,17.5 16.25,15.8210678 16.25,13.75 C16.25,11.6789322 17.9289322,10 20,10 L25,10 C33.2842712,10 40,16.7157288 40,25 C40,33.2842712 33.2842712,40 25,40 L20,40 C17.9289322,40 16.25,38.3210678 16.25,36.25 C16.25,34.1789322 17.9289322,32.5 20,32.5 L25,32.5 C26.0355339,32.5 26.875,31.6605339 26.875,30.625 C26.875,29.5894661 26.0355339,28.75 25,28.75 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>
