@@ -16,6 +16,7 @@
   <meta content="HYPERS" name="apple-mobile-web-app-title">
   <link href="images/icons/logo/hypers_crop_256.png" rel="apple-touch-icon">
   <link href="/images/favicon.png" rel="icon" type="image/png">
+    @yield('style')
   <style>
     .page-content-wrapper {
       padding: 40px 0 50px 0;
@@ -135,15 +136,10 @@
 <script src="//cdn.jsdelivr.net/npm/jquery@3.4.0/dist/jquery.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" type="text/javascript"></script>
-<script>
+@section('script')
+    <script>
   $(function () {
-    $('.banners-slider').slick({
-      dots: true,
-      accessibility: false,
-      autoplay: true,
-      arrows: false
-    });
-    window.addEventListener('scroll', function () {
+      window.addEventListener('scroll', function () {
       let scrollTop = document.documentElement.scrollTop
       if (scrollTop > 10) {
         $('.navbar').addClass('nav-bg')
@@ -153,6 +149,8 @@
     });
   });
 </script>
+@show
+
 </body>
 </head>
 </html>

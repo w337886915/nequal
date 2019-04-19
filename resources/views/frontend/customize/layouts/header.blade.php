@@ -54,7 +54,7 @@
         background-color: unset !important;
     }
 </style>
-<nav class="navbar navbar-fixed-top nav-transparent">
+<nav class="navbar navbar-fixed-top nav-transparent ">
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">
@@ -70,7 +70,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="nav navbar-nav navbar-right hidden-sm navbar-top-menu">
                 <li><a href="./">首页</a></li>
-                <li><a href="./solutions.html">解决方案</a></li>
+                <li><a href="./solutions">解决方案</a></li>
                 <li><a href="./services">成功案例</a></li>
                 <li><a href="./about">关于我们</a></li>
                 <li><a href="./about">语言切换</a></li>
