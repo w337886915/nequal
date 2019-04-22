@@ -47,4 +47,5 @@ Route::group(['domain' => config('administrator.domain'), 'prefix' => config('ad
     Route::get('categorys/{category}/edit/{type}','CategorysController@edit')->name('administrator.category.edit');
     Route::put('categorys/{category}/{type}','CategorysController@update')->name('administrator.category.update');
     Route::post('categorys/{type}','CategorysController@store')->name('administrator.category.store');
+    Route::resource('articles', 'ArticlesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 });
