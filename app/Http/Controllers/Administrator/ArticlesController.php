@@ -17,16 +17,19 @@ namespace App\Http\Controllers\Administrator;
 
 use DB;
 use App\Models\Article;
+
 use App\Http\Requests\Request;
 use App\Http\Requests\Administrator\ArticleRequest;
 use App\Handlers\CategoryHandler;
 use App\Models\Category;
 use App\Models\MultipleFile;
 
+
 /**
  * 后台文章管理控制器
  *
  * Class ArticlesController
+
  * @package App\Http\Controllers\Administrator
  */
 class ArticlesController extends Controller
@@ -106,7 +109,7 @@ class ArticlesController extends Controller
     public function create(Article $article, CategoryHandler $categoryHandler)
     {
         $this->authorize('create', $article);
-        
+
         $category = $categoryHandler->web($categoryHandler->select($categoryHandler->getCategorys('article')), []);
 
         return backend_view('article.create_and_edit', compact('article','category'));
@@ -157,10 +160,12 @@ class ArticlesController extends Controller
     public function update(ArticleRequest $request, Article $article)
     {
         $this->authorize('update', $article);
+
         $article->update($request->all());
         $article->syncCategory($request->category_id ?? []);
 
         return $this->redirect('articles.index')->with('success', '更新成功.');
+
     }
 
     /**
@@ -272,7 +277,7 @@ class ArticlesController extends Controller
         $multipleFile->delete();
         return [];
     }
-    
+
     /**
      * 多文件排序
      *
@@ -284,12 +289,13 @@ class ArticlesController extends Controller
      */
     public function multipleFilesOrder(Article $article, $field, Request $request){
         $params = $request->params ?? [];
-        
+
         foreach($params as $param){
             MultipleFile::where('id', intval($param['id']))->update(['order' => intval($param['order'])]);
         }
-        
+
         return [];
     }
 
 }
+

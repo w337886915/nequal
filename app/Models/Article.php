@@ -14,7 +14,6 @@
  */
 
 namespace App\Models;
-
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -49,9 +48,9 @@ class Article extends Model
     protected $fillable = [
          'id','object_id', 'alias','title', 'subtitle', 'keywords', 'description', 'author', 'source', 'order', 'content', 'attribute', 'thumb', 'type', 'is_link','link', 'template', 'status', 'views', 'reply_count', 'weight', 'css', 'js', 'top', 'created_op', 'updated_op',
     ];
-    
+
     protected $dates = ['created_at', 'updated_at', 'deleted_at'];
-    
+
     protected static function boot()
     {
         parent::boot();
@@ -60,7 +59,7 @@ class Article extends Model
             $builder->with(['created_user','updated_user']);
         });
     }
-    
+
     public function toSearchableArray()
     {
 //        $array = $this->toArray();
@@ -214,22 +213,22 @@ class Article extends Model
     public function getAttribute($key){
 
         $value = parent::getAttribute($key);
-        
+
         $attribute = parent::getAttribute('attribute');
-        
+
         if(is_array($attribute)){
             $attribute = empty($attribute) ? new \stdClass() : $attribute;
         }else if( is_string( $attribute ) ){
             $attribute = empty($attribute) ? new \stdClass() : json_decode($attribute, true);
         }
-        
+
         if( $key !== $value && is_array($attribute) && array_key_exists($key, $attribute)){
             $value = $attribute[$key] ?? null;
         }
 
         return $value;
     }
-    
+
     /**
      * 清除缓存
      *
@@ -239,11 +238,11 @@ class Article extends Model
      */
     public static function clearCache($id){
         $id = intval($id);
-    
+
         $key = 'article_active_cache_'.$id;
-    
+
         \Cache::forget($key);
-        
+
         return true;
     }
 
@@ -273,5 +272,6 @@ class Article extends Model
 
         return $article;
     }
+
 
 }

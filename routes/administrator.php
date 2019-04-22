@@ -90,6 +90,7 @@ Route::group(['domain' => config('administrator.domain'), 'prefix' => config('ad
     Route::get('categorys/{category}/edit/{type}','CategorysController@edit')->name('administrator.category.edit');
     Route::put('categorys/{type}/order','CategorysController@order')->name('administrator.category.order');
     Route::put('categorys/{category}/{type}','CategorysController@update')->name('administrator.category.update');
+
     Route::delete('categorys/{category}/{type}','CategorysController@destroy')->name('administrator.category.destroy');
 
     # 导航相关路由
@@ -170,3 +171,4 @@ Route::group(['domain' => config('administrator.domain'), 'prefix' => config('ad
     Route::delete('form/{form}/{type}', 'FormController@destroy')->name('form.destroy');
 
 });
+

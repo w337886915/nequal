@@ -9,137 +9,28 @@
         <div class="container-fluid">
             <div class="container">
                 <div class="row-split-150"></div>
-                <div class="page-title"><p><span>HYPERS GROWTH CLOUD</span></p>
-                    <p>企 业 增 长 云</p></div>
+                <div class="page-title"><p><span>{{$get_level_one['en_name']}}</span></p>
+                    <p>{{$get_level_one['name']}}</p></div>
                 <div class="row-split-70"></div>
                 <div class="row">
+                    @foreach ($get_level_two as $v)
                     <div class="col-md-3 col-sm-6">
                         <div class="product-group-wrap">
-                            <div class="product-group-title"><a href="../products_analyticscloud" target="_blank"><p>Hyper
-                                        Analytics Cloud</p>
-                                    <p>分析云</p></a></div>
+
+                            <div class="product-group-title"><a href="../products_analyticscloud" target="_blank"><p>{{$v['en_name']}}</p>
+                                    <p>{{$v['name']}}</p></a></div>
                             <ul class="product-group-items">
+                                @foreach($v['articles'] as $v1)
                                 <li><a href="../products_analyticscloud#list"><img
                                                 src="{{asset('vendor/nequal/picture/hyper-web-analytics.svg')}}" class="product-logo-img"
                                                 title="Hyper Web Analytics" alt="Hyper Web Analytics">
-                                        <p>Hyper Web Analytics</p>
-                                        <p>网站分析</p></a></li>
-                                <li><a href="../product_hma"><img src="{{asset('vendor/nequal/picture/hyper-mobile-analytics.svg')}}"
-                                                                  class="product-logo-img" title="Hyper Mobile Analytics"
-                                                                  alt="Hyper Mobile Analytics">
-                                        <p>Hyper Mobile Analytics</p>
-                                        <p>移动应用分析</p></a></li>
-                                <li><a href="../products_analyticscloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-video-analytics.svg')}}" class="product-logo-img"
-                                                title="Hyper Video Analytics" alt="Hyper Video Analytics">
-                                        <p>Hyper Video Analytics</p>
-                                        <p>视频媒体分析</p></a></li>
-                                <li><a href="../products_analyticscloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-ads-analytics.svg')}}" class="product-logo-img"
-                                                title="Hyper Ads Analytics" alt="Hyper Ads Analytics">
-                                        <p>Hyper Ads Analytics</p>
-                                        <p>广告分析</p></a></li>
-                                <li><a href="../products_analyticscloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-media-intelligence.svg')}}" class="product-logo-img"
-                                                title="Hyper Media Intelligence" alt="Hyper Media Intelligence">
-                                        <p>Hyper Media Intelligence</p>
-                                        <p>媒介效力分析</p></a></li>
-                                <li><a href="../products_analyticscloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-ec-intelligence.svg')}}" class="product-logo-img"
-                                                title="Hyper EC Intelligence" alt="Hyper EC Intelligence">
-                                        <p>Hyper EC Intelligence</p>
-                                        <p>电商分析</p></a></li>
-                                <li><a href="../products_analyticscloud#list"><img src="{{asset('vendor/nequal/picture/hyper-things.svg')}}"
-                                                                                   class="product-logo-img"
-                                                                                   title="Hyper Things" alt="Hyper Things">
-                                        <p>Hyper Things</p>
-                                        <p>一物一码</p></a></li>
+                                        <p>{{$v1['subtitle']}}</p>
+                                        <p>{{$v1['title']}}</p></a></li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-group-wrap">
-                            <div class="product-group-title"><a href="../products_audiencecloud" target="_blank"><p>Hyper
-                                        Audience Cloud</p>
-                                    <p>受众云</p></a></div>
-                            <ul class="product-group-items">
-                                <li><a href="../products_audiencecloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-1st-party-dmp.svg')}}" class="product-logo-img"
-                                                title="Hyper 1st-Party DMP" alt="Hyper 1st-Party DMP">
-                                        <p>Hyper 1st-Party DMP</p>
-                                        <p>企业第一方数据管理平台</p></a></li>
-                                <li><a href="../products_audiencecloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-1st-party-cdp.svg')}}" class="product-logo-img"
-                                                title="Hyper 1st-Party CDP" alt="Hyper 1st-Party CDP">
-                                        <p>Hyper 1st-Party CDP</p>
-                                        <p>企业第一方受众画像平台</p></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 hidden-md hidden-lg"></div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-group-wrap">
-                            <div class="product-group-title"><a href="../products_experiencecloud" target="_blank"><p>Hyper
-                                        Experience Cloud</p>
-                                    <p>体验云</p></a></div>
-                            <ul class="product-group-items">
-                                <li><a href="../products_experiencecloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-demand-side-platform.svg')}}" class="product-logo-img"
-                                                title="Hyper Demand Side Platform" alt="Hyper Demand Side Platform">
-                                        <p>Hyper Demand Side Platform</p>
-                                        <p>需求方平台</p></a></li>
-                                <li><a href="../products_experiencecloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-demand-side-platform.svg')}}" class="product-logo-img"
-                                                title="Hyper Ad Serving" alt="Hyper Ad Serving">
-                                        <p>Hyper Ad Serving</p>
-                                        <p>投放管理平台</p></a></li>
-                                <li><a href="../products_experiencecloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-omni-channel-campaign-managment.svg')}}"
-                                                class="product-logo-img" title="Hyper Omni-channel Campaign Management"
-                                                alt="Hyper Omni-channel Campaign Management">
-                                        <p>Hyper Omni-channel Campaign Management</p>
-                                        <p>多渠道营销活动管理</p></a></li>
-                                <li><a href="../products_experiencecloud#list"><img src="{{asset('vendor/nequal/picture/hyper-scrm.svg')}}"
-                                                                                    class="product-logo-img"
-                                                                                    title="Hyper SCRM" alt="Hyper SCRM">
-                                        <p>Hyper SCRM</p>
-                                        <p>社交会员管理平台</p></a></li>
-                                <li><a href="../products_experiencecloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-realtime-personalization-engine.png')}}"
-                                                class="product-logo-img" title="Hyper Realtime Personalization Engine"
-                                                alt="Hyper Realtime Personalization Engine">
-                                        <p>Hyper Realtime Personalization Engine</p>
-                                        <p>实时个性化推荐引擎</p></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-group-wrap">
-                            <div class="product-group-title"><a href="../products_insightcloud" target="_blank"><p>Hyper
-                                        Insight Cloud</p>
-                                    <p>洞察云</p></a></div>
-                            <ul class="product-group-items">
-                                <li><a href="../products_insightcloud#list"><img src="{{asset('vendor/nequal/picture/hyper-data-lab.svg')}}"
-                                                                                 class="product-logo-img"
-                                                                                 title="Hyper 3rd-Party DMP"
-                                                                                 alt="Hyper 3rd-Party DMP">
-                                        <p>Hyper 3rd-Party DMP</p>
-                                        <p>第三方 DMP</p></a></li>
-                                <li><a href="../products_insightcloud#list"><img src="{{asset('vendor/nequal/picture/hyper-industries.svg')}}"
-                                                                                 class="product-logo-img"
-                                                                                 title="Hyper Industry Insight"
-                                                                                 alt="Hyper Industry Insight">
-                                        <p>Hyper Industry Insight</p>
-                                        <p>行业洞察</p></a></li>
-                                <li><a href="../products_insightcloud#list"><img src="{{asset('vendor/nequal/picture/hyper-trust.svg')}}"
-                                                                                 class="product-logo-img"
-                                                                                 title="Hyper Credibility Platform"
-                                                                                 alt="Hyper Credibility Platform">
-                                        <p>Hyper Credibility Platform</p>
-                                        <p>置信度平台</p></a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 <div class="row" style="text-align:center"><a class="primary-button" href="/demo-request" target="_blank">立即申请试用</a>
                 </div>

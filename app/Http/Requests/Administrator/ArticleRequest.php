@@ -18,6 +18,7 @@ namespace App\Http\Requests\Administrator;
 use Illuminate\Validation\Rule;
 
 class ArticleRequest extends Request
+
 {
     public function rules()
     {
@@ -26,6 +27,7 @@ class ArticleRequest extends Request
         {
             // CREATE
             case 'POST':
+
             {
                 return [
                     'category_id' => 'required|array',
@@ -81,11 +83,12 @@ class ArticleRequest extends Request
             };
         }
     }
-    
+
     public function attributes()
     {
         return [
             'category_id' => '分类',
+
         ];
     }
 }
