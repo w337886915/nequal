@@ -1,4 +1,7 @@
 <style>
+    body{
+        padding-top: 68px;
+    }
     .navbar-toggler-icon {
         color: #fff !important;
     }
