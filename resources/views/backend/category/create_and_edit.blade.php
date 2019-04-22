@@ -49,6 +49,15 @@
                                    maxlength="128"
                             ></div>
                         </div>
+                        <div class="form-group has-feedback  has-icon-right">
+                            <label for="en_name" class="col-md-2 col-sm-2 control-label">英文名称</label>
+                            <div class="col-md-5 col-sm-10">
+                                <input type="text" name="en_name" id="en_name" autocomplete="off" class="form-control" value="{{ old('en_name',$category->en_name) }}"
+                                       data-fv-trigger="blur"
+                                       minlength="1"
+                                       maxlength="128"
+                                ></div>
+                        </div>
 
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="keywords" class="col-md-2 col-sm-2 control-label">关键字</label>
@@ -63,7 +72,7 @@
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="" class="col-md-2 col-sm-2 control-label required">排序</label>
                             <div class="col-md-5 col-sm-10">
-                            <input type="number" name="order" autocomplete="off" placeholder="请输入排序" class="form-control" value="{{ old('order',$category->order) }}"
+                            <input type="number" name="order" autocomplete="off" placeholder="请输入排序" class="form-control" value="{{ old('order',$category->order) ?? 999}}"
                                    required
                                    data-fv-trigger="blur"
                                    min="1"
@@ -103,6 +112,24 @@
                                       maxlength="255"
                             >{{  old('description', $category->description) }}</textarea>
                             </div>
+                        </div>
+                        <div class="form-group has-feedback  has-icon-right">
+                            <label for="tel" class="col-md-2 col-sm-2 control-label">联系电话</label>
+                            <div class="col-md-5 col-sm-10">
+                                <input type="text" name="tel" id="tel" autocomplete="off" class="form-control" value="{{ old('tel',$category->tel) }}"
+                                       data-fv-trigger="blur"
+                                       minlength="1"
+                                       maxlength="128"
+                                ></div>
+                        </div>
+                        <div class="form-group has-feedback  has-icon-right">
+                            <label for="email" class="col-md-2 col-sm-2 control-label">联系邮箱</label>
+                            <div class="col-md-5 col-sm-10">
+                                <input type="email" name="email" id="email" autocomplete="off" class="form-control" value="{{ old('email',$category->email) }}"
+                                       data-fv-trigger="blur"
+                                       minlength="1"
+                                       maxlength="128"
+                                ></div>
                         </div>
 
                         <div class="form-group">

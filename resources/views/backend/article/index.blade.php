@@ -25,7 +25,7 @@
         <div class="col-md-12">
 
             <div class="table-tools" style="margin-bottom: 15px;">
-                <div class="pull-right" style="width: 450px;">
+                <div class="pull-right" style="width: 500px;">
                     <form class="form-inline" method="GET" action="">
                         <input type="hidden" name="type" value="{{$type}}">
                         <div class="form-group">

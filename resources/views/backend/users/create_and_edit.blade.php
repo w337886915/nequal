@@ -15,7 +15,6 @@
         <div class="col-md-12">
             <div class="panel">
                 <div class="panel-body">
-
                     <form id="form-validator" method="POST" class="form-horizontal" action="{{ $user->id ? route('users.update', $user->id) : route('users.store') }}?redirect={{ previous_url() }}">
                         {{ csrf_field() }}
                         <input type="hidden" name="_method" class="mini-hidden" value="{{ $user->id ? 'PATCH' : 'POST' }}">
@@ -46,7 +45,7 @@
                             <div class="form-group has-feedback  has-icon-right">
                                 <label for="password" class="col-md-2 col-sm-2 control-label required">密码</label>
                                 <div class="col-md-5 col-sm-10">
-                                <input type="password" class="form-control" id="password" name="old_password" autocomplete="off" value="{{ old('old_password') }}"
+                                <input type="password" class="form-control" id="password" name="password" autocomplete="off" value="{{ old('password') }}"
                                        required
                                        data-fv-trigger="blur"
                                        minlength="6"
