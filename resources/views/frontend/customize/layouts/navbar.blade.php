@@ -62,7 +62,7 @@
     }
 </style>
 <nav class="{{ isset($fixdBackgroud) && $fixdBackgroud ? 'fixd-background' : '' }} navbar navbar-fixed-top nav-transparent">
-    <div class="container-f">
+    <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="./">
                 <img alt="nEqual" src="https://www.nequal.com/images/nEqual/nEqua_logo.svg" height="50">
