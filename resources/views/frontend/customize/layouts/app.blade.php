@@ -39,118 +39,15 @@
   <link href="//cdn.bootcss.com/slick-carousel/1.8.1/slick.min.css" rel="stylesheet" type="text/css"/>
 </head>
 <body class="zh-cn">
-@include('frontend.customize.layouts.header')
-@yield('banner')
-
-<style>
-  .product-item {
-    margin-bottom: 25px;
-  }
-
-  .product-item .media {
-
-  }
-
-  .product-item .media-left {
-    padding-right: 30px
-  }
-
-  .product-item .media-left, .product-item .media-body, .product-item .media-right {
-    display: table-cell;
-    vertical-align: top;
-  }
-
-  .product-item .media-left .media-object {
-    max-width: 140px
-  }
-
-  .product-item .media-heading {
-    margin-top: 15px;
-    margin-bottom: 20px;
-  }
-
-  .product-item .media-body p {
-    font-size: 14px;
-    line-height: 28px;
-  }
-
-  .product-item .media-body .product-intro {
-    min-height: 85px;
-    display: block;
-  }
-
-  .product-item .product-item-attr a {
-    color: #28aedf !important;
-    margin-right: 15px;
-  }
-
-  .product-item .product-item-attr a:hover {
-    text-decoration: none !important;
-  }
-
-  .product-item .product-item-attr img {
-    width: 22px;
-    height: 22px;
-  }
-
-  .product-group-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-  }
-
-  .product-group-actions a {
-    margin: 10px 0;
-  }
-
-  .product-group-actions .btn-default {
-    border-color: #28aedf;
-    color: #28aedf;
-  }
-
-  @media (max-width: 991px) {
-    .product-item .media-left {
-      display: block;
-      text-align: center;
-      padding: 0.10rem;
-    }
-
-    .product-item .media-left .media-object {
-      margin: auto;
-    }
-
-    .product-item .media-body {
-      display: block;
-      width: auto;
-    }
-
-    .product-item .media-body .media-heading {
-      text-align: center;
-    }
-  }
-</style>
 @yield('content')
 @include('frontend.customize.layouts.footer')
 @include('frontend.customize.layouts.help')
 <script src="//cdn.jsdelivr.net/npm/jquery@3.4.0/dist/jquery.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" type="text/javascript"></script>
-@section('script')
-    <script>
-  $(function () {
-      window.addEventListener('scroll', function () {
-      let scrollTop = document.documentElement.scrollTop
-      if (scrollTop > 10) {
-        $('.navbar').addClass('nav-bg')
-      } else {
-        $('.navbar').removeClass('nav-bg')
-      }
-    });
-  });
-</script>
-@show
-
+@yield('script-navbar')
+@yield('script-banner')
+@yield('script-content')
 </body>
 </head>
 </html>

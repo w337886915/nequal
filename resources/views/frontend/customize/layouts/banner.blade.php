@@ -94,13 +94,15 @@
                     alt=""
                     src="https://www.qiniu.com/assets/banner/banner-qvm1rmb-index-3c79c38ee87a7b6a0ef8ff28b2d8da9a28e567bdf3cb9bea8ea761d601be7ce6.jpg"></a></div>
 </div>
-<script>
-    $(function(){
-        $('.banners-slider').slick({
-            dots: true,
-            accessibility: false,
-            autoplay: true,
-            arrows: false
-        });
-    })
-</script>
+@section('script-banner')
+    <script>
+        $(function(){
+            $('.banners-slider').slick({
+                dots: true,
+                accessibility: false,
+                autoplay: true,
+                arrows: false
+            });
+        })
+    </script>
+@endsection

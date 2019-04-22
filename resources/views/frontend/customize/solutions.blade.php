@@ -4,7 +4,6 @@
 @endsection
 @section('content')
     <div class="page-content-wrapper products">
-        <div class="hypers-solutions-top-line media"></div>
         <div class="container-fluid">
             <div class="container">
                 <div class="row-split-150"></div>
