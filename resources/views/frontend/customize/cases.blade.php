@@ -77,7 +77,7 @@
 @endsection
 @section('content')
 <div class="page-content-wrapper">
-    <div class="container">
+    <div class="container" style="width: 1500px;">
         <div class="page-title">
             <h2>客户案例</h2>
             <p>比以往更好地了解和服务于客户。将您的数据及其提供的洞察力转化为有吸引力的体验。</p>
@@ -104,7 +104,7 @@
     </div>
 </div>
 <div class="page-content-wrapper">
-    <div class="container">
+    <div class="container" style="width: 1500px;">
         <div class="page-title">
             <h2>客户支持</h2>
             <p>比以往更好地了解和服务于客户。将您的数据及其提供的洞察力转化为有吸引力的体验。</p>
@@ -131,7 +131,7 @@
     </div>
 </div>
 <div class="page-content-wrapper">
-    <div class="container">
+    <div class="container" style="width: 1500px;">
         <div class="page-title">
             <h2>服务品牌</h2>
             <p>比以往更好地了解和服务于客户。将您的数据及其提供的洞察力转化为有吸引力的体验。</p>

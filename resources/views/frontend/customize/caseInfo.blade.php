@@ -1,6 +1,10 @@
 @extends('frontend.customize.layouts.app')
 @section('style')
     <style>
+        a{
+            text-decoration: none !important;
+        }
+
         .top-title{
             position: relative;
             margin:0 auto;
@@ -35,6 +39,13 @@
             line-height: 26px;
             position: relative;
             z-index: 110;
+        }
+
+        .page-next-pre  p a{
+            color: #999;
+        }
+        .page-next-pre  p a:hover{
+            color: #337ab7;
         }
 
     </style>
