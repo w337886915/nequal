@@ -1,4 +1,8 @@
 <style>
+    body{
+        padding-top: 0;
+    }
+
     .banners-slider {
         height: 500px;
         overflow: hidden;
