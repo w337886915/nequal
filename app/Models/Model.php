@@ -15,7 +15,14 @@
 
 namespace App\Models;
 
-class Model extends Wanglelecc\Laracms\Models\Model
+use Illuminate\Database\Eloquent\Model as EloquentModel;
+use App\Models\Traits\WithOrderHelper;
+use App\Models\Traits\WithMultipleFilesTraits;
+
+class Model extends EloquentModel
 {
+    use WithOrderHelper;
+    use WithMultipleFilesTraits;
+
 
 }

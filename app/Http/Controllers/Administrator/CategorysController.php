@@ -17,14 +17,14 @@ namespace App\Http\Controllers\Administrator;
 
 use App\Http\Requests\Administrator\CategoryRequest;
 use App\Models\Category;
-use Wanglelecc\Laracms\Handlers\CategoryHandler;
+use App\Handlers\CategoryHandler;
 use Illuminate\Http\Request;
 
 /**
  * 分类控制器
  *
  * Class CategorysController
- * @package Wanglelecc\Laracms\Http\Controllers\Administrator
+ * @package App\Http\Controllers\Administrator
  */
 class CategorysController extends Controller
 {
@@ -33,7 +33,7 @@ class CategorysController extends Controller
         $type = ($request->route('type'));
         static::$activeNavId = 'content.category.'.$type;
     }
-
+    
     /**
      * 列表
      *
@@ -68,7 +68,7 @@ class CategorysController extends Controller
     public function create($type, $parent = 0, Category $category){
         $this->authorize('create', $category);
 
-        $view = backend_view_exists("category.create_and_edit_{$type}") ? backend_view("category.create_and_edit_{$type}") : laravel_backend_view('category.create_and_edit');
+        $view = backend_view_exists("category.create_and_edit_{$type}") ? backend_view("category.create_and_edit_{$type}") : backend_view('category.create_and_edit');
 
         return $view->with(compact(['type','parent','category']));
     }
@@ -101,7 +101,7 @@ class CategorysController extends Controller
     public function edit(Category $category, $type){
         $this->authorize('update', $category);
 
-        $view = backend_view_exists("category.create_and_edit_{$type}") ? backend_view("category.create_and_edit_{$type}") : laravel_backend_view('category.create_and_edit');
+        $view = backend_view_exists("category.create_and_edit_{$type}") ? backend_view("category.create_and_edit_{$type}") : backend_view('category.create_and_edit');
         $parent = $category->parent;
 
         return $view->with(compact(['category','type','parent']));
@@ -135,7 +135,7 @@ class CategorysController extends Controller
      */
     public function destroy(Category $category, $type){
         $this->authorize('destroy', $category);
-
+        
         if( is_string($message = $category->isDestroy()) ){
             return $this->redirect()->with('message', $message);
         }

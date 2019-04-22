@@ -14,7 +14,7 @@
 @section('content')
 
     @php
-        $categoryHandler = app(\Wanglelecc\Laracms\Handlers\CategoryHandler::class);
+        $categoryHandler = app(\App\Handlers\CategoryHandler::class);
         $categoryItems = $categoryHandler->select($categoryHandler->getCategorys($type));
     @endphp
 
@@ -26,8 +26,6 @@
                     <form id="form-validator" class="form-horizontal" method="POST" action="{{ $category->id ? route('administrator.category.update', [$category->id, $type]) : route('administrator.category.store', $type) }}?redirect={{ previous_url() }}">
                         {{ csrf_field() }}
                         <input type="hidden" name="_method" class="mini-hidden" value="{{ $category->id ? 'PUT' : 'POST' }}">
-                        {{-- path 字段暂时没用 --}}
-                        <input type="hidden" name="path" class="mini-hidden" value="0">
 
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="parent" class="col-md-2 col-sm-2 control-label required">父级</label>
@@ -44,21 +42,12 @@
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="name" class="col-md-2 col-sm-2 control-label required">名称</label>
                             <div class="col-md-5 col-sm-10">
-                            <input type="text" name="name" autocomplete="off" id="name" class="form-control" value="{{ old('name',$category->name) }}"
+                            <input type="text" name="name" autocomplete="off" class="form-control" value="{{ old('name',$category->name) }}"
                                    required
                                    data-fv-trigger="blur"
                                    minlength="1"
                                    maxlength="128"
                             ></div>
-                        </div>
-                        <div class="form-group has-feedback  has-icon-right">
-                            <label for="en_name" class="col-md-2 col-sm-2 control-label">英语名称</label>
-                            <div class="col-md-5 col-sm-10">
-                                <input type="text" name="en_name" autocomplete="off" id="en_name" class="form-control" value="{{ old('en_name',$category->en_name) }}"
-                                       data-fv-trigger="blur"
-                                       minlength="1"
-                                       maxlength="128"
-                                ></div>
                         </div>
 
                         <div class="form-group has-feedback  has-icon-right">
@@ -74,7 +63,7 @@
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="" class="col-md-2 col-sm-2 control-label required">排序</label>
                             <div class="col-md-5 col-sm-10">
-                            <input type="number" name="order" autocomplete="off" placeholder="请输入排序" class="form-control" value="{{ old('order',$category->order ?: 999) }}"
+                            <input type="number" name="order" autocomplete="off" placeholder="请输入排序" class="form-control" value="{{ old('order',$category->order) }}"
                                    required
                                    data-fv-trigger="blur"
                                    min="1"
@@ -114,25 +103,6 @@
                                       maxlength="255"
                             >{{  old('description', $category->description) }}</textarea>
                             </div>
-                        </div>
-
-                        <div class="form-group has-feedback  has-icon-right">
-                            <label for="email" class="col-md-2 col-sm-2 control-label">联系邮箱</label>
-                            <div class="col-md-5 col-sm-10">
-                                <input type="email" name="email" autocomplete="off" id="email" class="form-control" value="{{ old('email',$category->email) }}"
-                                       data-fv-trigger="blur"
-                                       minlength="1"
-                                       maxlength="128"
-                                ></div>
-                        </div>
-                        <div class="form-group has-feedback  has-icon-right">
-                            <label for="tel" class="col-md-2 col-sm-2 control-label">联系电话</label>
-                            <div class="col-md-5 col-sm-10">
-                                <input type="text" name="tel" autocomplete="off" id="tel" class="form-control" value="{{ old('tel',$category->tel) }}"
-                                       data-fv-trigger="blur"
-                                       minlength="1"
-                                       maxlength="50"
-                                ></div>
                         </div>
 
                         <div class="form-group">

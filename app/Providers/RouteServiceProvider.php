@@ -23,7 +23,10 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Route::bind('safePage',function($value){ return \App\Models\Page::show($value); });
+        Route::bind('safeArticle',function($value){ return \App\Models\Article::show( $value); });
+        Route::bind('articleCategory',function($value){ return \App\Models\Category::show($value, 'article'); });
+        Route::bind('safeWechat',function($value){ return \App\Models\Wechat::where('object_id', $value)->first(); });
 
         parent::boot();
     }
@@ -53,7 +56,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::middleware('web')
              ->namespace($this->namespace)
-             ->group(base_path('routes/web.php'));
+             ->group(__DIR__.'/../../routes/web.php');
     }
 
     /**
@@ -68,6 +71,6 @@ class RouteServiceProvider extends ServiceProvider
         Route::prefix('api')
              ->middleware('api')
              ->namespace($this->namespace)
-             ->group(base_path('routes/api.php'));
+             ->group(__DIR__.'/../../routes/api.php');
     }
 }
