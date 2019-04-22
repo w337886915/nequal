@@ -92,10 +92,11 @@
                 <div class="col-sm-2 text-center">
                     <a class="logo" href="/">
                         <img alt="nEqual"
-                             src="/assets/logo-zh-dbef5f389fb045c60f710d4d4e6225e9015c1684b1a1f7b81e000b952581dcd4.png">
+                             src="https://www.nequal.com/images/nEqual/nEqua_logo.svg">
                     </a>
                     <div class="qrcode">
-                        <img src="#" style="width: 100px;height: 100px;background-color: #FFFFFF;"></div>
+                        <img src="https://static.easyicon.net/preview/115/1158132.gif" style="width: 100px;height: 100px;background-color: #FFFFFF;">
+                    </div>
                     <div>关注nEqual公众号</div>
                     <div class="sns">
                         <a class="weibo" href="#" target="_blank"></a>
@@ -108,9 +109,9 @@
     <div class="copyright">
         <div class="container">
             <div class="row">
-                <div class="col-md-10"> Copyright ©2010-2018 HYPERS &nbsp;&nbsp;<br class="visible-xs"> 沪 ICP 备 12011101
-                    号 - 5 &nbsp;<br class="visible-xs"> 公安机关备案号 31010902002414 　<br class="visible-xs"> <a
-                            href="/privacy" target="_blank">HYPERS 隐私条款</a></div>
+                <div class="col-md-10"> Copyright ©2010-2018 nEqual &nbsp;&nbsp;<br class="visible-xs"> 沪 ICP 备 88888888
+                    号 - 8 &nbsp;<br class="visible-xs"> 公安机关备案号 88888888 　<br class="visible-xs"> <a
+                            href="/privacy" target="_blank">nEqual 隐私条款</a></div>
             </div>
         </div>
     </div>

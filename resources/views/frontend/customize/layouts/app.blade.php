@@ -16,7 +16,7 @@
   <meta content="HYPERS" name="apple-mobile-web-app-title">
   <link href="images/icons/logo/hypers_crop_256.png" rel="apple-touch-icon">
   <link href="/images/favicon.png" rel="icon" type="image/png">
-    @yield('style')
+  @yield('style')
   <style>
     .page-content-wrapper {
       padding: 40px 0 50px 0;
@@ -48,6 +48,13 @@
 @yield('script-navbar')
 @yield('script-banner')
 @yield('script-content')
+<script>
+  $(function(){
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+  })
+</script>
 </body>
 </head>
 </html>

@@ -11,17 +11,21 @@
 
     .navbar-toggler span {
         font-size: 30px;
-        line-height: 50px;
+        line-height: 68px;
         margin-right: 10px;
         color: #FFFFFF;
     }
 
     .nav-transparent {
         min-height: 68px;
-        background-color: transparent !important;
+        background-color: transparent;
         margin-bottom: 0;
         border: none;
         transition: opacity .6s ease, background .6s ease, box-shadow .6s ease;
+    }
+
+    .navbar.fixd-background {
+        background-color: #303848;
     }
 
     .nav-transparent.nav-bg {
@@ -57,8 +61,8 @@
         background-color: unset !important;
     }
 </style>
-<nav class="navbar navbar-fixed-top nav-transparent ">
-    <div class="container">
+<nav class="{{ isset($fixdBackgroud) && $fixdBackgroud ? 'fixd-background' : '' }} navbar navbar-fixed-top nav-transparent">
+    <div class="container-f">
         <div class="navbar-header">
             <a class="navbar-brand" href="./">
                 <img alt="nEqual" src="https://www.nequal.com/images/nEqual/nEqua_logo.svg" height="50">

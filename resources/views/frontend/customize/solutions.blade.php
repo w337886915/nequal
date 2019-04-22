@@ -3,6 +3,8 @@
     <link rel="stylesheet" href="{{asset('vendor/nequal/css/frontend.css')}}" />
 @endsection
 @section('content')
+  <!--navbar-->
+  @include('frontend.customize.layouts.navbar', ['active' => 'solutions', 'fixdBackgroud' => true])
     <div class="page-content-wrapper products">
         <div class="container-fluid">
             <div class="container">
