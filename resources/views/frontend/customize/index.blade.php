@@ -1,104 +1,100 @@
 @extends('frontend.customize.layouts.app')
-@section('banner')
+@section('content')
+    <!--navbar-->
+    @include('frontend.customize.layouts.navbar', ['active' => 'index'])
+
+    <!--banner-->
+    @include('frontend.customize.layouts.banner')
+
+    <!--product-->
     <style>
-        .banners-slider {
-            height: 500px;
-            overflow: hidden;
-            margin-bottom: 30px;
+        .product-item {
+            margin-bottom: 25px;
         }
 
-        .banners-slider .banner-item {
-            width: 100%;
-            height: 500px;
+        .product-item .media {
+
         }
 
-        .banners-slider .banner-item img {
-            height: 500px;
-            width: 100%;
+        .product-item .media-left {
+            padding-right: 30px
         }
 
-        .banners-slider .slick-dots {
-            position: absolute;
-            bottom: 20px;
+        .product-item .media-left, .product-item .media-body, .product-item .media-right {
+            display: table-cell;
+            vertical-align: top;
+        }
+
+        .product-item .media-left .media-object {
+            max-width: 140px
+        }
+
+        .product-item .media-heading {
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .product-item .media-body p {
+            font-size: 14px;
+            line-height: 28px;
+        }
+
+        .product-item .media-body .product-intro {
+            min-height: 85px;
             display: block;
-            width: 100%;
-            padding: 0;
-            list-style: none;
-            text-align: center;
         }
 
-        .banners-slider .slick-dots li {
-            position: relative;
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            margin: 0 5px;
-            padding: 0;
-            cursor: pointer;
+        .product-item .product-item-attr a {
+            color: #28aedf !important;
+            margin-right: 15px;
         }
 
-        .banners-slider .slick-dots li button {
-            font-size: 0;
-            line-height: 0;
-            display: block;
-            width: 20px;
-            height: 20px;
-            padding: 5px;
-            cursor: pointer;
-            color: transparent;
-            border: 0;
-            outline: none;
-            background: transparent;
+        .product-item .product-item-attr a:hover {
+            text-decoration: none !important;
         }
 
-        .banners-slider .slick-dots li button::before {
-            font-size: 0.40rem;
-            content: "-";
-            color: #B9B9B9;
+        .product-item .product-item-attr img {
+            width: 22px;
+            height: 22px;
         }
 
-        .banners-slider .slick-dots li button::before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 20px;
-            height: 5px;
-            content: '';
-            text-align: center;
-            background-color: #999999;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+        .product-group-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 0;
         }
 
-        .banners-slider .slick-dots li.slick-active button::before {
-            background-color: #3498db
+        .product-group-actions a {
+            margin: 10px 0;
         }
 
-        .banners-slider .slick-dots.banners-arrow {
-            bottom: 0.48rem
+        .product-group-actions .btn-default {
+            border-color: #28aedf;
+            color: #28aedf;
+        }
+
+        @media (max-width: 991px) {
+            .product-item .media-left {
+                display: block;
+                text-align: center;
+                padding: 0.10rem;
+            }
+
+            .product-item .media-left .media-object {
+                margin: auto;
+            }
+
+            .product-item .media-body {
+                display: block;
+                width: auto;
+            }
+
+            .product-item .media-body .media-heading {
+                text-align: center;
+            }
         }
     </style>
-    <div class="banners-slider">
-        <div class="banner-item">
-            <a href="">
-                <img
-                        alt=""
-                        src="https://www.qiniu.com/assets/banner/banner-qvm1rmb-index-3c79c38ee87a7b6a0ef8ff28b2d8da9a28e567bdf3cb9bea8ea761d601be7ce6.jpg">
-            </a>
-        </div>
-        <div class="banner-item"><a href=""><img
-                        alt=""
-                        src="https://www.qiniu.com/assets/banner/banner-qvm1rmb-index-3c79c38ee87a7b6a0ef8ff28b2d8da9a28e567bdf3cb9bea8ea761d601be7ce6.jpg"></a></div>
-        <div class="banner-item"><a href=""><img
-                        alt=""
-                        src="https://www.qiniu.com/assets/banner/banner-qvm1rmb-index-3c79c38ee87a7b6a0ef8ff28b2d8da9a28e567bdf3cb9bea8ea761d601be7ce6.jpg"></a></div>
-        <div class="banner-item"><a href=""><img
-                        alt=""
-                        src="https://www.qiniu.com/assets/banner/banner-qvm1rmb-index-3c79c38ee87a7b6a0ef8ff28b2d8da9a28e567bdf3cb9bea8ea761d601be7ce6.jpg"></a></div>
-    </div>
-
-@endsection
-@section('content')
     <div class="page-content-wrapper products">
         <div class="container">
             <div class="page-title">
@@ -369,4 +365,9 @@
             </div>
         </div>
     </div>
+@endsection
+@section('script-content')
+    <script>
+
+    </script>
 @endsection

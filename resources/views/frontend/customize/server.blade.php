@@ -1,6 +1,4 @@
 @extends('frontend.customize.layouts.app')
-@section('star_class') services @endsection
-@section('fluid_class') products @endsection
 @section('page_title')
     <div class="container hypers-solutions-top-wrap">
         <div class="row hypers-solutions-top">
@@ -10,6 +8,9 @@
     </div>
 @endsection
 @section('content')
+    <!--navbar-->
+    @include('frontend.customize.layouts.navbar', ['active' => 'services', 'fixdBackgroud' => true])
+
     <div class="page-content-wrapper services">
         <div class="hypers-services-top-line auto"></div>
         <div class="container-fluid">

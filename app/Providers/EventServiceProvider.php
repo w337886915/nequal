@@ -3,8 +3,6 @@
 namespace App\Providers;
 
 use Illuminate\Support\Facades\Event;
-use Illuminate\Auth\Events\Registered;
-use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
 class EventServiceProvider extends ServiceProvider
@@ -15,9 +13,36 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        Registered::class => [
-            SendEmailVerificationNotification::class,
+        \SocialiteProviders\Manager\SocialiteWasCalled::class => [
+            // add your listeners (aka providers) here
+            'SocialiteProviders\Weixin\WeixinExtendSocialite@handle',
+            'SocialiteProviders\WeixinWeb\WeixinWebExtendSocialite@handle',
+            'SocialiteProviders\QQ\QqExtendSocialite@handle',
+            'SocialiteProviders\Weibo\WeiboExtendSocialite@handle',
         ],
+
+        'Wanglelecc\LaracmsEvents\BehaviorLogEvent' => [
+            'App\Listeners\BehaviorLogListener',
+        ],
+
+        'App\Events\Event' => [
+            'App\Listeners\EventListener',
+        ],
+
+
+
+//        'Illuminate\Auth\Events\Login' => [
+//            'App\Listeners\UserEventSubscriber@onUserLogin'
+//        ],
+    ];
+
+    /**
+     * 需要注册的订阅者类。
+     *
+     * @var array
+     */
+    protected $subscribe = [
+        'App\Listeners\UserEventSubscriber',
     ];
 
     /**

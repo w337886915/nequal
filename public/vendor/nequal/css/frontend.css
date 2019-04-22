@@ -9187,64 +9187,6 @@ body {
   color: #999;
 }
 @media screen and (min-width: 320px) {
-  footer .container {
-    position: relative;
-  }
-  footer .bar {
-    background: #29abe2;
-  }
-  footer .bar .container {
-    padding: 60px 0;
-  }
-  footer .bar .container .title {
-    height: 160px;
-  }
-  footer .bar h2 {
-    font-size: 70px;
-    line-height: 106px;
-    text-transform: uppercase;
-    color: #fff;
-    padding: 20px;
-  }
-  footer .bar .logo {
-    position: absolute;
-    right: 20px;
-    top: 90px;
-  }
-  footer .sitemap {
-    padding: 40px 0;
-    background: #222;
-  }
-  footer .sitemap ul {
-    float: left;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    margin-right: 80px;
-  }
-  footer .sitemap ul li a {
-    color: #999;
-    line-height: 24px;
-    text-transform: uppercase;
-  }
-  footer .sitemap ul li:nth-child(1) a {
-    color: #e3e3e3;
-  }
-  footer .sns-info #btn_wechat {
-    text-decoration: none;
-  }
-  footer .sns-info img {
-    margin: 0 4px;
-  }
-  footer .sns-info img.center-block.visible-xs {
-    width: 30%;
-    background: #fff;
-    padding: 10px;
-  }
-  footer .copyright {
-    background: #222;
-    padding: 10px 0;
-  }
   .hypers-contact-us {
     font-size: 26px;
     line-height: 40px;
@@ -9269,15 +9211,7 @@ body {
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-  footer .bar .container {
-    padding: 36px 12px !important;
-  }
-  footer .bar .title {
-    height: 50px !important;
-  }
-  footer .sns-info {
-    margin-top: 20px;
-  }
+
 }
 .hypers-solutions-top {
   margin-top: 40px;
@@ -10461,14 +10395,6 @@ body.war-for-king .hypers-footer-wrap h4 {
     bottom: -30px;
     right: -130px;
   }
-  footer .bar .container h2 {
-    font-size: 30px;
-    line-height: 36px;
-  }
-  footer .bar .container .logo {
-    right: 20px;
-    top: 10px;
-  }
 }
 @media only screen and (min-width: 375px) and (max-width: 413px) {
   .hypers-solution-wrap .hypers-catogry-wrap .hypers-catogry-caption-wrap .hypers-caption-zh-cn {
@@ -10482,14 +10408,6 @@ body.war-for-king .hypers-footer-wrap h4 {
   }
   .hypers-contact-us {
     font-size: 20px;
-  }
-  footer .bar .container h2 {
-    font-size: 30px;
-    line-height: 36px;
-  }
-  footer .bar .container .logo {
-    right: 20px;
-    top: 10px;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 374px) {
@@ -10507,15 +10425,6 @@ body.war-for-king .hypers-footer-wrap h4 {
   #section2 .hypers-solution-more {
     bottom: -80px;
     right: -130px;
-  }
-  footer .bar .container h2 {
-    font-size: 20px;
-    line-height: 26px;
-  }
-  footer .bar .container .logo {
-    right: 20px;
-    top: 34px;
-    width: 60px;
   }
   .hypers-contact-us {
     font-size: 18px;
@@ -12797,9 +12706,6 @@ body {
 @media screen and (width: 1024px) {
   .x-hidden {
     display: none !important;
-  }
-  footer .sitemap ul {
-    margin-right: 56px;
   }
 }
 /** Error page **/
