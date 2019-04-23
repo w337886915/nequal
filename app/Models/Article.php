@@ -32,6 +32,7 @@ class Article extends Model
 {
     use SoftDeletes;
     use WithCommonHelper;
+//    use Searchable;  // 全文搜索没用
 
 
     public $dispatchesEvents  = [
