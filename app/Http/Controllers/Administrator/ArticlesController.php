@@ -50,6 +50,7 @@ class ArticlesController extends Controller
      */
     public function index(Article $article, Request $request, CategoryHandler $categoryHandler)
     {
+
         $this->authorize('index', $article);
 
         // 分类过滤
