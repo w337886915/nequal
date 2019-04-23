@@ -33,7 +33,8 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        return frontend_view('welcome');
+//        return frontend_view('welcome');
+        return frontend_view('index');
     }
 
     /**
