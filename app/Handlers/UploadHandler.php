@@ -243,7 +243,7 @@ class UploadHandler
         if( ! ( $path = $file->store($folder_name)) ) {
             return false;
         }
-        var_dump($path);die;
+
         // 将文件信息记录到数据库
         if($result = $this->saveFile($object_id, $type, $path, $mimeType, $md5, $title, $folder, $size, $width, $height, $editor)){
             return [

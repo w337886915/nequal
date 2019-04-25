@@ -1,7 +1,7 @@
 <!DOCTYPE html><!--[if IE 8]>
-<html lang="en" class="ie8"><![endif]--><!--[if IE 9]>
-<html lang="en" class="ie9"><![endif]--><!--[if !IE]><!-->
-<html lang="en"><!--<![endif]-->
+<html lang="{{app()->getLocale()}}" class="ie8"><![endif]--><!--[if IE 9]>
+<html lang="{{app()->getLocale() }}" class="ie9"><![endif]--><!--[if !IE]><!-->
+<html lang="{{app()->getLocale()}}"><!--<![endif]-->
 <head>
   <title>nEqual-@yield('title')</title>
   <meta charset="utf-8">

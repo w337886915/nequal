@@ -29,6 +29,13 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
  */
 class Controller extends BaseController
 {
+    public function __construct()
+    {
+        $lang = app()->getLocale();
+        session('lang', $lang);
+    }
+
+
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     /**
