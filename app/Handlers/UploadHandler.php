@@ -45,7 +45,7 @@ class UploadHandler
 
         return Storage::disk('local')->exists($filename);
     }
-    
+
     /**
      * 保存上传的文件分片
      *
@@ -61,10 +61,10 @@ class UploadHandler
 
         // 构建分片目录
         $tmp_chunks_directory = "chunks/{$md5}";
-        
+
         return Storage::disk('local')->putFileAs($tmp_chunks_directory, $file, "{$chunk}.part");
     }
-    
+
     /**
      * 合并分片文件并保存到文件系统记录入库
      *
@@ -179,7 +179,7 @@ class UploadHandler
 
         return false;
     }
-    
+
     /**
      * 保存上传文件
      *
@@ -193,11 +193,12 @@ class UploadHandler
      */
     public function saveUploadFile($type, $object_id, $file, $folder, $editor)
     {
+
         $type = strtolower($type);
-        
+
         // 构建存储的文件夹规则，值如：images/avatars/201709/21/
         $folder_name = $type."s/$folder/" . date("Ym", time()) . '/'.date("d", time());
-        
+
         // 获取文件的后缀名，因图片从剪贴板里黏贴时后缀名为空，所以此处确保后缀一直存在
         $extension = strtolower($file->getClientOriginalExtension()) ? : 'png';
 
@@ -205,19 +206,19 @@ class UploadHandler
         if ( ! in_array($extension, config('filesystems.uploader.'.$type.'.allowed_ext')) ) {
             return false;
         }
-    
+
         // 原始文件名
         $title = $file->getClientOriginalName();
-    
+
         // 获取文件的 Mime
         $mimeType = $file->getClientMimeType();
-        
+
         // 获取文件大小
         $size = $file->getSize();
-        
+
         // 获取文件 MD5 值
         $md5 = md5_file($file->getPathname());
-       
+
         // 检查文件是否已上传过
         if($fileModel = $this->checkFile($md5, $type, $folder)){
             return [
@@ -226,7 +227,7 @@ class UploadHandler
                 'url'   => $type == 'image' ? storage_image_url($fileModel->path) : storage_url($fileModel->path),
             ];
         }
-    
+
         // 实例化 Image 对象
         if($type == 'image'){
             $image = Image::make($file->getPathname());
@@ -237,12 +238,12 @@ class UploadHandler
             $width = 0;
             $height = 0;
         }
-        
+
         // 将图片移动到我们的目标存储路径中 或 云存储中
         if( ! ( $path = $file->store($folder_name)) ) {
             return false;
         }
-        
+        var_dump($path);die;
         // 将文件信息记录到数据库
         if($result = $this->saveFile($object_id, $type, $path, $mimeType, $md5, $title, $folder, $size, $width, $height, $editor)){
             return [
@@ -253,7 +254,7 @@ class UploadHandler
         }else{
             Storage::delete($path);
         }
-    
+
         return false;
     }
 

@@ -10,16 +10,18 @@ use Illuminate\Http\Request;
 
 class SolutionsController extends Controller
 {
-    public function index(){
-        $category_model = new Category();
-        $get_level_one = $category_model->findOrFail(14)->toArray();
-        $get_level_two = $category_model->with('articles')->where('parent',14)->get();
+    public function index(Request $request,Category $category){
+
+        $get_level_one = $category->findOrFail(14)->toArray();
+        $get_level_two = $category->with(['articles' => function ($query) {
+            $query->select('title');
+        }])->where('parent',14)->get();
         $output['get_level_one'] = $get_level_one;
         $output['get_level_two'] = $get_level_two->toArray();
-
+        //dd($output);
         //dd($get_level_two);
         //dd($get_level_one);
         //dd($output);
-        return laravel_frontend_view('solutions',$output);
+        return frontend_view('solutions',$output);
     }
 }

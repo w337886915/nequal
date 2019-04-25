@@ -169,6 +169,8 @@ Route::group(['domain' => config('administrator.domain'), 'prefix' => config('ad
     Route::get('form/{type}', 'FormController@index')->name('form.index');
     Route::get('form/{form}/{type}', 'FormController@show')->name('form.show');
     Route::delete('form/{form}/{type}', 'FormController@destroy')->name('form.destroy');
+    # 咨询申请
+    Route::resource('consultations','ConsultationController');
 
 });
 

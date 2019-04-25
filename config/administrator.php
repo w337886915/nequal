@@ -25,10 +25,10 @@ return [
     'paginate' => [
         'limit' => 15,
     ],
-    
+
     // ueditor , simditor
     'editor' => 'simditor',
-    
+
     /**
      * 后台菜单数组
      */
@@ -233,6 +233,16 @@ return [
                     "link" => "",
                     "route" => "form.index",
                     "params" => ['feedback'],
+                    "query" => [],
+                ],
+                "content.consultations" => [
+                    "id" => "content.consultations.index",
+                    "text" => "咨询申请",
+                    "permission" => function(){ return Auth::user()->can('manage_consultations'); },
+                    "icon" => "icon-envelope-alt",
+                    "link" => "",
+                    "route" => "consultations.index",
+                    "params" => [],
                     "query" => [],
                 ],
                 /*

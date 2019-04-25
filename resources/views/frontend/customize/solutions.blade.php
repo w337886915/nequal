@@ -5,231 +5,295 @@
 @section('content')
   <!--navbar-->
   @include('frontend.customize.layouts.navbar', ['active' => 'solutions', 'fixdBackgroud' => true])
-    <div class="page-content-wrapper products">
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row-split-150"></div>
-                <div class="page-title"><p><span>HYPERS GROWTH CLOUD</span></p>
-                    <p>企 业 增 长 云</p></div>
-                <div class="row-split-70"></div>
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-group-wrap">
-                            <div class="product-group-title"><a href="../products_analyticscloud" target="_blank"><p>Hyper
-                                        Analytics Cloud</p>
-                                    <p>分析云</p></a></div>
-                            <ul class="product-group-items">
-                                <li><a href="../products_analyticscloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-web-analytics.svg')}}" class="product-logo-img"
-                                                title="Hyper Web Analytics" alt="Hyper Web Analytics">
-                                        <p>Hyper Web Analytics</p>
-                                        <p>网站分析</p></a></li>
-                                <li><a href="../product_hma"><img src="{{asset('vendor/nequal/picture/hyper-mobile-analytics.svg')}}"
-                                                                  class="product-logo-img" title="Hyper Mobile Analytics"
-                                                                  alt="Hyper Mobile Analytics">
-                                        <p>Hyper Mobile Analytics</p>
-                                        <p>移动应用分析</p></a></li>
-                                <li><a href="../products_analyticscloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-video-analytics.svg')}}" class="product-logo-img"
-                                                title="Hyper Video Analytics" alt="Hyper Video Analytics">
-                                        <p>Hyper Video Analytics</p>
-                                        <p>视频媒体分析</p></a></li>
-                                <li><a href="../products_analyticscloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-ads-analytics.svg')}}" class="product-logo-img"
-                                                title="Hyper Ads Analytics" alt="Hyper Ads Analytics">
-                                        <p>Hyper Ads Analytics</p>
-                                        <p>广告分析</p></a></li>
-                                <li><a href="../products_analyticscloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-media-intelligence.svg')}}" class="product-logo-img"
-                                                title="Hyper Media Intelligence" alt="Hyper Media Intelligence">
-                                        <p>Hyper Media Intelligence</p>
-                                        <p>媒介效力分析</p></a></li>
-                                <li><a href="../products_analyticscloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-ec-intelligence.svg')}}" class="product-logo-img"
-                                                title="Hyper EC Intelligence" alt="Hyper EC Intelligence">
-                                        <p>Hyper EC Intelligence</p>
-                                        <p>电商分析</p></a></li>
-                                <li><a href="../products_analyticscloud#list"><img src="{{asset('vendor/nequal/picture/hyper-things.svg')}}"
-                                                                                   class="product-logo-img"
-                                                                                   title="Hyper Things" alt="Hyper Things">
-                                        <p>Hyper Things</p>
-                                        <p>一物一码</p></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-group-wrap">
-                            <div class="product-group-title"><a href="../products_audiencecloud" target="_blank"><p>Hyper
-                                        Audience Cloud</p>
-                                    <p>受众云</p></a></div>
-                            <ul class="product-group-items">
-                                <li><a href="../products_audiencecloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-1st-party-dmp.svg')}}" class="product-logo-img"
-                                                title="Hyper 1st-Party DMP" alt="Hyper 1st-Party DMP">
-                                        <p>Hyper 1st-Party DMP</p>
-                                        <p>企业第一方数据管理平台</p></a></li>
-                                <li><a href="../products_audiencecloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-1st-party-cdp.svg')}}" class="product-logo-img"
-                                                title="Hyper 1st-Party CDP" alt="Hyper 1st-Party CDP">
-                                        <p>Hyper 1st-Party CDP</p>
-                                        <p>企业第一方受众画像平台</p></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 hidden-md hidden-lg"></div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-group-wrap">
-                            <div class="product-group-title"><a href="../products_experiencecloud" target="_blank"><p>Hyper
-                                        Experience Cloud</p>
-                                    <p>体验云</p></a></div>
-                            <ul class="product-group-items">
-                                <li><a href="../products_experiencecloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-demand-side-platform.svg')}}" class="product-logo-img"
-                                                title="Hyper Demand Side Platform" alt="Hyper Demand Side Platform">
-                                        <p>Hyper Demand Side Platform</p>
-                                        <p>需求方平台</p></a></li>
-                                <li><a href="../products_experiencecloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-demand-side-platform.svg')}}" class="product-logo-img"
-                                                title="Hyper Ad Serving" alt="Hyper Ad Serving">
-                                        <p>Hyper Ad Serving</p>
-                                        <p>投放管理平台</p></a></li>
-                                <li><a href="../products_experiencecloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-omni-channel-campaign-managment.svg')}}"
-                                                class="product-logo-img" title="Hyper Omni-channel Campaign Management"
-                                                alt="Hyper Omni-channel Campaign Management">
-                                        <p>Hyper Omni-channel Campaign Management</p>
-                                        <p>多渠道营销活动管理</p></a></li>
-                                <li><a href="../products_experiencecloud#list"><img src="{{asset('vendor/nequal/picture/hyper-scrm.svg')}}"
-                                                                                    class="product-logo-img"
-                                                                                    title="Hyper SCRM" alt="Hyper SCRM">
-                                        <p>Hyper SCRM</p>
-                                        <p>社交会员管理平台</p></a></li>
-                                <li><a href="../products_experiencecloud#list"><img
-                                                src="{{asset('vendor/nequal/picture/hyper-realtime-personalization-engine.png')}}"
-                                                class="product-logo-img" title="Hyper Realtime Personalization Engine"
-                                                alt="Hyper Realtime Personalization Engine">
-                                        <p>Hyper Realtime Personalization Engine</p>
-                                        <p>实时个性化推荐引擎</p></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="product-group-wrap">
-                            <div class="product-group-title"><a href="../products_insightcloud" target="_blank"><p>Hyper
-                                        Insight Cloud</p>
-                                    <p>洞察云</p></a></div>
-                            <ul class="product-group-items">
-                                <li><a href="../products_insightcloud#list"><img src="{{asset('vendor/nequal/picture/hyper-data-lab.svg')}}"
-                                                                                 class="product-logo-img"
-                                                                                 title="Hyper 3rd-Party DMP"
-                                                                                 alt="Hyper 3rd-Party DMP">
-                                        <p>Hyper 3rd-Party DMP</p>
-                                        <p>第三方 DMP</p></a></li>
-                                <li><a href="../products_insightcloud#list"><img src="{{asset('vendor/nequal/picture/hyper-industries.svg')}}"
-                                                                                 class="product-logo-img"
-                                                                                 title="Hyper Industry Insight"
-                                                                                 alt="Hyper Industry Insight">
-                                        <p>Hyper Industry Insight</p>
-                                        <p>行业洞察</p></a></li>
-                                <li><a href="../products_insightcloud#list"><img src="{{asset('vendor/nequal/picture/hyper-trust.svg')}}"
-                                                                                 class="product-logo-img"
-                                                                                 title="Hyper Credibility Platform"
-                                                                                 alt="Hyper Credibility Platform">
-                                        <p>Hyper Credibility Platform</p>
-                                        <p>置信度平台</p></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="text-align:center"><a class="primary-button" href="/demo-request" target="_blank">立即申请试用</a>
-                </div>
-                <div class="hypers-products-split-line row-split-100"></div>
-                <div class="page-sub-title"><p>USE CASES</p>
-                    <p>我 们 将 助 您 实 现 增 长</p></div>
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1 products-cases">
-                        <div class="col-md-4 col-sm-4"><img src="{{asset('vendor/nequal/picture/cases-1.svg')}}">
-                            <p>掌控并激活数据</p></div>
-                        <div class="col-md-4 col-sm-4"><img src="{{asset('vendor/nequal/picture/cases-2.svg')}}">
-                            <p>全方位了解客户</p></div>
-                        <div class="col-md-4 col-sm-4"><img src="{{asset('vendor/nequal/picture/cases-3.svg')}}">
-                            <p>提升运营效率</p></div>
-                        <div class="col-md-4 col-sm-4"><img src="{{asset('vendor/nequal/picture/cases-4.svg')}}">
-                            <p>精准获客</p></div>
-                        <div class="col-md-4 col-sm-4"><img src="{{asset('vendor/nequal/picture/cases-5.svg')}}">
-                            <p>准确归因</p></div>
-                        <div class="col-md-4 col-sm-4"><img src="{{asset('vendor/nequal/picture/cases-6.svg')}}">
-                            <p>实时获取决策指导</p></div>
-                        <div class="col-md-4 col-sm-4"><img src="{{asset('vendor/nequal/picture/cases-7.svg')}}">
-                            <p>全生命周期洞察</p></div>
-                        <div class="col-md-4 col-sm-4"><img src="{{asset('vendor/nequal/picture/cases-8.svg')}}">
-                            <p>跨渠道传递个性化体验</p></div>
-                        <div class="col-md-4 col-sm-4"><img src="{{asset('vendor/nequal/picture/cases-9.svg')}}">
-                            <p>提升ARPU</p></div>
-                        <div class="col-sm-12 details"><p>底层数据天然打通，支持 SaaS 与企业本地化部署，提高业务灵活性</p></div>
-                    </div>
-                </div>
-                <div class="hypers-products-split-line row-split-100"></div>
-                <div class="page-sub-title"><p>CLIENTS</p>
-                    <p>全 球 顶 尖 客 户 的 一 致 选 择</p></div>
-                <div class="row">
-                    <div class="about-wrapper">
-                        <div class="col-md-12 items-wrapper col-6">
-                            <ul>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/benz.svg')}}" title="奔驰" alt="奔驰"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/about_c_11.svg')}}" title="中信证券" alt="中信证券"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/uniqlo.svg')}}" title="UNIQLO" alt="UNIQLO"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/about_c_25.svg')}}" title="新浪网" alt="新浪网"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/about_c_3.svg')}}" title="阳狮" alt="阳狮"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/about_c_1.svg')}}" title="尼尔森" alt="尼尔森"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/about_c_15.svg')}}" title="上海通用汽车" alt="上海通用汽车"></a>
-                                </li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/yh.svg')}}" title="银河证件" alt="银河证件"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/yum-china.svg')}}" title="YUM CHINA"
-                                                     alt="YUM CHINA"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/about_c_26.svg')}}" title="凤凰网" alt="凤凰网"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/dentsuaegisnetwork.svg')}}"
-                                                     title="Dentsu Aegis Network" alt="Dentsu Aegis Network"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/about_c_2.svg')}}" title="艾瑞咨询" alt="艾瑞咨询"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/about_c_17.svg')}}" title="上汽集团" alt="上汽集团"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/about_c_10.svg')}}" title="中国平安" alt="中国平安"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/mzc.svg')}}" title="美赞臣" alt="美赞臣"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/about_c_28.svg')}}" title="爱奇艺" alt="爱奇艺"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/mindshare.svg')}}" title="MINDSHARE"
-                                                     alt="MINDSHARE"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/ipsos.svg')}}" title="IPSOS" alt="IPSOS"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/about_c_18.svg')}}" title="雷克萨斯" alt="雷克萨斯"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/about_c_8.svg')}}" title="浦发银行" alt="浦发银行"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/about_c_40.svg')}}" title="奕欧来" alt="奕欧来"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/about_c_29.svg')}}" title="TVB" alt="TVB"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/yr.svg')}}" title="云锐集团" alt="云锐集团"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/arvato.svg')}}" title="Arvato" alt="Arvato"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/sqdt.svg')}}" title="上汽大通" alt="上汽大通"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/about_c_5.svg')}}" title="VISA" alt="VISA"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/about_c_42.svg')}}" title="倩碧" alt="倩碧"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/about_c_27.svg')}}" title="久游" alt="久游"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/prwh.svg')}}" title="派瑞威行" alt="派瑞威行"></a></li>
-                                <li class=""><a><img src="{{asset('vendor/nequal/picture/maxbit.svg')}}" title="秒硕" alt="秒硕"></a></li>
-                            </ul>
-                            <div class="clients-more">......</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="split-line"></div>
-                <div class="row"><p class="hypers-contact-us"><a class="primary-button" href="/demo-request"
-                                                                 target="_blank">立即申请试用</a><br> <a
-                                href="tel://400-806-3766">400-806-3766</a><br> <a href="mailto:contact@hypers.com">contact@hypers.com</a>
-                    </p></div>
-                <div class="row-split-100"></div>
-            </div>
-        </div>
-    </div>
+  <style>
+      .product-item {
+          margin-bottom: 25px;
+      }
+
+      .product-item .media {
+
+      }
+
+      .product-item .media-left {
+          padding-right: 30px
+      }
+
+      .product-item .media-left, .product-item .media-body, .product-item .media-right {
+          display: table-cell;
+          vertical-align: top;
+      }
+
+      .product-item .media-left .media-object {
+          max-width: 140px
+      }
+
+      .product-item .media-heading {
+          margin-top: 15px;
+          margin-bottom: 20px;
+      }
+
+      .product-item .media-body p {
+          font-size: 14px;
+          line-height: 28px;
+      }
+
+      .product-item .media-body .product-intro {
+          min-height: 85px;
+          display: block;
+      }
+
+      .product-item .product-item-attr a {
+          color: #28aedf !important;
+          margin-right: 15px;
+      }
+
+      .product-item .product-item-attr a:hover {
+          text-decoration: none !important;
+      }
+
+      .product-item .product-item-attr img {
+          width: 22px;
+          height: 22px;
+      }
+
+      .product-group-actions {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 10px 0;
+      }
+
+      .product-group-actions a {
+          margin: 10px 0;
+      }
+
+      .product-group-actions .btn-default {
+          border-color: #28aedf;
+          color: #28aedf;
+      }
+
+      @media (max-width: 991px) {
+          .product-item .media-left {
+              display: block;
+              text-align: center;
+              padding: 0.10rem;
+          }
+
+          .product-item .media-left .media-object {
+              margin: auto;
+          }
+
+          .product-item .media-body {
+              display: block;
+              width: auto;
+          }
+
+          .product-item .media-body .media-heading {
+              text-align: center;
+          }
+      }
+  </style>
+  <div class="page-content-wrapper products">
+      <div class="container">
+          <div class="page-title">
+              <h2>nEqual 解决方案</h2>
+          </div>
+          <div class="row">
+              @foreach ($get_level_two as $v)
+              <div class="col-sm-6 product-item">
+                  <div class="media">
+                      <div class="media-left">
+                          <img alt=""
+                               class="media-object"
+                               src="{{storage_image_url($v['thumb'])}}">
+                      </div>
+                      <div class="media-body">
+                          <h4 class="media-heading">
+                              {{$v['en_name']}}
+                          </h4>
+                          <h4 class="media-heading">
+                              {{$v['name']}}
+                          </h4>
+                          <p class="product-intro">
+                              {{$v['description']}}
+                          </p>
+                          <p class="product-item-attr">
+                              @foreach($v['articles'] as $v1)
+                              <a href="">
+                                  <img
+                                          alt=""
+                                          src="https://www.qiniu.com/assets/icon-storage-highlight@2x-5a13511e8a135b25aeaa1df7a44cec15d7291e5e9e2c5d0feae5361bc19687aa.png">
+                                  <span>{{$v1['title']}}</span>
+                              </a>
+                              @endforeach
+                          </p>
+                          <div class="product-group-actions">
+                              <button class="btn btn-default apply" data-name = "{{$v['name']}}" data-tel="{{$v['tel']}}" data-email="{{$v['email']}}" data-target="#feedback-modal" type="button">申请咨询/试用</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              @endforeach
+          </div>
+      </div>
+  </div>
+  <div class="modal fade alert-modal-css form-wrapper in" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="feedback-modal-label" data-keyboard="false" data-backdrop="true" style="display: none;">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <h4 class="modal-title" id="feedback-modal-label">申请咨询/试用</h4>
+              </div>
+              <div class="modal-body">
+                  <form class="form-horizontal" id="feedback-form" action="/consultation" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="/nKYt2EwTAz6lJ7XNHyAhbEv0CW3gfcbddK5rg1mUYlRCqNmNYL7kNU+8bEQWWLb1cGWZqSxgC0FqNB4BS/48w==">
+                      {{ csrf_field() }}
+                      <div class="tips text-center d-none">
+
+                      </div>
+
+
+                      <div class="form-group valid-bottom-border">
+                          <label for="feedback-content" class="col-sm-2 control-label">咨询内容</label>
+                          <div class="col-sm-10">
+                              <textarea maxlength="255" placeholder="请详细描述您的需求" class="form-control" id="feedback-content" name="content" cols="" rows="5"></textarea>
+                          </div>
+                      </div>
+
+                      <div class="form-group valid-up-border">
+                          <label for="feedback-company" class="col-sm-2 control-label">公司名称</label>
+                          <div class="col-sm-10">
+                              <input class="form-control" placeholder="请输入您的公司名" id="feedback-company" type="text" name="company">
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="feedback-name" class="col-sm-2 control-label"><small class="text-danger required-mark">*</small>称呼</label>
+                          <div class="col-sm-10">
+                              <input class="form-control" placeholder="请输入您的称呼" id="feedback-name" validate="true" type="text" name="name">
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="feedback-phone" class="col-sm-2 control-label"><small class="text-danger required-mark">*</small>电话</label>
+                          <div class="col-sm-10">
+                              <input class="form-control" placeholder="请输入您的手机号" id="feedback-phone" validate="true" validate="true" type="phone" name="phone">
+
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="feedback-city" class="col-sm-2 control-label"><small class="text-danger required-mark">*</small>地区</label>
+                          <div class="col-sm-10" id="province_city" required="true">
+                              <select name="province" id="province" class="province form-control"  style=""><option value="">请选择</option><option value="北京市">北京市</option><option value="天津市">天津市</option><option value="河北省">河北省</option><option value="山西省">山西省</option><option value="内蒙古自治区">内蒙古自治区</option><option value="辽宁省">辽宁省</option><option value="吉林省">吉林省</option><option value="黑龙江省">黑龙江省</option><option value="上海市">上海市</option><option value="江苏省">江苏省</option><option value="浙江省">浙江省</option><option value="安徽省">安徽省</option><option value="福建省">福建省</option><option value="江西省">江西省</option><option value="山东省">山东省</option><option value="河南省">河南省</option><option value="湖北省">湖北省</option><option value="湖南省">湖南省</option><option value="广东省">广东省</option><option value="广西壮族自治区">广西壮族自治区</option><option value="海南省">海南省</option><option value="重庆市">重庆市</option><option value="四川省">四川省</option><option value="贵州省">贵州省</option><option value="云南省">云南省</option><option value="西藏自治区">西藏自治区</option><option value="陕西省">陕西省</option><option value="甘肃省">甘肃省</option><option value="青海省">青海省</option><option value="宁夏回族自治区">宁夏回族自治区</option><option value="新疆维吾尔自治区">新疆维吾尔自治区</option><option value="香港特别行政区">香港特别行政区</option><option value="澳门特别行政区">澳门特别行政区</option><option value="台湾">台湾</option></select>
+
+                          </div>
+                      </div>
+
+                      <div class="actions" style="text-align: center">
+                          <button onclick="submitForm()" type="button" class="btn btn-primary submit-btn">提交</button>
+                          <input type="hidden" name="category" id="category">
+                          <input type="hidden" name="salesman_phone" id="Salesman_phone">
+                      </div>
+
+                      <div class="tips text-center bottom-tips ">
+                          <p> </p>
+                          <p>可以发邮件到 <span class="tips-dark" id="email"></span> 咨询</p>
+                          <p>您也可以拨打 <span class="tips-dark" id="tel"></span> 进行电话咨询</p>
+                      </div>
+                  </form>          </div>
+          </div>
+      </div>
+  </div>
 @endsection
-@section('script')
+@section('script-content')
+    <link href="https://cdn.bootcss.com/bootstrap-validator/0.5.3/css/bootstrapValidator.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
+
     <script>
         $(function(){
             $('.navbar').addClass('nav-bg')
+            $(".apply").click(function(){
+                var _this = $(this)
+                $("#email").html(_this.attr('data-email'))
+                $("#tel").html(_this.attr('data-tel'))
+                $("#category").val(_this.attr('data-name'))
+                $("#Salesman_phone").val(_this.attr('data-tel'))
+                $("#feedback-modal").modal('show')
+
+            })
+            $('#feedback-form').bootstrapValidator({
+                fields : {
+                    //验证手机
+                    'phone' : {          //input中的name 值
+                        validators:{
+                            regexp: {
+                                regexp: /^1\d{10}$/ ,
+                                message: '请输入正确的11位手机号'
+                            },
+                            notEmpty:{
+                                message: '手机号不能为空'
+                            }
+
+                        }
+                    },
+                    'province' : {
+                        validators:{
+                            notEmpty:{
+                                message: '请选择你所在地'
+                            }
+                        }
+                    },
+                    'name' : {
+                        validators:{
+                            notEmpty:{
+                                message: '称呼不能为空'
+                            }
+                        }
+                    },
+                    'content': {
+                        validators:{
+                            notEmpty:{
+                                message: '咨询内容不能为空'
+                            }
+                        }
+                    }
+
+
+
+                }
+            });
         })
+        function submitForm(){
+
+            var $form = $('#feedback-form');
+            $form.data("bootstrapValidator").validate(); // 手动验证
+            var isValid = $form.data("bootstrapValidator").isValid(); // 是否验证成功
+            if(isValid){
+                var url = $form.attr("action");
+                $.ajax({
+                    url: url,
+                    type: "post",
+                    async: true, // 是否异步请求（此处需这只为异步请求true，否则bootstrap的modal不会顺序显示）
+                    cache: false, // 是否缓存此页面，每次都请求服务器
+                    contentType: "application/x-www-form-urlencoded", // 内容编码类型，默认
+                    dataType: "json", // 预期服务器返回数据格式
+                    timeout: 60000, // 超时时间，60s
+                    data: $form.serialize(), // 请求参数
+                    beforeSend: function(xhr){
+
+                    }, // 发送请求预处理
+                    error: function(xhr, errMsg, e){
+                       // bootbox.alert("请求服务器失败！");
+                    }, // 请求服务器失败的处理
+                    dataFilter: function(data, type){
+                        return data;
+                    }, // 请求成功预处理，返回的值为success的参数data
+                    success: function(data){
+                        $("#feedback-modal").modal('hide')
+
+                    }
+                });
+            }
+        }
 
     </script>
 @endsection

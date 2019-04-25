@@ -58,6 +58,14 @@
                                        maxlength="128"
                                 ></div>
                         </div>
+                        <div class="form-group has-feedback  has-icon-right">
+                            <label for="en_name" class="col-md-2 col-sm-2 control-label">分类图片</label>
+                            <div class="col-md-5 col-sm-10">
+                                <img id="image_image" src="{{ storage_image_url($category->thumb) }}">
+                                <input id="form_thumb" type="hidden" name="thumb" value="{{ old('thumb',$category->thumb) }}">
+                                <button id="upload_thumb" type="button" class="btn btn-info uploader-btn-browse"><i class="icon icon-upload"></i> 上传</button>
+                            </div>
+                        </div>
 
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="keywords" class="col-md-2 col-sm-2 control-label">关键字</label>
@@ -147,4 +155,5 @@
 @endsection
 
 @section('scripts')
+    @include('backend::common._upload_image_scripts',['elem' => '#upload_thumb', 'previewElem' => '#image_image', 'fieldElem' => '#form_thumb', 'folder'=>'category','object_id'=>create_object_id()])
 @endsection

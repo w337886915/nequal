@@ -72,7 +72,7 @@ return [
             'oss_endpoint'      => env('ALIYUN_OSS_ENDPOINT',''), // 生成环境若使用的阿里云服务，可配置内网地址，上传速度更快
             'oss_prefix'        => env('ALIYUN_OSS_PREFIX', ''), // optional
             'oss_url'           => env('ALIYUN_OSS_URL', ''), // optional //  https://<bucket>.<endpoint>/<filename>
-            
+
             'vod_region_id'     => env('ALIYUN_VOD_REGION_ID', ''),
             'vod_upload_url'    => env('ALIYUN_VOD_URLOAD_URL', ''),
         ],
@@ -86,36 +86,36 @@ return [
         ],
 
     ],
-    
+
     // 配置的允许大小不能超过 PHP.ini 限制. 默认PHP POST 请求允许最大8MB，File Upload 最大 2MB
     'uploader' => [
-        
-        'folder' => ['avatar', 'article', 'blog', 'page', 'website', 'slide', 'link', 'video', 'annex', 'voice', 'navigation'],
-        
+
+        'folder' => ['avatar', 'article', 'blog', 'page', 'website', 'slide', 'link', 'video', 'annex', 'voice', 'navigation','category'],
+
         // 图片
         'image' => [
             'size_limit' => 5242880, // 单位：字节，默认：5MB
             'allowed_ext' => ["png", "jpg", "gif", 'jpeg', 'bmp'],
         ],
-        
+
         // 附件
         'annex' => [
             'size_limit' => 204857600000, // 单位：字节，默认：5MB (5242880 B)  // 104857600
             'allowed_ext' => ['zip','rar','7z','gz'],
         ],
-        
+
         // 文件
         'file' => [
             'size_limit' => 5242880, // 单位：字节，默认：5MB
             'allowed_ext' => ['pdf','doc','docx','xls','xlsx','ppt','pptx'],
         ],
-        
+
         // 音频
         'voice' => [
             'size_limit' => 5242880, // 单位：字节，默认：5MB
             'allowed_ext' => ['mp3','wmv'],
         ],
-        
+
         // 视频
         'video' => [
             'size_limit' => 5242880, // 单位：字节，默认：5MB
@@ -150,7 +150,7 @@ return [
             "videoAllowFiles" => [".flv", ".swf", ".mkv", ".avi", ".rm", ".rmvb", ".mpeg", ".mpg", ".ogg", ".ogv", ".mov", ".wmv", ".mp4", ".webm", ".mp3", ".wav", ".mid"],
             "videoUrlPrefix" => "",
             "videoPathFormat" => "",
-    
+
             "catcherLocalDomain" =>  ["127.0.0.1", "localhost", "img.baidu.com"],
             "catcherActionName" => "catchimage",
             "catcherFieldName" =>  "source",
@@ -158,7 +158,7 @@ return [
             "catcherMaxSize" =>  2048000,
             "catcherAllowFiles" =>  [".png", ".jpg", ".jpeg", ".gif", ".bmp"],
         ],
-        
+
     ],
 
 ];
