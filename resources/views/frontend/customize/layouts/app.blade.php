@@ -3,12 +3,12 @@
 <html lang="en" class="ie9"><![endif]--><!--[if !IE]><!-->
 <html lang="en"><!--<![endif]-->
 <head>
-  <title>nEqual</title>
+  <title>nEqual-@yield('title')</title>
   <meta charset="utf-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="" dynamic-meta name="description">
-  <meta content="" dynamic-meta name="keywords">
+  <meta content="@yield('description',config('system.common.basic.description',''))" dynamic-meta name="description">
+  <meta content="@yield('keywords', config('system.common.basic.keywords',''))" dynamic-meta name="keywords">
   <meta content="320" name="MobileOptimized">
   <meta content="#000000" name="theme-color">
   <meta content="yes" name="apple-mobile-web-app-capable">

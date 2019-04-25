@@ -56,24 +56,24 @@
                             <label for="target" class="col-md-2 col-sm-2 control-label required">类型</label>
                             <div class="col-md-5 col-sm-10">
                             <div class="radio">
-                                <label class="radio-inline">
+                             {{--   <label class="radio-inline">
                                     <input type="radio" name="type" value="action" v-model="type" required > 控制器
-                                </label>
+                                </label>--}}
                                 <label class="radio-inline">
                                     <input type="radio" name="type" value="link" v-model="type" required > 链接
                                 </label>
-                                <label class="radio-inline">
+                                {{--<label class="radio-inline">
                                     <input type="radio" name="type" value="article" v-model="type" required > 文章
-                                </label>
+                                </label>--}}
                                 <label class="radio-inline">
                                     <input type="radio" name="type" value="page" v-model="type" required > 页面
                                 </label>
-                                <label class="radio-inline">
+                               {{-- <label class="radio-inline">
                                     <input type="radio" name="type" value="category" v-model="type" required > 栏目
                                 </label>
                                 <label class="radio-inline">
                                     <input type="radio" name="type" value="navigation" v-model="type" required > 导航
-                                </label>
+                                </label>--}}
                             </div>
                             </div>
                         </div>
@@ -127,7 +127,7 @@
                             </div>
                         </div>
 
-                        <div  v-if="type == 'article' || type == 'category' " class="form-group has-feedback  has-icon-right">
+                         <div  v-if="type == 'article' || type == 'category' " class="form-group has-feedback  has-icon-right">
                             <label for="parent" class="col-md-2 col-sm-2 control-label required">分类</label>
                             <div class="col-md-5 col-sm-10">
                             <select class="form-control" name="params[category_id]">
@@ -227,7 +227,7 @@
        var app = new Vue({
            el : '#app',
            data : {
-               type : "{{old('type',$navigation->type)}}"
+               type : "{{old('type','link')}}"
            },
 
            updated : function(){

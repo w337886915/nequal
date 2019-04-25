@@ -36,7 +36,8 @@ class NavigationRequest extends Request
             'parent' => 'required|integer',
             'order' => 'nullable|integer',
             'path' => 'nullable|alpha_dash|max:255',
-            'link' => 'nullable|url|max:255',
+//            'link' => 'nullable|url|max:255',
+            'link' => 'nullable|min:1|max:255',
             'icon' => 'nullable|alpha_dash|max:255',
 //            'params' => 'nullable|alpha_dash|max:255',
         ];
@@ -48,7 +49,8 @@ class NavigationRequest extends Request
             ]);
         }else if($this->type == 'link'){
             $rules = array_merge($rules,[
-                'params.link' => 'required|url|max:255',
+//                'params.link' => 'required|url|max:255',
+                'params.link' => 'required|min:1|max:255',
             ]);
         }else if($this->type == 'article'){
             $rules = array_merge($rules,[

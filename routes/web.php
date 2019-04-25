@@ -30,6 +30,13 @@ Route::group([ 'middleware' => ['laracms.frontend'], ], function () {
     # 栏目聚合页
     Route::get('category/show_{navigation}_{articleCategory}.html', 'ArticleController@category')->name('category.index');
 
+
+    // 成功案例
+    Route::get('cases_{category}.html', 'CasesController@index')->name('cases.index');
+    Route::get('cases/list_{category}_{child}.html', 'CasesController@category')->name('cases.category');
+    Route::get('cases/list_{category}.html', 'CasesController@list')->name('cases.list');
+    Route::get('cases/show_{article}.html', 'CasesController@info')->name('cases.info');
+
     # 文章列表页
     Route::get('article/list_{navigation}_{articleCategory}.html', 'ArticleController@index')->name('article.index');
 
