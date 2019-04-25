@@ -119,7 +119,7 @@
                           </p>
                           <p class="product-item-attr">
                               @foreach($v['articles'] as $v1)
-                              <a href="">
+                              <a href="{{rout('ca')}}">
                                   <img
                                           alt=""
                                           src="https://www.qiniu.com/assets/icon-storage-highlight@2x-5a13511e8a135b25aeaa1df7a44cec15d7291e5e9e2c5d0feae5361bc19687aa.png">
@@ -207,7 +207,7 @@
 @section('script-content')
     <link href="https://cdn.bootcss.com/bootstrap-validator/0.5.3/css/bootstrapValidator.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
-
+    <script src="{{asset('js/bootbox.min.js')}}"></script>
     <script>
         $(function(){
             $('.navbar').addClass('nav-bg')
@@ -225,12 +225,13 @@
                     //验证手机
                     'phone' : {          //input中的name 值
                         validators:{
-                            regexp: {
-                                regexp: /^1\d{10}$/ ,
-                                message: '请输入正确的11位手机号'
-                            },
+
                             notEmpty:{
                                 message: '手机号不能为空'
+                            },
+                            regexp:{
+                                regexp: /^1[3456789]\d{9}$/,
+                                message: '手机号码不正确'
                             }
 
                         }
@@ -282,12 +283,23 @@
 
                     }, // 发送请求预处理
                     error: function(xhr, errMsg, e){
+
+                        //console.log(xhr.responseJSON.errors);
+                        var error = xhr.responseJSON.errors;
+                        var str = "";
+                        for(var i in error){
+                            for(var n in error[i]){
+                                str += error[i][n]+";"
+                            }
+                        }
+                        bootbox.alert(str);
                        // bootbox.alert("请求服务器失败！");
                     }, // 请求服务器失败的处理
                     dataFilter: function(data, type){
                         return data;
                     }, // 请求成功预处理，返回的值为success的参数data
                     success: function(data){
+                        bootbox.alert("提交成功");
                         $("#feedback-modal").modal('hide')
 
                     }
