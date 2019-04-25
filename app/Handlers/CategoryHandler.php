@@ -34,17 +34,17 @@ class CategoryHandler
      * @param int $lavel
      * @return array
      */
-    public function level($categorys, $parent = 0, $lavel = 0)
+    public function level($categorys, $parent = 0, $level = 0)
     {
         $newCategorys = [];
         $len = count($categorys) - 1;
         foreach($categorys as $key => $category){
             if($category->parent == $parent){
-                $category->lavel = $lavel;
+                $category->level = $level;
                 $category->is_end = 0;
                 $newCategorys[] = $category;
 
-                if($tmpCategorys = call_user_func_array([$this, __FUNCTION__],[$categorys, $category->id, ($lavel+1) ])){
+                if($tmpCategorys = call_user_func_array([$this, __FUNCTION__],[$categorys, $category->id, ($level+1) ])){
 
                     $newCategorys = !empty($newCategorys) ? array_merge($newCategorys, $tmpCategorys) : $tmpCategorys;
                 }
@@ -133,5 +133,4 @@ class CategoryHandler
 
         return $newCategorys;
     }
-
 }

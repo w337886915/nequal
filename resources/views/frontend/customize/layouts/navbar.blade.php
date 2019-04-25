@@ -64,6 +64,14 @@
         background-color: unset !important;
     }
 </style>
+
+@php
+    $navigations = frontend_navigation('desktop');
+    //$currentBrothersAndChildNavigation = frontend_current_brother_and_child_navigation('desktop');
+
+    $currentChildNavigations = frontend_current_child_navigation('desktop');
+
+@endphp
 <nav class="{{ isset($fixdBackgroud) && $fixdBackgroud ? 'fixd-background' : '' }} navbar navbar-fixed-top nav-transparent">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -79,13 +87,26 @@
         </a>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="nav navbar-nav navbar-right hidden-sm navbar-top-menu">
-                <li><a href="./" class="{{ $active == 'index' ? 'active' : '' }}">首页</a></li>
+                <li><a href="/" class="{{ $active == 'index' ? 'active' : '' }}">首页</a></li>
+                @foreach($navigations as $navigation)
+                    <li>
+                        <a target="{{ $navigation->target }}"  href="{{$navigation->link}}" class="{{ $active == $navigation->title ? 'active' : '' }}">{{ $navigation->title }}</a>
+                        @if($navigation->child)
+                            <dl class="layui-nav-child">
+                                @foreach($navigation->child as $nav)
+                                    <dd><a target="{{ $navigation->target }}" href="{{$nav->link}}">{{ $nav->title }}</a></dd>
+                                @endforeach
+                            </dl>
+                        @endif
+                    </li>
+                @endforeach
+               {{-- <li><a href="./" class="{{ $active == 'index' ? 'active' : '' }}">首页</a></li>
                 <li><a href="./solutions" class="{{ $active == 'solutions' ? 'active' : '' }}">解决方案</a></li>
                 <li><a href="./services" class="{{ $active == 'services' ? 'active' : '' }}">成功案例</a></li>
                 <li><a href="./about" class="{{ $active == 'about' ? 'active' : '' }}">关于我们</a></li>
                 <li><a href="./lang" class="{{ $active == 'lang' ? 'active' : '' }}">语言切换</a></li>
                 <li><a href="./about" class="{{ $active == 'about' ? 'active' : '' }}">加入我们</a></li>
-                <li><a href="./contact" class="{{ $active == 'contact' ? 'active' : '' }}">联系我们</a></li>
+                <li><a href="./contact" class="{{ $active == 'contact' ? 'active' : '' }}">联系我们</a></li>--}}
             </ul>
         </div>
     </div>
