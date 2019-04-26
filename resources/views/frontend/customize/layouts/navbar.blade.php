@@ -87,7 +87,7 @@
         </a>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="nav navbar-nav navbar-right hidden-sm navbar-top-menu">
-                <li><a href="/" class="{{ $active == 'index' ? 'active' : '' }}">首页</a></li>
+                <li><a href="/" class="{{ $active == 'index' ? 'active' : '' }}">{{trans('page.home')}}</a></li>
                 @foreach($navigations as $navigation)
                     <li>
                         <a target="{{ $navigation->target }}"  href="{{$navigation->link}}" class="{{ $active == $navigation->title ? 'active' : '' }}">{{ $navigation->title }}</a>
@@ -100,6 +100,9 @@
                         @endif
                     </li>
                 @endforeach
+              {{--  <li><a href="{{request()->getRequestUri()}}">语言切换</a></li>--}}
+                <li id="lang"><a href="javascript:;">语言切换</a></li>
+
                {{-- <li><a href="./" class="{{ $active == 'index' ? 'active' : '' }}">首页</a></li>
                 <li><a href="./solutions" class="{{ $active == 'solutions' ? 'active' : '' }}">解决方案</a></li>
                 <li><a href="./services" class="{{ $active == 'services' ? 'active' : '' }}">成功案例</a></li>
@@ -122,6 +125,27 @@
                     $('.navbar').removeClass('nav-bg')
                 }
             });
+
+            $('#lang').click(function () {
+                console.log('click');
+                var lang = `{{app()->getLocale()}}`;
+                $.ajax({
+                    type: 'get',
+                    url: '/lang',
+                    data: {
+                        lang: lang
+                    },
+                    success: function (res) {
+                        if(res.status){
+                            window.location.reload();
+                        }
+                    }
+                });
+            })
+
+
+
+
         });
     </script>
 @endsection

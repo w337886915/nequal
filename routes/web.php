@@ -21,7 +21,7 @@
 | 前台相关路由
 |
 */
-Route::group([ 'middleware' => ['laracms.frontend'], ], function () {
+Route::group([ 'middleware' => ['laracms.frontend', 'toggleLang'], ], function () {
     # 前台所有URL必须加入 navigation 参数,否则面包屑无法正常使用
     # 站点首页
     Route::get('/', 'WelcomeController@index')->name('welcome');
@@ -36,6 +36,7 @@ Route::group([ 'middleware' => ['laracms.frontend'], ], function () {
     # 栏目聚合页
     Route::get('category/show_{navigation}_{articleCategory}.html', 'ArticleController@category')->name('category.index');
 
+    Route::get('/lang', 'LangController@index');
 
     // 成功案例
     Route::get('cases_{category}.html', 'CasesController@index')->name('cases.index');
@@ -66,43 +67,43 @@ Route::group([ 'middleware' => ['laracms.frontend'], ], function () {
     Route::post('form/{type}.html', 'FormController@store')->name('form.store');
 
     # 搜索页面
-    Route::get('search', 'SearchController@index')->name('search');
+//    Route::get('search', 'SearchController@index')->name('search');
 
     # 前台认证相关路由
-    Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-    Route::post('login', 'Auth\LoginController@login');
-    Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-    Route::post('register', 'Auth\RegisterController@register');
-    Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
-    Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
-    Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
-    Route::post('password/reset', 'Auth\ResetPasswordController@reset');
-    Route::get('user/home/{user}', 'UserController@home')->name('user.home');
-    Route::get('login/{type}', 'Auth\LoginController@redirectToProvider')->name('oauth.login');
-    Route::get('login/{type}/callback', 'Auth\LoginController@handleProviderCallback')->name('oauth.login.callback');
+//    Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+//    Route::post('login', 'Auth\LoginController@login');
+//    Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+//    Route::post('register', 'Auth\RegisterController@register');
+//    Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+//    Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+//    Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+//    Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+//    Route::get('user/home/{user}', 'UserController@home')->name('user.home');
+//    Route::get('login/{type}', 'Auth\LoginController@redirectToProvider')->name('oauth.login');
+//    Route::get('login/{type}/callback', 'Auth\LoginController@handleProviderCallback')->name('oauth.login.callback');
 
     # 前台需要用户认证路由
-    Route::group(['middleware' => ['auth']], function(){
-
-        # 退出
-        Route::get('logout', 'Auth\LoginController@logout')->name('logout');
-        Route::get('login/{type}/unbind', 'Auth\LoginController@unbind')->name('oauth.login.unbind');
-
-        # 用户中心
-        Route::get('user/index', 'UserController@index')->name('user.index');
-        Route::get('user/settings{type?}', 'UserController@settings')->name('user.settings');
-        Route::get('user/messages', 'UserController@messages')->name('user.messages');
-        Route::get('user/activate', 'UserController@activate')->name('user.activate');
-
-        # 短信验证码
-        Route::patch('user/update_info', 'UserController@updateInfo')->name('user.update_info');
-        Route::patch('user/update_avatar', 'UserController@updateAvatar')->name('user.update_avatar');
-        Route::patch('user/update_password', 'UserController@updatePassword')->name('user.update_password');
-
-        # 回复
-        Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
-
-    });
+//    Route::group(['middleware' => ['auth']], function(){
+//
+//        # 退出
+//        Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+//        Route::get('login/{type}/unbind', 'Auth\LoginController@unbind')->name('oauth.login.unbind');
+//
+//        # 用户中心
+//        Route::get('user/index', 'UserController@index')->name('user.index');
+//        Route::get('user/settings{type?}', 'UserController@settings')->name('user.settings');
+//        Route::get('user/messages', 'UserController@messages')->name('user.messages');
+//        Route::get('user/activate', 'UserController@activate')->name('user.activate');
+//
+//        # 短信验证码
+//        Route::patch('user/update_info', 'UserController@updateInfo')->name('user.update_info');
+//        Route::patch('user/update_avatar', 'UserController@updateAvatar')->name('user.update_avatar');
+//        Route::patch('user/update_password', 'UserController@updatePassword')->name('user.update_password');
+//
+//        # 回复
+//        Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
+//
+//    });
 
 });
 
