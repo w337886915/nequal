@@ -17,6 +17,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Article;
+use App\Models\Slide;
 
 /**
  * 前台公共控制器
@@ -31,10 +32,15 @@ class WelcomeController extends Controller
      *
      * @return mixed
      */
-    public function index()
+    public function index(Slide $slide)
     {
+        $slides_list = $slide->where('group',1)->where('status','1')->orderby('order','desc')->get();
+        $slides_list = $slides_list->toArray();
+        //解决方案
+        
+        //dd($slides_list);
 //        return frontend_view('welcome');
-        return frontend_view('index');
+        return frontend_view('index',compact('slides_list'));
     }
 
     /**

@@ -81,22 +81,18 @@
     }
 </style>
 <div class="banners-slider">
+
+    @if(!empty($slides_list))
+    @foreach($slides_list as $l)
     <div class="banner-item">
-        <a href="">
+        <a href="{{$l['link']}}">
             <img
                     alt=""
-                    src="https://www.qiniu.com/assets/banner/banner-qvm1rmb-index-3c79c38ee87a7b6a0ef8ff28b2d8da9a28e567bdf3cb9bea8ea761d601be7ce6.jpg">
+                    src="{{storage_image_url($l['image'])}}">
         </a>
     </div>
-    <div class="banner-item"><a href=""><img
-                    alt=""
-                    src="https://www.qiniu.com/assets/banner/banner-qvm1rmb-index-3c79c38ee87a7b6a0ef8ff28b2d8da9a28e567bdf3cb9bea8ea761d601be7ce6.jpg"></a></div>
-    <div class="banner-item"><a href=""><img
-                    alt=""
-                    src="https://www.qiniu.com/assets/banner/banner-qvm1rmb-index-3c79c38ee87a7b6a0ef8ff28b2d8da9a28e567bdf3cb9bea8ea761d601be7ce6.jpg"></a></div>
-    <div class="banner-item"><a href=""><img
-                    alt=""
-                    src="https://www.qiniu.com/assets/banner/banner-qvm1rmb-index-3c79c38ee87a7b6a0ef8ff28b2d8da9a28e567bdf3cb9bea8ea761d601be7ce6.jpg"></a></div>
+    @endforeach
+    @endif
 </div>
 @section('script-banner')
     <script>

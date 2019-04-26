@@ -4,7 +4,7 @@
     @include('frontend.customize.layouts.navbar', ['active' => 'index'])
 
     <!--banner-->
-    @include('frontend.customize.layouts.banner')
+    @include('frontend.customize.layouts.banner',$slides_list)
 
     <!--product-->
     <style>
