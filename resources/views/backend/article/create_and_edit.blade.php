@@ -28,7 +28,7 @@
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="type" class="col-md-2 col-sm-2 control-label required">所属分类</label>
                             <div class="col-md-5 col-sm-10">
-                            <select name="category_id[]" class="chosen-select form-control" id="category_id[]" tabindex="2" multiple="">
+                            <select name="category_id[]" class="chosen-select form-control" id="category_id[]" tabindex="2">
                                 @foreach($category as $value)
                                     <option @if($value['check']) selected @endif value="{{$value['id']}}">/ {{$value['name']}}</option>
                                 @endforeach

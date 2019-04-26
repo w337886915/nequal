@@ -28,7 +28,10 @@ Route::group([ 'middleware' => ['laracms.frontend'], ], function () {
     Route::get('index.html', 'WelcomeController@index')->name('index');
     #解决方案
     Route::get('solutions', 'SolutionsController@index')->name('solutions') ;
-    Route::post('consultation', 'ConsultationController@store')->name('consultation') ;
+    Route::get('solutions/{id}', 'SolutionsController@show')->name('solutions.show') ;
+    Route::post('consultation', 'ConsultationController@store')->name('consultation');
+    #关于我们
+    Route::get('aboutus/{acticle}', 'AboutUsController@show')->name('aboutus.show');
 
     # 栏目聚合页
     Route::get('category/show_{navigation}_{articleCategory}.html', 'ArticleController@category')->name('category.index');
@@ -53,7 +56,7 @@ Route::group([ 'middleware' => ['laracms.frontend'], ], function () {
     Route::get('message/show_{navigation}.html', 'WelcomeController@message')->name('message.index');
 
     # 关于我们
-    Route::get('company/show_{navigation}.html', 'WelcomeController@company')->name('company.index');
+    //Route::get('company/show_{navigation}.html', 'WelcomeController@company')->name('company.index');
 
     # 站点地图
     Route::get('map/show_{navigation}.html', 'WelcomeController@map')->name('map.index');

@@ -4,8 +4,11 @@
 @endsection
 @section('content')
   <!--navbar-->
-  @include('frontend.customize.layouts.navbar', ['active' => 'solutions', 'fixdBackgroud' => true])
+  @include('frontend.customize.layouts.navbar', ['active' => '解决方案', 'fixdBackgroud' => true])
   <style>
+      .page-content-wrapper{
+          margin-top: 0;
+      }
       .product-item {
           margin-bottom: 25px;
       }
@@ -119,7 +122,7 @@
                           </p>
                           <p class="product-item-attr">
                               @foreach($v['articles'] as $v1)
-                              <a href="{{rout('ca')}}">
+                              <a href="{{route('solutions.show',['article'=>$v1['id']])}}">
                                   <img
                                           alt=""
                                           src="https://www.qiniu.com/assets/icon-storage-highlight@2x-5a13511e8a135b25aeaa1df7a44cec15d7291e5e9e2c5d0feae5361bc19687aa.png">
