@@ -16,30 +16,17 @@
         font-size: 30px;
         line-height: 68px;
         margin-right: 10px;
-        color: #FFFFFF;
     }
 
-    .nav-transparent {
+    .navbar {
         min-height: 68px;
-        background-color: transparent;
+        background-color: #FFFFFF;
         margin-bottom: 0;
         border: none;
         transition: opacity .6s ease, background .6s ease, box-shadow .6s ease;
     }
 
-    .navbar.fixd-background {
-        background-color: #303848;
-    }
-
-    .nav-transparent.nav-bg {
-        background-color: #303848 !important;
-    }
-
-    .nav-transparent:hover {
-        background-color: #303848 !important;
-    }
-
-    .nav-transparent .navbar-brand {
+    .navbar .navbar-brand {
         padding: 10px 15px !important;
         height: 68px;
     }
@@ -51,17 +38,19 @@
 
     .navbar-nav > li > a {
         display: block;
-        color: #FFF;
+        color: #151515;
+        font-weight: 400;
         position: relative;
         padding-top: 15px;
         padding-bottom: 15px;
         line-height: 38px;
+        height: 68px;
+        box-sizing: border-box;
     }
 
-
-    .navbar-nav > li > a:hover, .navbar-nav > li > a:focus, .navbar-nav > li > a.active {
-        color: #00A0DE;
-        background-color: unset !important;
+    .navbar-nav > li > a.active {
+        color: #004060;
+        border-bottom: 3px solid #004060;
     }
 </style>
 
@@ -72,7 +61,8 @@
     $currentChildNavigations = frontend_current_child_navigation('desktop');
 
 @endphp
-<nav class="{{ isset($fixdBackgroud) && $fixdBackgroud ? 'fixd-background' : '' }} navbar navbar-fixed-top nav-transparent">
+<div style="height: 68px;"></div>
+<nav class="navbar navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="./">
@@ -117,15 +107,6 @@
 @section('script-navbar')
     <script>
         $(function () {
-            window.addEventListener('scroll', function () {
-                let scrollTop = document.documentElement.scrollTop
-                if (scrollTop > 10) {
-                    $('.navbar').addClass('nav-bg')
-                } else {
-                    $('.navbar').removeClass('nav-bg')
-                }
-            });
-
             $('#lang').click(function () {
                 console.log('click');
                 var lang = `{{app()->getLocale()}}`;
@@ -142,10 +123,6 @@
                     }
                 });
             })
-
-
-
-
         });
     </script>
 @endsection

@@ -32,8 +32,8 @@
     .banners-slider .slick-dots li {
         position: relative;
         display: inline-block;
-        width: 20px;
-        height: 20px;
+        width: 60px;
+        height: 40px;
         margin: 0 5px;
         padding: 0;
         cursor: pointer;
@@ -41,47 +41,27 @@
 
     .banners-slider .slick-dots li button {
         font-size: 0;
-        line-height: 0;
-        display: block;
-        width: 20px;
-        height: 20px;
-        padding: 5px;
-        cursor: pointer;
-        color: transparent;
-        border: 0;
-        outline: none;
-        background: transparent;
+        width: 60px;
+        height: 6px;
+        background: rgba(255, 255, 255, 1);
+        opacity: 0.4;
+        border-radius: 2px;
+        border: transparent;
     }
 
-    .banners-slider .slick-dots li button::before {
-        font-size: 0.40rem;
-        content: "-";
-        color: #B9B9B9;
-    }
-
-    .banners-slider .slick-dots li button::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 20px;
-        height: 5px;
-        content: '';
-        text-align: center;
-        background-color: #999999;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-
-    .banners-slider .slick-dots li.slick-active button::before {
-        background-color: #3498db
-    }
-
-    .banners-slider .slick-dots.banners-arrow {
-        bottom: 0.48rem
+    .banners-slider .slick-dots li.slick-active button {
+        background: rgba(255, 255, 255, 1);
+        opacity: unset;
     }
 </style>
 <div class="banners-slider">
-
+    <div class="banner-item">
+        <a href="#">
+            <img
+              alt=""
+              src="https://iocaffcdn.phphub.org/uploads/images/201704/21/1/dDANSZZbWZ.jpg">
+        </a>
+    </div>
     @if(!empty($slides_list))
     @foreach($slides_list as $l)
     <div class="banner-item">
