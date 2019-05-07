@@ -64,7 +64,7 @@ class ArticleObserver
 
     public function saved(Article $article){
         // 分发事件
-        $event_class_name = '\\Wanglelecc\\Laracms\\Events\\' . ucfirst($article->type) . 'SavedEvent';
+        $event_class_name = '\\App\\Events\\' . ucfirst($article->type) . 'SavedEvent';
         class_exists($event_class_name) && event(new $event_class_name($article));
     }
 

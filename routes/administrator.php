@@ -172,5 +172,8 @@ Route::group(['domain' => config('administrator.domain'), 'prefix' => config('ad
     # 咨询申请
     Route::resource('consultations','ConsultationController');
 
+    # 服务品牌相关路由
+    Route::resource('brands', 'BrandsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
 });
 

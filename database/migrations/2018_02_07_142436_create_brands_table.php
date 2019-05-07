@@ -17,21 +17,24 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProjectsTable extends Migration 
+class CreateBrandsTable extends Migration
 {
 	public function up()
 	{
-		Schema::create('projects', function(Blueprint $table) {
+		Schema::create('brands', function(Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->index();
-            $table->text('description')->nullable();
-            $table->integer('subscriber_count')->unsigned()->default(0);
+            $table->string('name',128)->comment('品牌名称');
+            $table->string('url',255)->nullable()->comment('品牌链接地址');
+            $table->string('image',255)->comment('服务品牌图标');
+            $table->integer('order')->default(9999)->comment('排序');
             $table->timestamps();
+            
+            $table->index('order','order_index');
         });
 	}
 
 	public function down()
 	{
-		Schema::drop('projects');
+		Schema::drop('brands');
 	}
 }

@@ -13,6 +13,7 @@
  * @version   Release 1.0
  */
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 

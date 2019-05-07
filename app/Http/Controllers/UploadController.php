@@ -360,8 +360,7 @@ class UploadController extends Controller
         // 获取多附件所需参数
         $article_id     = $request->article_id;
         $field          = $request->field;
-        $article        = Article::find($article_id);
-
+        $article        = Article::withoutGlobalScope('type')->find($article_id);
         // 将附件保存到内容节点
         if( $article->addMultipleFiles( $result['path'], $field ) === null ){
             // 判断是否已在当前内容节点，上传过该文件

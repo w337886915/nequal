@@ -29,6 +29,7 @@ class AuthServiceProvider extends ServiceProvider
          \App\Models\Page::class                            => \App\Policies\PagePolicy::class,
          \App\Models\Reply::class                           => \App\Policies\ReplyPolicy::class,
          \App\Models\Form::class                            => \App\Policies\FormPolicy::class,
+         \App\Models\Brand::class                            => \App\Policies\BrandPolicy::class,
 
          \Spatie\Permission\Models\Role::class                             => \App\Policies\RolePolicy::class,
          \Spatie\Permission\Models\Permission::class                       => \App\Policies\PermissionPolicy::class,

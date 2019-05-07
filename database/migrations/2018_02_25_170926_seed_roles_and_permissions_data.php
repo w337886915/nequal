@@ -41,7 +41,7 @@ class SeedRolesAndPermissionsData extends Migration
         Permission::create(['name' => 'manage_users', 'remarks'=> '用户管理']);
         Permission::create(['name' => 'manage_permissions', 'remarks'=> '权限管理']);
         Permission::create(['name' => 'manage_roles', 'remarks'=> '角色管理']);
-        Permission::create(['name' => 'manage_setting', 'remarks'=> '系统设置']);
+        Permission::create(['name' => 'manage_setting', 'remarks'=> '站点设置']);
         Permission::create(['name' => 'manage_site_basic', 'remarks'=> '站点信息']);
         Permission::create(['name' => 'manage_site_company', 'remarks'=> '公司信息']);
         Permission::create(['name' => 'manage_site_contact', 'remarks'=> '联系方式']);
@@ -59,6 +59,7 @@ class SeedRolesAndPermissionsData extends Migration
         Permission::create(['name' => 'manage_xcx', 'remarks'=> '小程序管理']);
         Permission::create(['name' => 'manage_media', 'remarks'=> '媒体管理']);
         Permission::create(['name' => 'manage_form', 'remarks'=> '表单管理']);
+        Permission::create(['name' => 'manage_brands', 'remarks'=> '服务品牌']);
 
         // 创建超级管理角色，并赋予权限
         $administrator = Role::create(['name' => 'Administrator', 'remarks'=> '超级管理员']);
@@ -86,6 +87,7 @@ class SeedRolesAndPermissionsData extends Migration
         $administrator->givePermissionTo('manage_xcx');
         $administrator->givePermissionTo('manage_media');
         $administrator->givePermissionTo('manage_form');
+        $administrator->givePermissionTo('manage_brands');
 
         // 创建站长角色，并赋予权限
         $founder = Role::create(['name' => 'Founder', 'remarks'=> '创始人']);
@@ -103,6 +105,7 @@ class SeedRolesAndPermissionsData extends Migration
         $founder->givePermissionTo('manage_xcx');
         $founder->givePermissionTo('manage_media');
         $founder->givePermissionTo('manage_form');
+        $founder->givePermissionTo('manage_brands');
 
         // 创建管理员角色，并赋予权限
         $maintainer = Role::create(['name' => 'Maintainer', 'remarks'=> '站长']);
@@ -115,11 +118,12 @@ class SeedRolesAndPermissionsData extends Migration
         $maintainer->givePermissionTo('manage_block');
         $maintainer->givePermissionTo('manage_annex');
         $maintainer->givePermissionTo('manage_form');
-    
+        $maintainer->givePermissionTo('manage_brands');
+
         // 创建管理员账户
         $user = User::create([
             'name' => 'admin',
-            'email' => 'admin@56br.com',
+            'email' => 'admin@admin.com',
             'status' => '1',
             'password' => bcrypt('123456'),
             'avatar' => 'images/avatar/201803/04/9CT3XvX0Jcv8QEEzPCzgg8k0NXJVwrMsaKKf1iN9.jpeg',

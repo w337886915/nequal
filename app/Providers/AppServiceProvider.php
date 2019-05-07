@@ -16,6 +16,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Models\Setting;
@@ -62,6 +63,9 @@ class AppServiceProvider extends ServiceProvider
             // 非命令行模式
             Setting::afflux();
         }
+
+        Schema::defaultStringLength(191);
+
     }
 
     /**

@@ -54,7 +54,7 @@ class PermissionsController extends Controller
         if($permissions){
             $permissions = $categoryHandler->level($permissions);
         }
-        
+//        dd($permissions);
         return backend_view('permissions.index', compact('permissions'));
     }
 

@@ -21,7 +21,7 @@ class EventServiceProvider extends ServiceProvider
             'SocialiteProviders\Weibo\WeiboExtendSocialite@handle',
         ],
 
-        'Wanglelecc\LaracmsEvents\BehaviorLogEvent' => [
+        'App\BehaviorLogEvent' => [
             'App\Listeners\BehaviorLogListener',
         ],
 

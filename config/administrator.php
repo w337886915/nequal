@@ -245,6 +245,16 @@ return [
                     "params" => [],
                     "query" => [],
                 ],
+                "content.brands" => [
+                    "id" => "content.brands",
+                    "text" => "服务品牌",
+                    "permission" => function(){ return Auth::user()->can('manage_brands'); },
+                    "icon" => 'icon-th-large',
+                    "link" => "",
+                    "route" => "brands.index",
+                    "params" => [],
+                    "query" => [],
+                ],
                 /*
                 "content.annex" => [
                     "id" => "content.annex",
@@ -336,17 +346,17 @@ return [
                 ],
             ],
         ],
-        "github" => [
-            "id" => "github",
-            "text" => "Github",
-            "permission" => function(){ return true; },
-            "icon" => "",
-            "route" => "",
-            "params" => [],
-            "query" => [],
-            "link" => "https://github.com/wanglelecc",
-            "children" => [],
-        ],
+//        "github" => [
+//            "id" => "github",
+//            "text" => "Github",
+//            "permission" => function(){ return true; },
+//            "icon" => "",
+//            "route" => "",
+//            "params" => [],
+//            "query" => [],
+//            "link" => "https://github.com/wanglelecc",
+//            "children" => [],
+//        ],
     ],
 
 ];

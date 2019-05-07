@@ -57,7 +57,7 @@ Route::group([ 'middleware' => ['laracms.frontend', 'toggleLang'], ], function (
     Route::get('message/show_{navigation}.html', 'WelcomeController@message')->name('message.index');
 
     # 关于我们
-    //Route::get('company/show_{navigation}.html', 'WelcomeController@company')->name('company.index');
+    Route::get('company/show_{navigation}.html', 'WelcomeController@company')->name('company.index');
 
     # 站点地图
     Route::get('map/show_{navigation}.html', 'WelcomeController@map')->name('map.index');
