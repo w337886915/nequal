@@ -21,19 +21,9 @@ class EventServiceProvider extends ServiceProvider
             'SocialiteProviders\Weibo\WeiboExtendSocialite@handle',
         ],
 
-        'App\BehaviorLogEvent' => [
+        'App\Events\BehaviorLogEvent' => [
             'App\Listeners\BehaviorLogListener',
         ],
-
-        'App\Events\Event' => [
-            'App\Listeners\EventListener',
-        ],
-
-
-
-//        'Illuminate\Auth\Events\Login' => [
-//            'App\Listeners\UserEventSubscriber@onUserLogin'
-//        ],
     ];
 
     /**

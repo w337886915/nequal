@@ -80,7 +80,7 @@
                                         <img src="{{ storage_image_url($article->thumb) }}" id="image_image" class="img-rounded" width="660px" height="300px" alt="">
                                         <input type="hidden" name="thumb" id="form_thumb" value="{{ old('thumb',$article->thumb) }}" />
                                         <button id="upload_thumb" type="button" class="btn btn-info uploader-btn-browse"><i class="icon icon-upload"></i> 上传</button>
-                                        <button id="select_thumb" type="button" class="btn btn-primary"><i class="icon icon-file-image"></i> 选择</button>
+                                      {{--  <button id="select_thumb" type="button" class="btn btn-primary"><i class="icon icon-file-image"></i> 选择</button>--}}
                                         <button id="delete_thumb" type="button" class="btn btn-danger"><i class="icon icon-remove-sign"></i> 删除</button>
                                     </div>
                                 </div>
@@ -190,7 +190,7 @@
 
     @include('backend::common._upload_image_scripts',['elem' => '#upload_thumb', 'previewElem' => '#image_image', 'fieldElem' => '#form_thumb', 'folder'=>'article', 'object_id'=>$object_id])
     @include('backend::common._delete_image_scripts',['elem' => '#delete_thumb', 'previewElem' => '#image_image', 'fieldElem' => '#form_thumb', ])
-    @include('backend::common._select_image_scripts',['elem' => '#select_thumb', 'previewElem' => '#image_image', 'fieldElem' => '#form_thumb', 'folder'=>'article', 'object_id'=>$object_id ])
+    {{--@include('backend::common._select_image_scripts',['elem' => '#select_thumb', 'previewElem' => '#image_image', 'fieldElem' => '#form_thumb', 'folder'=>'article', 'object_id'=>$object_id ])--}}
 
     @include('backend::common._upload_aliyun_vod_scripts',['elem' => '#upload_video', 'previewElem' => '#video_title_h4', 'fieldIdElem' => '#upload_video_id', 'fieldTitleElem' => '#upload_video_title', 'fieldThumbElem' => '#upload_video_thumb', 'fieldImageElem' => '#video_thumb_image', 'folder'=>'article', 'object_id'=>$object_id])
     @include('backend::common._delete_aliyun_vod_scripts',['elem' => '#delete_video', 'previewElem' => '#video_title_h4', 'fieldIdElem' => '#upload_video_id', 'fieldTitleElem' => '#upload_video_title', 'fieldThumbElem' => '#upload_video_thumb', 'fieldImageElem' => '#video_thumb_image', 'folder'=>'article', 'object_id'=>$object_id])

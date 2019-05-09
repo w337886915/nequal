@@ -14,7 +14,7 @@
                 <input id="upload_video_thumb" type="hidden" name="attribute[video_thumb]" value="{{ get_value($attribute, 'video_thumb', '') }}" >
                 <input id="upload_video_title" type="hidden" name="attribute[video_title]" value="{{ get_value($attribute, 'video_title', '') }}" >
                 <button id="upload_video" type="button" class="btn btn-info uploader-btn-browse"><i class="icon icon-upload"></i> 上传</button>
-                <button id="select_video" type="button" class="btn btn-primary"><i class="icon icon-file-image"></i> 选择</button>
+          {{--      <button id="select_video" type="button" class="btn btn-primary"><i class="icon icon-file-image"></i> 选择</button>--}}
                 <button id="delete_video" type="button" class="btn btn-danger"><i class="icon icon-remove-sign"></i> 删除</button>
             </div>
         </div>

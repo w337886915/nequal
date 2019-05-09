@@ -102,7 +102,7 @@ class UploadController extends Controller
             return response_ajax(2, '无效文件.');
         }
     
-        \Debugbar::disable();
+//        \Debugbar::disable();
         return response_ajax(0, 'ok', $response);
     }
     
@@ -125,7 +125,7 @@ class UploadController extends Controller
     
         $response = $client->getAcsResponse($vodRequest);
     
-        \Debugbar::disable();
+//        \Debugbar::disable();
     
         return response_ajax(0, 'ok', $response);
     }
@@ -171,7 +171,7 @@ class UploadController extends Controller
                 break;
         }
 
-        \Debugbar::disable();
+//        \Debugbar::disable();
         if( ($callback = $request->callback) && (preg_match("/^[\w_]+$/", $callback)) ){
             return htmlspecialchars($callback) . '(' . json_encode($result) . ')';
         }else{

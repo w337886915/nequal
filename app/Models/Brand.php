@@ -21,4 +21,8 @@ class Brand extends Model
         'saved' => BehaviorLogEvent::class,
     ];
 
+    public function titleName(){
+        return 'name';
+    }
+
 }

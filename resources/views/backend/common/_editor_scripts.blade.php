@@ -98,6 +98,9 @@ $editor = config('administrator.editor', 'simditor');
 
         window.ueditor[index].addListener('ready', function()
         {
+            // 添加token
+            window.ueditor[index].execCommand('serverparam', '_token', '{{ csrf_token() }}');
+
             $(this.container).parent().removeClass('form-control');
         });
 

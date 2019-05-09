@@ -11,6 +11,30 @@ return [
         'quality'   => 90,
     ],
 
+    'login'   => [
+        'length'    => 4,
+        'width'     => 133,
+        'height'    => 36,
+        'quality'   => 90,
+        'lines'     => 6,
+        'bgImage'   => false,
+        'bgColor'   => '#ecf2f4',
+        'fontColors'=> ['#2c3e50', '#c0392b', '#16a085', '#c0392b', '#8e44ad', '#303f9f', '#f57c00', '#795548'],
+        'contrast'  => -5,
+    ],
+
+    'form'   => [
+        'length'    => 4,
+        'width'     => 133,
+        'height'    => 36,
+        'quality'   => 90,
+        'lines'     => 6,
+        'bgImage'   => false,
+        'bgColor'   => '#ecf2f4',
+        'fontColors'=> ['#2c3e50', '#c0392b', '#16a085', '#c0392b', '#8e44ad', '#303f9f', '#f57c00', '#795548'],
+        'contrast'  => -5,
+    ],
+
     'flat'   => [
         'length'    => 6,
         'width'     => 160,
@@ -41,5 +65,4 @@ return [
         'invert'    => true,
         'contrast'  => -5,
     ]
-
 ];

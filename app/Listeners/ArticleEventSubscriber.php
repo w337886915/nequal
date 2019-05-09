@@ -68,13 +68,13 @@ class ArticleEventSubscriber
     public function subscribe($events)
     {
         $events->listen(
-            'App\ArticleSavedEvent',
+            'App\Events\ArticleSavedEvent',
             'App\Listeners\ArticleEventSubscriber@onArticleSaved'
         );
 
         $events->listen(
-            'App\VideoSavedEvent',
-            'App\Listeners\UserEventSubscriber@onVideoSaved'
+            'App\Events\VideoSavedEvent',
+            'App\Listeners\ArticleEventSubscriber@onVideoSaved'
         );
 
     }

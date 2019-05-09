@@ -116,6 +116,7 @@ class BlockHandler
         $articles = Article::whereIn('id', $article_ids)->active()->get();
 
         // 将查询结果按照区块数据顺序排位
+        // todo   getCllection,setCllection
         $collection = $articles->getCollection();
         $collection = $collection->sortBy(function ($product, $key) use ($article_ids) {
             return array_search($product->id, $article_ids);
