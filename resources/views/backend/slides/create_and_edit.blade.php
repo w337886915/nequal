@@ -11,6 +11,9 @@
 @endsection
 
 @section('content')
+    @php
+        $object_id = $article->object_id ?? create_object_id();
+    @endphp
 
     <h2 class="header-dividing">{{$title}} <small></small></h2>
     <div class="row">
@@ -65,10 +68,17 @@
                                     <img src="{{ storage_image_url($slide->image) }}" id="image_image" class="img-rounded" width="660px" height="300px" alt="">
                                     <input type="hidden" name="image" id="form_image" value="{{ old('image',$slide->image) }}" />
                                     <button id="upload_image" type="button" class="btn btn-info uploader-btn-browse"><i class="icon icon-upload"></i> 上传</button>
-                                    <button id="select_thumb" type="button" class="btn btn-primary"><i class="icon icon-file-image"></i> 选择</button>
+                                {{--    <button id="select_thumb" type="button" class="btn btn-primary"><i class="icon icon-file-image"></i> 选择</button>--}}
                                     <button id="delete_thumb" type="button" class="btn btn-danger"><i class="icon icon-remove-sign"></i> 删除</button>
                                 </div>
                             </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group has-feedback  has-icon-right">
+                            <label for="content" class="col-md-2 col-sm-2 control-label required">显示内容</label>
+                            <div class="col-md-8 col-sm-10">
+                                <textarea name="content" id="content" class="form-control editor" >{{  old('content', $slide->content) }}</textarea>
                             </div>
                         </div>
 
@@ -115,6 +125,7 @@
 @endsection
 
 @section('scripts')
+    @include('backend::common._editor_scripts',[ 'folder'=>'slide', 'object_id'=>$object_id ])
 
     @include('backend::common._upload_image_scripts',['elem' => '#upload_image', 'previewElem' => '#image_image', 'fieldElem' => '#form_image', 'folder'=>'slide', 'object_id' => $group->id ?? 0 ])
     @include('backend::common._delete_image_scripts',['elem' => '#delete_thumb', 'previewElem' => '#image_image', 'fieldElem' => '#form_image', ])

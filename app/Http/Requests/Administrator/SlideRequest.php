@@ -28,6 +28,7 @@ class SlideRequest extends Request
             'target' => 'required|min:1,max:255',
             'order' => 'nullable|integer',
             'status' => 'nullable|integer',
+            'content' => 'nullable|min:1|max:65535',
         ];
     }
     
