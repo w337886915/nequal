@@ -64,6 +64,14 @@ class AppServiceProvider extends ServiceProvider
             Setting::afflux();
         }
 
+        // 注册模板变量
+        $theme = is_mobile() ? config('theme.mobile') : config('theme.desktop');
+
+        $this->loadViewsFrom( __DIR__.'/../../resources/views/backend', 'backend' );
+        $this->loadViewsFrom( __DIR__.'/../../resources/views/frontend/'.$theme, 'frontend' );
+        $this->loadViewsFrom( __DIR__.'/../../resources/views/pagination','pagination' );
+
+
         Schema::defaultStringLength(191);
 
     }

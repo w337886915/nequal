@@ -41,6 +41,12 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             'bindings',
         ],
+
+        'laracms' => [
+            'laracms.frontend',
+            'laracms.authenticated',
+            'laracms.auth',
+        ],
     ];
 
     /**
@@ -60,8 +66,12 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+
+        'laracms.frontend'              =>\App\Http\Middleware\FrontendRequests::class,
+        'laracms.auth'                  => \App\Http\Middleware\Authenticate::class,
+
         // 切换语言
-        'toggleLang' => \App\Http\Middleware\ToggleLang::class
+        'toggleLang' => \App\Http\Middleware\ToggleLang::class,
     ];
 
     /**

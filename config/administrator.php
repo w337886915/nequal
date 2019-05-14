@@ -175,16 +175,16 @@ return [
                     "params" => [],
                     "query" => [ "type=article", ],
                 ],
-                "content.article.video" => [
-                    "id" => "content.article.video",
-                    "text" => "视频管理",
-                    "permission" => function(){ return Auth::user()->can('manage_article'); },
-                    "icon" => "icon-play-sign",
-                    "link" => "",
-                    "route" => "articles.index",
-                    "params" => [],
-                    "query" => [ "type=video", ],
-                ],
+//                "content.article.video" => [
+//                    "id" => "content.article.video",
+//                    "text" => "视频管理",
+//                    "permission" => function(){ return Auth::user()->can('manage_article'); },
+//                    "icon" => "icon-play-sign",
+//                    "link" => "",
+//                    "route" => "articles.index",
+//                    "params" => [],
+//                    "query" => [ "type=video", ],
+//                ],
                 "content.page" => [
                     "id" => "content.page",
                     "text" => "页面管理",
@@ -225,16 +225,16 @@ return [
                     "params" => [],
                     "query" => [],
                 ],
-                "content.form.feedback" => [
-                    "id" => "content.form.feedback",
-                    "text" => "意见反馈",
-                    "permission" => function(){ return Auth::user()->can('manage_form'); },
-                    "icon" => "icon-envelope-alt",
-                    "link" => "",
-                    "route" => "form.index",
-                    "params" => ['feedback'],
-                    "query" => [],
-                ],
+//                "content.form.feedback" => [
+//                    "id" => "content.form.feedback",
+//                    "text" => "意见反馈",
+//                    "permission" => function(){ return Auth::user()->can('manage_form'); },
+//                    "icon" => "icon-envelope-alt",
+//                    "link" => "",
+//                    "route" => "form.index",
+//                    "params" => ['feedback'],
+//                    "query" => [],
+//                ],
                 "content.consultations" => [
                     "id" => "content.consultations.index",
                     "text" => "咨询申请",
@@ -255,6 +255,18 @@ return [
                     "params" => [],
                     "query" => [],
                 ],
+                 "content.solutions" => [
+                    "id" => "content.solutions",
+                    "text" => "解决方案",
+                    "permission" => function(){ return Auth::user()->can('manage_solutions'); },
+                    "icon" => 'icon-th-large',
+                    "link" => "",
+                    "route" => "solutions.index",
+                    "params" => [],
+                    "query" => [],
+                ],
+
+
                 /*
                 "content.annex" => [
                     "id" => "content.annex",

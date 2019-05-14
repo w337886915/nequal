@@ -47,7 +47,7 @@ class SeedRolesAndPermissionsData extends Migration
         Permission::create(['name' => 'manage_site_contact', 'remarks'=> '联系方式']);
         Permission::create(['name' => 'manage_links', 'remarks'=> '友情链接']);
         Permission::create(['name' => 'manage_navigation', 'remarks'=> '栏目导航']);
-        Permission::create(['name' => 'manage_wechat', 'remarks'=> '微信管理']);
+//        Permission::create(['name' => 'manage_wechat', 'remarks'=> '微信管理']);
         Permission::create(['name' => 'manage_content', 'remarks'=> '内容管理']);
         Permission::create(['name' => 'manage_category', 'remarks'=> '分类管理']);
         Permission::create(['name' => 'manage_article', 'remarks'=> '文章管理']);
@@ -56,8 +56,8 @@ class SeedRolesAndPermissionsData extends Migration
         Permission::create(['name' => 'manage_slide', 'remarks'=> '幻灯管理']);
         Permission::create(['name' => 'manage_block', 'remarks'=> '区块管理']);
         Permission::create(['name' => 'manage_annex', 'remarks'=> '附件管理']);
-        Permission::create(['name' => 'manage_xcx', 'remarks'=> '小程序管理']);
-        Permission::create(['name' => 'manage_media', 'remarks'=> '媒体管理']);
+//        Permission::create(['name' => 'manage_xcx', 'remarks'=> '小程序管理']);
+//        Permission::create(['name' => 'manage_media', 'remarks'=> '媒体管理']);
         Permission::create(['name' => 'manage_form', 'remarks'=> '表单管理']);
         Permission::create(['name' => 'manage_brands', 'remarks'=> '服务品牌']);
 
@@ -75,7 +75,7 @@ class SeedRolesAndPermissionsData extends Migration
         $administrator->givePermissionTo('manage_site_contact');
         $administrator->givePermissionTo('manage_links');
         $administrator->givePermissionTo('manage_navigation');
-        $administrator->givePermissionTo('manage_wechat');
+//        $administrator->givePermissionTo('manage_wechat');
         $administrator->givePermissionTo('manage_content');
         $administrator->givePermissionTo('manage_category');
         $administrator->givePermissionTo('manage_article');
@@ -84,8 +84,8 @@ class SeedRolesAndPermissionsData extends Migration
         $administrator->givePermissionTo('manage_slide');
         $administrator->givePermissionTo('manage_block');
         $administrator->givePermissionTo('manage_annex');
-        $administrator->givePermissionTo('manage_xcx');
-        $administrator->givePermissionTo('manage_media');
+//        $administrator->givePermissionTo('manage_xcx');
+//        $administrator->givePermissionTo('manage_media');
         $administrator->givePermissionTo('manage_form');
         $administrator->givePermissionTo('manage_brands');
 
@@ -101,9 +101,9 @@ class SeedRolesAndPermissionsData extends Migration
         $founder->givePermissionTo('manage_slide');
         $founder->givePermissionTo('manage_block');
         $founder->givePermissionTo('manage_annex');
-        $founder->givePermissionTo('manage_wechat');
-        $founder->givePermissionTo('manage_xcx');
-        $founder->givePermissionTo('manage_media');
+//        $founder->givePermissionTo('manage_wechat');
+//        $founder->givePermissionTo('manage_xcx');
+//        $founder->givePermissionTo('manage_media');
         $founder->givePermissionTo('manage_form');
         $founder->givePermissionTo('manage_brands');
 

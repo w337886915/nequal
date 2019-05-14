@@ -174,6 +174,8 @@ Route::group(['domain' => config('administrator.domain'), 'prefix' => config('ad
 
     # 服务品牌相关路由
     Route::resource('brands', 'BrandsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+    # 解决方案路由
+    Route::resource('solutions', 'SolutionsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 
 });
 
