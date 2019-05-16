@@ -93,8 +93,9 @@
                                 <td class="text-center">
                                     <input type="tel" name="order[]" class="form-control text-center" value="{{ $article->order  }}">
                                 </td>
-                                <td><a href="{{$article->getLink()}}" target="_blank">{{ $article->title  }}</a></td>
-                                <td class="text-center">{{ implode('，', $article->categorys->pluck('name')->toArray() ) }}</td>
+                                {{--<td><a href="{{$article->getLink()}}" target="_blank">{{ fieldCN($article->title)  }}</a></td>--}}
+                                <td>{{ fieldCN($article->title)  }}</td>
+                                <td class="text-center">{{ implode('，', $article->categorys->pluck('name.cn')->toArray() ) }}</td>
                                 <td class="text-center">{{ $article->author  }}</td>
                                 <td class="text-center">{{ $article->created_at->toDateString()}}</td>
                                 <td class="text-center">{{ $article->created_user->name}}</td>

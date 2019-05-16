@@ -14,6 +14,7 @@
  */
 
 namespace App\Models;
+use App\Models\Traits\WithBehaviorLogTraits;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -50,6 +51,15 @@ class Article extends Model
     ];
 
     protected $dates = ['created_at', 'updated_at', 'deleted_at'];
+
+    protected $casts = [
+        'title' => 'array',
+        'subtitle' => 'array',
+        'keywords' => 'array',
+        'description' => 'array',
+        'content' => 'array',
+    ];
+
 
     protected static function boot()
     {

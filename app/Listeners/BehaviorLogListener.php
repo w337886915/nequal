@@ -33,6 +33,7 @@ class BehaviorLogListener
         $model = $event->model;
         $type = isset($model->id) ? '更新' : '添加';
         $title = get_value($model, $model->titleName());
+        $title = is_array($title) ? $title['cn'] : $title;
 
         behavior_log($model->getTable(),"{$type}了[\"{$title}\"]", $model->getMorphClass());
     }

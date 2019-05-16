@@ -28,9 +28,12 @@ class CreateCategorysTable extends Migration
     {
         Schema::create('categorys', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->comment("分类名称");
-            $table->string("keywords",150)->nullable()->comment('关键字');
-            $table->string("description")->nullable()->comment('描述');
+//            $table->string('name')->comment("分类名称");
+            $table->json('name')->comment("分类名称");
+//            $table->string("keywords",150)->nullable()->comment('关键字');
+            $table->json("keywords")->nullable()->comment('关键字');
+//            $table->string("description")->nullable()->comment('描述');
+            $table->json("description")->nullable()->comment('描述');
             $table->integer("parent")->comment('父id');
             $table->integer("order")->comment('排序');
             $table->string("path")->comment('路径');

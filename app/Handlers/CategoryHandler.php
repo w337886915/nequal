@@ -95,6 +95,7 @@ class CategoryHandler
     {
         static $newCategorys = [];
         foreach($categorys as $category){
+            $category->name = fieldCN($category->name); // 只需要中文名
             if($category->parent == $parent){
                 $category->parentName = $parentName ? ($parentName . ' / ' . $category->name) : $category->name;
                 $newCategorys[$category->id] = $category->parentName;

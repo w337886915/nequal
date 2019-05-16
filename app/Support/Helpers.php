@@ -740,3 +740,53 @@ if( !function_exists("business_log") ){
         return laracms_log('business', $type, $description, $model);
     }
 }
+
+
+if (! function_exists('field_locale')) {
+
+    /**
+     * 跟据语言环境获取对应中英文字段
+     * @param $field
+     * @return mixed
+     */
+    function field_locale($field)
+    {
+        if (!is_array($field)) {
+            return $field;
+        }
+        $lang = app()->getLocale();
+        return $lang === 'en' ? $field['en'] : $field['cn'];
+    }
+}
+
+if (! function_exists('fieldCN')) {
+
+    /**
+     * 中文字段
+     * @param $field
+     * @return mixed
+     */
+    function fieldCN($field)
+    {
+        if (!is_array($field)) {
+            return $field;
+        }
+        return  $field['cn'];
+    }
+}
+
+if (! function_exists('fieldEn')) {
+
+    /**
+     * 英文字段
+     * @param $field
+     * @return mixed
+     */
+    function fieldEn($field)
+    {
+        if (!is_array($field)) {
+            return $field;
+        }
+        return $field['en'];
+    }
+}

@@ -29,9 +29,17 @@ class Category extends Model
     use SoftDeletes;
 
     protected $table = 'categorys';
-    protected $fillable = ['id','name', 'en_name','thumb','keywords', 'description', 'parent', 'order', 'path', 'type', 'link', 'template', 'tel', 'email'];
+    protected $fillable = ['id','name','keywords', 'description', 'parent', 'order', 'path', 'type', 'link', 'template'];
 
     protected $dates = ['created_at', 'updated_at', 'deleted_at'];
+
+    // 类型转换
+    protected $casts = [
+        'name' => 'array',
+        'keywords' => 'array',
+        'description' => 'array',
+    ];
+
 
     public function articles(){
         return $this->belongsToMany(

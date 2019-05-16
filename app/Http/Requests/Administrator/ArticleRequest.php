@@ -32,7 +32,7 @@ class ArticleRequest extends Request
                 return [
                     'category_id' => 'required|array',
                     'category_id.*' => 'integer',
-                    'title' => 'required|min:1|max:191',
+                    'title' => 'required|array|min:1|max:191',
                     'object_id' => 'required|alpha_dash|unique:articles|min:1|max:64',
                     'keywords' => 'nullable|max:191',
                     'description' => 'nullable|max:191',

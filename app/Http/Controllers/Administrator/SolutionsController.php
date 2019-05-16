@@ -17,24 +17,28 @@ class SolutionsController extends Controller
      * Display a listing of the resource.
      *
      * @param Solution $solution
-     * @return void
+     * @return mixed
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
     public function index(Solution $solution)
     {
-        //
         $this->authorize('index', $solution);
-        dd('solutions.index');
+
+        $solutions = $solution->ordered()->recent()->paginate((config('administrator.paginate.limit')));
+
+        return backend_view('solutions.index', compact('solutions'));
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @param Solution $solution
+     * @return mixed
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function create()
+    public function create(Solution $solution)
     {
-        //
+        $this->authorize('create',$solution);
+
+        return backend_view('solutions.create_and_edit', compact('solution'));
     }
 
     /**

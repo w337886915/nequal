@@ -26,35 +26,65 @@
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="title" class="col-md-2 col-sm-2 control-label required">标题</label>
                             <div class="col-md-5 col-sm-10">
-                            <input type="text" name="title" required autocomplete="off" class="form-control" value="{{ old('title',$page->title) }}" >
+                                <input type="text" name="title[cn]" required autocomplete="off" id="title" class="form-control" value="{{ old('title',fieldCN($page->title)) }}">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback  has-icon-right">
+                            <label for="title_en" class="col-md-2 col-sm-2 control-label required">标题(英文)</label>
+                            <div class="col-md-5 col-sm-10">
+                                <input type="text" name="title[en]" required autocomplete="off" id="title_en" class="form-control" value="{{ old('title',fieldEn($page->title)) }}">
                             </div>
                         </div>
 
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="subtitle" class="col-md-2 col-sm-2 control-label">副标题</label>
                             <div class="col-md-5 col-sm-10">
-                            <input type="text" name="subtitle" autocomplete="off" class="form-control" value="{{ old('subtitle',$page->subtitle) }}" >
+                            <input type="text" name="subtitle[cn]" autocomplete="off" id="subtitle" class="form-control" value="{{ old('subtitle',fieldCN($page->subtitle)) }}" >
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback  has-icon-right">
+                            <label for="subtitle_en" class="col-md-2 col-sm-2 control-label">副标题(英文)</label>
+                            <div class="col-md-5 col-sm-10">
+                                <input type="text" name="subtitle[en]" autocomplete="off" id="subtitle_en" class="form-control" value="{{ old('subtitle',fieldEn($page->subtitle)) }}" >
                             </div>
                         </div>
 
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="keywords" class="col-md-2 col-sm-2 control-label">关键词</label>
                             <div class="col-md-5 col-sm-10">
-                            <input type="text" name="keywords" autocomplete="off" class="form-control" value="{{ old('keywords',$page->keywords) }}" >
+                            <input type="text" name="keywords[cn]" autocomplete="off" id="keywords" class="form-control" value="{{ old('keywords',fieldCN($page->keywords)) }}" >
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback  has-icon-right">
+                            <label for="keywords_en" class="col-md-2 col-sm-2 control-label">关键词(英文)</label>
+                            <div class="col-md-5 col-sm-10">
+                                <input type="text" name="keywords[en]" autocomplete="off" id="keywords_en" class="form-control" value="{{ old('keywords',fieldEn($page->keywords)) }}" >
                             </div>
                         </div>
 
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="description" class="col-md-2 col-sm-2 control-label">描述</label>
                             <div class="col-md-5 col-sm-10">
-                            <textarea name="description" class="form-control" rows="4">{{  old('description', $page->description) }}</textarea>
+                            <textarea name="description[cn]" id="description" class="form-control" rows="4">{{  old('description', fieldCN($page->description)) }}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback  has-icon-right">
+                            <label for="description_en" class="col-md-2 col-sm-2 control-label">描述(英文)</label>
+                            <div class="col-md-5 col-sm-10">
+                                <textarea name="description[en]" id="description_en" class="form-control" rows="4">{{  old('description', fieldEn($page->description)) }}</textarea>
                             </div>
                         </div>
 
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="content" class="col-md-2 col-sm-2 control-label required">内容</label>
                             <div class="col-md-8 col-sm-10">
-                            <textarea name="content" id="content" class="form-control editor">{{  old('content', $page->content) }}</textarea>
+                            <textarea name="content[cn]" id="content" class="form-control editor">{{  old('content', fieldCN($page->content)) }}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback  has-icon-right">
+                            <label for="content_en" class="col-md-2 col-sm-2 control-label required">内容(英文)</label>
+                            <div class="col-md-8 col-sm-10">
+                                <textarea name="content[en]" id="content_en" class="form-control editor">{{  old('content', fieldEn($page->content)) }}</textarea>
                             </div>
                         </div>
 
@@ -67,7 +97,7 @@
                                             <img src="{{ storage_image_url($page->thumb) }}" id="image_image" class="img-rounded" width="660px" height="300px" alt="">
                                             <input type="hidden" name="image" id="form_thumb" value="{{ old('thumb',$page->thumb) }}" />
                                             <button id="upload_thumb" type="button" class="btn btn-info uploader-btn-browse"><i class="icon icon-upload"></i> 上传</button>
-                                            <button id="select_thumb" type="button" class="btn btn-primary"><i class="icon icon-file-image"></i> 选择</button>
+                                      {{--      <button id="select_thumb" type="button" class="btn btn-primary"><i class="icon icon-file-image"></i> 选择</button>--}}
                                             <button id="delete_thumb" type="button" class="btn btn-danger"><i class="icon icon-remove-sign"></i> 删除</button>
                                         </div>
                                     </div>
@@ -77,7 +107,7 @@
                         <div class="form-group has-feedback has-icon-right">
                             <label for="author" class="col-md-2 col-sm-2 control-label">作者</label>
                             <div class="col-md-5 col-sm-10">
-                            <input type="text" name="author" autocomplete="off" class="form-control" value="{{ old('author',$page->author) }}"
+                            <input type="text" name="author" autocomplete="off" id="author" class="form-control" value="{{ old('author',$page->author) }}"
                                    data-fv-trigger="blur"
                                    minlength="1"
                                    maxlength="64"
@@ -85,9 +115,9 @@
                         </div>
 
                         <div class="form-group has-feedback has-icon-right">
-                            <label class="col-md-2 col-sm-2  required">排序</label>
+                            <label for="order" class="col-md-2 col-sm-2  required">排序</label>
                             <div class="col-md-5 col-sm-10">
-                            <input type="number" name="order" autocomplete="off" class="form-control" value="{{ old('order',$page->order) }}"
+                            <input type="number" name="order" autocomplete="off" id="order" class="form-control" value="{{ old('order',$page->order?:999) }}"
                                    required
                                    data-fv-trigger="blur"
                                    min="1"

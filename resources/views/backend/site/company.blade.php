@@ -27,6 +27,16 @@
                                    maxlength="64"
                             ></div>
                         </div>
+                        <div class="form-group has-feedback  has-icon-right">
+                            <label for="name_en" class="col-md-2 col-sm-2 control-label required">公司名称(英文)</label>
+                            <div class="col-md-5 col-sm-10">
+                                <input type="text" class="form-control" id="name_en" name="name_en" autocomplete="off" placeholder="" value="{{ get_value($site, 'name_en') }}"
+                                       required
+                                       data-fv-trigger="blur"
+                                       minlength="1"
+                                       maxlength="64"
+                                ></div>
+                        </div>
 
                         <div class="form-group">
                             <label for="description" class="col-md-2 col-sm-2 control-label">公司简介</label>
@@ -39,12 +49,31 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="description_en" class="col-md-2 col-sm-2 control-label">公司简介(英文)</label>
+                            <div class="col-md-5 col-sm-10">
+                            <textarea class="form-control" rows="6" id="description_en" name="description_en"
+                                      data-fv-trigger="blur"
+                                      minlength="1"
+                            >{{ get_value($site, 'description_en') }}</textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <label for="content" class="col-md-2 col-sm-2 control-label">公司介绍</label>
                             <div class="col-md-8 col-sm-10">
                             <textarea class="form-control editor" rows="6" id="content" name="content"
                                       data-fv-trigger="blur"
                                       minlength="1"
                             >{{ get_value($site, 'content') }}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="content_en" class="col-md-2 col-sm-2 control-label">公司介绍(英文)</label>
+                            <div class="col-md-8 col-sm-10">
+                            <textarea class="form-control editor" rows="6" id="content_en" name="content_en"
+                                      data-fv-trigger="blur"
+                                      minlength="1"
+                            >{{ get_value($site, 'content_en') }}</textarea>
                             </div>
                         </div>
 
@@ -54,9 +83,7 @@
                                 <button type="reset" class="btn btn-default">重置</button>
                             </div>
                         </div>
-
                     </form>
-
                 </div>
             </div>
         </div>

@@ -60,7 +60,7 @@
                     <div class="form-group">
                         <label for="email" class="col-sm-3 required">邮箱</label>
                         <div class="col-sm-8 @if ($errors->has('email')) has-error @endif">
-                            <input type="email" name="email" autocomplete="off" required class="form-control" value="337886915@qq.com" id="email" placeholder="请输入邮箱">
+                            <input type="email" name="email" autocomplete="off" required class="form-control" value="admin@admin.com" id="email" placeholder="请输入邮箱">
                             @if ($errors->has('email'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('email') }}</strong>

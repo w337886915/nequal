@@ -53,8 +53,14 @@ class Page extends Model
         ];
     
     protected $dates = ['created_at', 'updated_at', 'deleted_at'];
-    
-    
+    protected $casts = [
+        'title' => 'array',
+        'subtitle' => 'array',
+        'keywords' => 'array',
+        'description' => 'array',
+        'content' => 'array',
+    ];
+
     public $dispatchesEvents  = [
         'saved' => BehaviorLogEvent::class,
     ];

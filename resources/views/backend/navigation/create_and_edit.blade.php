@@ -183,7 +183,7 @@
                                     <img src="{{ storage_image_url($navigation->image) }}" id="image_image" class="img-rounded" width="250px" height="200px" alt="">
                                     <input type="hidden" name="image" id="form_image" value="{{ old('image',$navigation->image) }}" />
                                     <button id="upload_image" type="button" class="btn btn-info uploader-btn-browse"><i class="icon icon-upload"></i> 上传</button>
-                                    <button id="select_thumb" type="button" class="btn btn-primary"><i class="icon icon-file-image"></i> 选择</button>
+                                   {{-- <button id="select_thumb" type="button" class="btn btn-primary"><i class="icon icon-file-image"></i> 选择</button>--}}
                                     <button id="delete_thumb" type="button" class="btn btn-danger"><i class="icon icon-remove-sign"></i> 删除</button>
                                 </div>
                             </div>

@@ -54,7 +54,7 @@
                         <tr>
                             <td class="text-center">{{ $page->id }}</td>
                             <td class="text-center">{{ $page->order  }}</td>
-                            <td>{{ $page->title  }}</td>
+                            <td>{{ fieldCN($page->title)  }}</td>
                             <td class="text-center">{{ $page->author  }}</td>
                             <td class="text-center">{{ $page->created_at->toDateString()}}</td>
                             <td class="text-center">{{ $page->created_user->name}}</td>

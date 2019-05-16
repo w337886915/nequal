@@ -92,7 +92,8 @@ class SiteController extends Controller
     public function companyStore(Request $request, Setting $setting){
         $this->authorize('company', $setting);
 
-        $data = $request->only('name', 'description', 'content');
+        $data = $request->only('name', 'description', 'content', 'name_en', 'description_en', 'content_en');
+
         $setting->store($data,'company','common','system');
 
         return redirect()->route('administrator.site.company')->with('success', '保存成功.');

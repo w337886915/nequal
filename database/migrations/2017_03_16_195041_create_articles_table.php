@@ -30,14 +30,19 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->uuid('object_id')->comment('objectId');
             $table->string("alias",150)->nullable()->comment('别名');
-            $table->string("title",150)->comment('文章标题');
-            $table->string("subtitle",150)->nullable()->comment('副标题');
-            $table->string("keywords",150)->nullable()->comment('关键字');
-            $table->string("description")->nullable()->comment('文章描述');
+//            $table->string("title",150)->comment('文章标题');
+//            $table->string("subtitle",150)->nullable()->comment('副标题');
+//            $table->string("keywords",150)->nullable()->comment('关键字');
+//            $table->string("description")->nullable()->comment('文章描述');
+            $table->json("title")->comment('文章标题');
+            $table->json("subtitle")->nullable()->comment('副标题');
+            $table->json("keywords")->nullable()->comment('关键字');
+            $table->json("description")->nullable()->comment('文章描述');
+
             $table->string("author",60)->nullable()->comment('文章作者');
             $table->string("source",50)->nullable()->comment('文章来源');
-//            $table->integer("category_id")->comment('分类id');
-            $table->text("content")->comment('文章内容');
+//            $table->text("content")->comment('文章内容');
+            $table->json("content")->comment('文章内容');
             $table->json("attribute")->nullable()->comment('附加属性');
             $table->string("thumb",255)->nullable()->comment('封面');
             $table->enum("is_link",[0,1])->default(0)->comment('isLink');

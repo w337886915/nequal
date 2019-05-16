@@ -50,7 +50,7 @@
                                     <input type="hidden" name="id[]" value="{{$category->id}}">
                                     <input type="tel" name="order[]" autocomplete="off" class="form-control text-center" value="{{ $category->order  }}">
                                 </td>
-                                <td>{!! str_repeat('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',$category->level) !!}@if($category->level > 0)├─ @endif{{ $category->name}}</td>
+                                <td>{!! str_repeat('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',$category->level) !!}@if($category->level > 0)├─ @endif{{ fieldCN($category->name)}}</td>
                                 <td class="text-center">
                                     <a href="{{ route('administrator.category.create', [$type, $category->id]) }}" class="btn btn-xs btn-success">添加</a>
                                     <a href="{{ route('administrator.category.edit', [$category->id, $type]) }}" class="btn btn-xs btn-primary">编辑</a>
