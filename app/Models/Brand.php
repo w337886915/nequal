@@ -13,7 +13,7 @@ use App\Events\BehaviorLogEvent;
 class Brand extends Model
 {
 
-    protected $fillable = ['id','name', 'url', 'order', 'image'];
+    protected $fillable = ['id','name', 'url', 'order', 'image', 'brand_table_id', 'brand_table_type'];
 
     protected $dates = ['created_at', 'updated_at', 'deleted_at'];
 
@@ -24,5 +24,4 @@ class Brand extends Model
     public function titleName(){
         return 'name';
     }
-
 }

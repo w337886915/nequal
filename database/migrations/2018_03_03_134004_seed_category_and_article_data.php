@@ -35,9 +35,7 @@ class SeedCategoryAndArticleData extends Migration
 //        Category::create(['id' => 2, 'name' => '成功案例', 'parent' => 0, 'path' => '0', 'type' => 'article']);
 //        Category::create(['id' => 3, 'name' => '产品活动', 'parent' => 0, 'path' => '0', 'type' => 'article']);
 //        Category::create(['id' => 4, 'name' => '人才招聘', 'parent' => 0, 'path' => '0', 'type' => 'article']);
-        Category::create(['id' => 1, 'name' => '{\"cn\": \"企业新闻\", \"en\": \"NEWS\"}', 'parent' => 0, 'path' => '0', 'type' => 'article']);
-
-
+        Category::create(['id' => 1, 'name' => '{"cn": "企业新闻", "en": "NEWS"}', 'parent' => 0, 'path' => '0', 'type' => 'article']);
 
 //        Article::create(['id'=>1, 'author'=>'管理员', 'is_link' => '0', 'type'=>'article', 'created_op'=>1, 'updated_op'=>1, 'object_id'=>'1593889566486881', 'title'=>'享受购置税减半的B级车推荐', 'content'=>'<p><span style="color:rgb(85,85,85);font-size:15px;">前不久，一则重磅新闻引爆国内汽车市场，那就是国务院总理李克强9月29日主持召开国务院常务会议中决定，从2015年10月1日到2016年12月31日，对购买1.6升及以下排量乘用车实施减半征收车辆购置税的优惠政策。这便意味着市场上那些符合这一标准的车型，在消费者交全款买车前，就已经有了几千元甚至上万元的优惠！应该说此项举措对于目前比较消沉的车市以及不少持币观望合适买车的消费者来说，能起不少推动和促进的效果。</span></p><p><span style="color:rgb(85,85,85);font-size:15px;">但在不少消费者心中，总是认为符合这一标准的车型基本都集中在了紧凑级以及微型车，对于那些想买级别再高车型的朋友来说有点不沾边。其实有这种想法的朋友大可不必担心，因为在目前的市场上，配有小排量涡轮增压发动机的B级车有很多，完全满足市场的要求。今天，我们特意选出了4款在这个级别比较有特点的车型，希望能对您有些帮助。</span></p>',])->giveCategoryTo([1]);
 //        Article::create(['id'=>2, 'author'=>'管理员', 'is_link' => '0', 'type'=>'article', 'created_op'=>1, 'updated_op'=>1, 'object_id'=>'1593889630591207', 'title'=>'荷兰人测试无人驾驶大巴笑哭了 车只跑了200米', 'content'=>'<p>2月1日消息，上个星期，6 名居住在瓦格宁根的荷兰人，度过难忘的旅程。——他们坐上了全荷兰首次公开驾驶的无人驾驶汽车，尽管车速只有 8 km/h 的速度，行驶了 200 米的距离。</p><p>这个无人驾驶汽车由 The WePod 公司制造，它的最高行驶速度当然不止 8km/h，不过为了公开测试的安全性，所以特意降低了行驶的速度。要知道，除了车上的 6 个人，路边还有很多好奇宝宝观摩。</p>',])->giveCategoryTo([1]);

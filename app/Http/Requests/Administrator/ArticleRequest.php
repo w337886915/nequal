@@ -38,7 +38,8 @@ class ArticleRequest extends Request
                     'description' => 'nullable|max:191',
                     'author' => 'nullable|max:191',
                     'source' => 'nullable|max:191',
-                    'content' => 'required|min:1|max:65535',
+                    'content' => 'required|array',
+                    'content.*' => 'required|min:1|max:65535',
                     'attribute' => 'nullable|array',
                     'thumb' => 'nullable|max:191',
                     'order' => 'nullable|integer',
@@ -63,7 +64,8 @@ class ArticleRequest extends Request
                     'description' => 'nullable|max:191',
                     'author' => 'nullable|max:191',
                     'source' => 'nullable|max:191',
-                    'content' => 'required|min:1|max:65535',
+                    'content' => 'required|array',
+                    'content.*' => 'required|min:1|max:65535',
                     'attributes' => 'nullable|array',
                     'thumb' => 'nullable|max:191',
                     'order' => 'nullable|integer',
@@ -88,7 +90,7 @@ class ArticleRequest extends Request
     {
         return [
             'category_id' => '分类',
-
+            'content.*' => '内容(中/英)'
         ];
     }
 }

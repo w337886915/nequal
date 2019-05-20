@@ -26,65 +26,65 @@
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="title" class="col-md-2 col-sm-2 control-label required">标题</label>
                             <div class="col-md-5 col-sm-10">
-                                <input type="text" name="title[cn]" required autocomplete="off" id="title" class="form-control" value="{{ old('title',fieldCN($page->title)) }}">
+                                <input type="text" name="title[cn]" required autocomplete="off" id="title" class="form-control" value="{{ old('title.cn',fieldCN($page->title)) }}">
                             </div>
                         </div>
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="title_en" class="col-md-2 col-sm-2 control-label required">标题(英文)</label>
                             <div class="col-md-5 col-sm-10">
-                                <input type="text" name="title[en]" required autocomplete="off" id="title_en" class="form-control" value="{{ old('title',fieldEn($page->title)) }}">
+                                <input type="text" name="title[en]" required autocomplete="off" id="title_en" class="form-control" value="{{ old('title.en',fieldEn($page->title)) }}">
                             </div>
                         </div>
 
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="subtitle" class="col-md-2 col-sm-2 control-label">副标题</label>
                             <div class="col-md-5 col-sm-10">
-                            <input type="text" name="subtitle[cn]" autocomplete="off" id="subtitle" class="form-control" value="{{ old('subtitle',fieldCN($page->subtitle)) }}" >
+                            <input type="text" name="subtitle[cn]" autocomplete="off" id="subtitle" class="form-control" value="{{ old('subtitle.cn',fieldCN($page->subtitle)) }}" >
                             </div>
                         </div>
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="subtitle_en" class="col-md-2 col-sm-2 control-label">副标题(英文)</label>
                             <div class="col-md-5 col-sm-10">
-                                <input type="text" name="subtitle[en]" autocomplete="off" id="subtitle_en" class="form-control" value="{{ old('subtitle',fieldEn($page->subtitle)) }}" >
+                                <input type="text" name="subtitle[en]" autocomplete="off" id="subtitle_en" class="form-control" value="{{ old('subtitle.en',fieldEn($page->subtitle)) }}" >
                             </div>
                         </div>
 
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="keywords" class="col-md-2 col-sm-2 control-label">关键词</label>
                             <div class="col-md-5 col-sm-10">
-                            <input type="text" name="keywords[cn]" autocomplete="off" id="keywords" class="form-control" value="{{ old('keywords',fieldCN($page->keywords)) }}" >
+                            <input type="text" name="keywords[cn]" autocomplete="off" id="keywords" class="form-control" value="{{ old('keywords.cn',fieldCN($page->keywords)) }}" >
                             </div>
                         </div>
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="keywords_en" class="col-md-2 col-sm-2 control-label">关键词(英文)</label>
                             <div class="col-md-5 col-sm-10">
-                                <input type="text" name="keywords[en]" autocomplete="off" id="keywords_en" class="form-control" value="{{ old('keywords',fieldEn($page->keywords)) }}" >
+                                <input type="text" name="keywords[en]" autocomplete="off" id="keywords_en" class="form-control" value="{{ old('keywords.en',fieldEn($page->keywords)) }}" >
                             </div>
                         </div>
 
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="description" class="col-md-2 col-sm-2 control-label">描述</label>
                             <div class="col-md-5 col-sm-10">
-                            <textarea name="description[cn]" id="description" class="form-control" rows="4">{{  old('description', fieldCN($page->description)) }}</textarea>
+                            <textarea name="description[cn]" id="description" class="form-control" rows="4">{{  old('description.cn', fieldCN($page->description)) }}</textarea>
                             </div>
                         </div>
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="description_en" class="col-md-2 col-sm-2 control-label">描述(英文)</label>
                             <div class="col-md-5 col-sm-10">
-                                <textarea name="description[en]" id="description_en" class="form-control" rows="4">{{  old('description', fieldEn($page->description)) }}</textarea>
+                                <textarea name="description[en]" id="description_en" class="form-control" rows="4">{{  old('description.en', fieldEn($page->description)) }}</textarea>
                             </div>
                         </div>
 
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="content" class="col-md-2 col-sm-2 control-label required">内容</label>
                             <div class="col-md-8 col-sm-10">
-                            <textarea name="content[cn]" id="content" class="form-control editor">{{  old('content', fieldCN($page->content)) }}</textarea>
+                            <textarea name="content[cn]" id="content" class="form-control editor">{{  old('content.cn', fieldCN($page->content)) }}</textarea>
                             </div>
                         </div>
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="content_en" class="col-md-2 col-sm-2 control-label required">内容(英文)</label>
                             <div class="col-md-8 col-sm-10">
-                                <textarea name="content[en]" id="content_en" class="form-control editor">{{  old('content', fieldEn($page->content)) }}</textarea>
+                                <textarea name="content[en]" id="content_en" class="form-control editor">{{  old('content.en', fieldEn($page->content)) }}</textarea>
                             </div>
                         </div>
 

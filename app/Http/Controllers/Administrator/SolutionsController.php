@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers\Administrator;
 
+use App\Http\Requests\Administrator\SolutionRequest;
+use App\Models\Article;
+use App\Models\Brand;
 use App\Models\Solution;
 use Illuminate\Http\Request;
 
@@ -38,18 +41,26 @@ class SolutionsController extends Controller
     {
         $this->authorize('create',$solution);
 
-        return backend_view('solutions.create_and_edit', compact('solution'));
+        $brands = Brand::all()->toArray();
+
+        return backend_view('solutions.create_and_edit', compact('solution', 'brands'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param SolutionRequest $request
+     * @param Solution $solution
      * @return \Illuminate\Http\Response
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function store(Request $request)
+    public function store(SolutionRequest $request, Solution $solution)
     {
-        //
+        $this->authorize('create', $solution);
+
+        $solution = Solution::create($request->all());
+
+        return redirect()->route('solutions.index')->with('success', '添加成功.');
     }
 
     /**
@@ -69,31 +80,71 @@ class SolutionsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Solution $solution)
     {
-        //
+        $this->authorize('update', $solution);
+
+        $brands = [];
+        foreach(Brand::all() as $value) {
+            $brands[] = [
+                'id' => $value->id,
+                'name' => $value->name,
+                'check' => in_array($value->id, $solution->brand_ids ?: [])
+            ];
+        }
+        return backend_view('solutions.create_and_edit', compact('solution', 'brands'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param SolutionRequest $request
+     * @param Solution $solution
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function update(Request $request, $id)
+    public function update(SolutionRequest $request, Solution $solution)
     {
-        //
+        $this->authorize('update', $solution);
+
+        $solution->update($request->all());
+
+        return $this->redirect('solutions.index')->with('success', '更新成功.');
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * 删除
+     * @param Solution $solution
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function destroy($id)
+    public function destroy(Solution $solution)
     {
-        //
+        $this->authorize('destroy', $solution);
+        $solution->delete();
+
+        return $this->redirect()->with('success', '删除成功.');
     }
+
+
+
+    /**
+     * 排序
+     *
+     * @param Solution $solution
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Illuminate\Auth\Access\AuthorizationException
+     */
+    public function order(Solution $solution){
+        $this->authorize('update', $solution);
+        $ids = request('id',[]);
+        $order = request('order',[]);
+
+        foreach($ids as $k => $id){
+            $solution->where('id',$id)->update(['order' => $order[$k] ?? 999 ]);
+        }
+
+        return redirect()->route('solutions.index')->with('success', '操作成功.');
+    }
+
 }

@@ -50,6 +50,7 @@ class AppServiceProvider extends ServiceProvider
 		\App\Models\Log::observe(                   \App\Observers\LogObserver::class);
 		\App\Models\MultipleFile::observe(          \App\Observers\MultipleFileObserver::class);
 		\App\Models\Form::observe(                  \App\Observers\FormObserver::class);
+		\App\Models\Solution::observe(                  \App\Observers\SolutionObserver::class);
 
         // 设置时区
         \Carbon\Carbon::setLocale('zh');

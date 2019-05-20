@@ -42,7 +42,7 @@
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="name" class="col-md-2 col-sm-2 control-label required">名称</label>
                             <div class="col-md-5 col-sm-10">
-                            <input type="text" name="name[cn]" autocomplete="off" class="form-control" value="{{ old('name',fieldCN($category->name)) }}"
+                            <input type="text" name="name[cn]" autocomplete="off" class="form-control" value="{{ old('name.cn',fieldCN($category->name)) }}"
                                    required
                                    data-fv-trigger="blur"
                                    minlength="1"
@@ -52,7 +52,7 @@
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="en_name" class="col-md-2 col-sm-2 control-label required">名称(英文)</label>
                             <div class="col-md-5 col-sm-10">
-                                <input type="text" name="name[en]" id="en_name" autocomplete="off" class="form-control" value="{{ old('name', fieldEn($category->name))  }}"
+                                <input type="text" name="name[en]" id="en_name" autocomplete="off" class="form-control" value="{{ old('name.en', fieldEn($category->name))  }}"
                                        required
                                        data-fv-trigger="blur"
                                        minlength="1"
@@ -72,7 +72,7 @@
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="keywords" class="col-md-2 col-sm-2 control-label">关键字</label>
                             <div class="col-md-5 col-sm-10">
-                            <input type="text" name="keywords[cn]" autocomplete="off" placeholder="请输入关键字" class="form-control" value="{{ old('keywords',fieldCN($category->keywords)) }}"
+                            <input type="text" name="keywords[cn]" autocomplete="off" placeholder="请输入关键字" class="form-control" value="{{ old('keywords.cn',fieldCN($category->keywords)) }}"
                                    data-fv-trigger="blur"
                                    minlength="1"
                                    maxlength="128"
@@ -81,7 +81,7 @@
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="keywords" class="col-md-2 col-sm-2 control-label">关键字(英文)</label>
                             <div class="col-md-5 col-sm-10">
-                                <input type="text" name="keywords[en]" autocomplete="off" placeholder="请输入关键字" class="form-control" value="{{ old('keywords',fieldEn($category->keywords)) }}"
+                                <input type="text" name="keywords[en]" autocomplete="off" placeholder="请输入关键字" class="form-control" value="{{ old('keywords.en',fieldEn($category->keywords)) }}"
                                        data-fv-trigger="blur"
                                        minlength="1"
                                        maxlength="128"
@@ -129,7 +129,7 @@
                             <textarea name="description[cn]" placeholder="请输入描述" class="form-control" rows="3"
                                       data-fv-trigger="blur"
                                       maxlength="255"
-                            >{{  old('description', fieldCN($category->description)) }}</textarea>
+                            >{{  old('description.cn', fieldCN($category->description)) }}</textarea>
                             </div>
                         </div>
                         <div class="form-group has-feedback  has-icon-right">
@@ -138,7 +138,7 @@
                             <textarea name="description[en]" placeholder="请输入描述" class="form-control" rows="3"
                                       data-fv-trigger="blur"
                                       maxlength="255"
-                            >{{  old('description', fieldEN($category->description)) }}</textarea>
+                            >{{  old('description.en', fieldEN($category->description)) }}</textarea>
                             </div>
                         </div>
 

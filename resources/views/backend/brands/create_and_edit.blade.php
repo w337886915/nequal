@@ -56,7 +56,7 @@
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="order" class="col-md-2 col-sm-2 control-label required">排序</label>
                             <div class="col-md-5 col-sm-10">
-                            <input type="number" class="form-control" id="order" name="order" autocomplete="off" placeholder="" value="{{ old('order',$brand->order) }}"
+                            <input type="number" class="form-control" id="order" name="order" autocomplete="off" placeholder="" value="{{ old('order',$brand->order??999) }}"
                                    required
                                    data-fv-trigger="blur"
                                    min="0"
