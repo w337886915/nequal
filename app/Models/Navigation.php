@@ -31,7 +31,7 @@ class Navigation extends Model
     protected $fillable = ['id','category', 'type', 'title', 'description', 'target', 'link', 'image', 'icon', 'parent', 'path', 'params', 'order', 'is_show'];
     
     protected $dates = ['created_at', 'updated_at', 'deleted_at'];
-    
+    protected $casts = ['title'=>'array'];
     
     public $dispatchesEvents  = [
         'saved' => BehaviorLogEvent::class,

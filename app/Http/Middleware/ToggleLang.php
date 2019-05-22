@@ -17,11 +17,13 @@ class ToggleLang
      */
     public function handle($request, Closure $next)
     {
+
         if ($request->session()->has('lang')) {
             App::setLocale($request->session()->get('lang'));
         } else {
-            App::setLocale('zh-CN');
+            App::setLocale('cn');
         }
+
         return $next($request);
     }
 }

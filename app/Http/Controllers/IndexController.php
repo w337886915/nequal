@@ -15,4 +15,9 @@ class indexController extends Controller
         dd($slides_list->toArry());
         return laravel_frontend_view('index');
     }
+    public function lang($lang){
+        session(['lang'=>$lang]);
+        header('location:'.$_SERVER['HTTP_REFERER']);
+
+    }
 }

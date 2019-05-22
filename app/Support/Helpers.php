@@ -103,7 +103,7 @@ if( !function_exists('get_active_template') ){
             return $templates;
         }
 
-        $view_path = config('view.paths')[0] . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'frontend'. DIRECTORY_SEPARATOR . config('theme.desktop') . DIRECTORY_SEPARATOR . $path . DIRECTORY_SEPARATOR;
+        $view_path = config('view.paths')[0] . DIRECTORY_SEPARATOR .  'frontend'. DIRECTORY_SEPARATOR . config('theme.desktop') . DIRECTORY_SEPARATOR . $path . DIRECTORY_SEPARATOR;
         $list =  glob($view_path.$prefix."-*.blade.php");
         $templates = [
             '' => '默认',
@@ -126,7 +126,7 @@ if( !function_exists('get_active_template') ){
 }
 
 if( !function_exists('byte_to_size') ){
-    
+
     function byte_to_size($byte){
         if($byte > pow(2,40)){
             $size = round($byte/pow(2,40),2).' TB';
@@ -139,7 +139,7 @@ if( !function_exists('byte_to_size') ){
         }else{
             $size = round($byte,2).' B';
         }
-        
+
         return $size;
     }
 }
@@ -253,7 +253,7 @@ if( !function_exists("backend_view") ){
     {
         $args = func_get_args();
         $args[0] = 'backend::'.$name;
-        
+
         return view(...$args);
     }
 }
@@ -284,7 +284,7 @@ if( !function_exists("frontend_view") ){
     {
         $args = func_get_args();
         $args[0] = 'frontend::'.$name;
-        
+
         return view(...$args);
     }
 }

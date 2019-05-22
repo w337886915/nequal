@@ -66,7 +66,7 @@
                                     <input type="hidden" name="id[]" value="{{$navigation->id}}">
                                     <input type="tel" name="order[]" autocomplete="off" class="form-control text-center" value="{{ $navigation->order  }}">
                                 </td>
-                                <td>{!! str_repeat('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',$navigation->lavel) !!} @if($navigation->lavel > 0)├─ @endif{{ $navigation->title}}</td>
+                                <td>{!! str_repeat('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',$navigation->lavel) !!} @if($navigation->lavel > 0)├─ @endif{{ $navigation->title['cn']}}</td>
                                 <td class="text-center">@switch($navigation->is_show)
                                         @case(0)<span class="label label-badge label-danger">隐藏</span>@break
                                         @case(1)<span class="label label-badge label-success">正常</span>@break

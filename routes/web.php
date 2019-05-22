@@ -65,6 +65,8 @@ Route::group([ 'middleware' => ['laracms.frontend', 'toggleLang'], ], function (
     # 自定义表单
     Route::get('form/show_{navigation}_{type}.html', 'FormController@index')->name('form.index');
     Route::post('form/{type}.html', 'FormController@store')->name('form.store');
+    # 语言切换
+    Route::get('lang/{lang}', 'indexController@lang')->name('index.lang');
 
     # 搜索页面
 //    Route::get('search', 'SearchController@index')->name('search');
