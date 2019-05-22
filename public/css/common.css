@@ -1,0 +1,75 @@
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background: #fff;
+    color: #333;
+    font-size: medium;
+    margin-top: 5px;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif
+}
+
+
+ul,li, ol {
+    list-style-type: none;
+}
+
+select, input, img, select {
+    vertical-align: middle;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #009;
+}
+
+a:visited {
+    color: #800080;
+}
+
+a:hover, a:active, a:focus {
+    color: #c00;
+    text-decoration: underline;
+}
+
+
+/* -----底部样式------ */
+.fly-footer {
+    line-height: 30px;
+    color: #A4A5A6;
+    background: #2B2F32;
+}
+
+.fly-footer .list {
+    padding: 50px 15px;
+}
+
+.fly-footer .footer-item {
+    padding: 0 0 0 15px;
+}
+.fly-footer h6 {
+    line-height: 35px;
+}
+.fly-footer .footer-item a{
+    color: #fff;
+}
+
+.fly-footer .copyright {
+    padding: 15px 0;
+    border-top: 1px solid #7d7d7a;
+    line-height: 37px;
+}
+
+.fly-footer .copyright a {
+    font-weight: 300;
+    color: #A4A5A6 !important;
+}
+
+/* 底部 END*/
