@@ -1,1 +1,1 @@
-@extends('frontend.nequl.layouts.app')
+@extends('frontend.customize.layouts.app')
