@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
 
-
+    <link rel="stylesheet" href="{{asset('css/common.css')}}">
 
 </head>
 <body>
@@ -21,11 +21,11 @@
 @include('frontend.customize.layouts.swipper')
 @endsection
 <!--content-->
-<div class="container-fixed swap">
+<div class="container-fixed">
     @yield('content')
 </div>
 <!--footer-->
-@include('frontend.customize.layouts.footer');
+@include('frontend.customize.layouts.footer')
 
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
