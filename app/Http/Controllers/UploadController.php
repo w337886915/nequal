@@ -291,6 +291,7 @@ class UploadController extends Controller
      */
     public function uploader(Request $request, UploadHandler $uploader)
     {
+
         // 检测是否是允许的类型
         if ( ! in_array( $request->folder, config('filesystems.uploader.folder', []) ) ) {
             return $this->responseAjax(2,false, '非法上传，上传类型错误');

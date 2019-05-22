@@ -1,3 +1,19 @@
+<style>
+    .container-fixed .container nav #navbarSupportedContent .navbar-nav{
+        line-height: 88px;
+        height: 88px;
+        text-align: center;
+    }
+    .container-fixed .container nav #navbarSupportedContent .navbar-nav li {
+        width: 100px;
+    }
+    .container-fixed .container nav #navbarSupportedContent .navbar-nav li a{
+        color: black;
+    }
+    .container-fixed .container nav #navbarSupportedContent .navbar-nav li a button{
+        border-radius:20px;
+    }
+</style>
 <div class="container-fixed">
     <div class="container">
         <nav class="navbar navbar-expand-lg ">

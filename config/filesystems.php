@@ -84,6 +84,29 @@ return [
             'container' => env('AZURE_STORAGE_CONTAINER', 'azure storage container'),
             // $url = 'https://' . config('filesystems.disks.azure.name'). '.blob.core.windows.net/' . config('filesystems.disks.azure.container') . '/' . $filename;
         ],
+        'qiniu' => [
+
+            'driver'  => 'qiniu',
+
+            'domains' => [
+
+                'default'   => 'image.whgjh.top', //你的七牛域名
+
+                'https'     => 'http',         //你的HTTPS域名
+
+                'custom'    => 'xxxxx',     //你的自定义域名
+
+            ],
+
+            'access_key'=> 'mCBi3uLIemS71l2xrQNUDz1eoIl8tI0EC3fvNH2f',  //AccessKey
+
+            'secret_key'=> 'BCqoGzxU1qKwtYlLg6QBWxwb8agZYYAcJywL4VM0',  //SecretKey
+
+            'bucket'    => '337886915',  //Bucket名字
+
+            'notify_url'=> '',  //持久化处理回调地址
+
+        ],
 
     ],
 
