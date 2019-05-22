@@ -1,23 +1,46 @@
-<div class="container-fixed">
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img style="background-color: red" height="715px" width="1920px" src="http://image.whgjh.top/banner1.gif" alt=""></div>
-            <div class="swiper-slide" style="background: #044563;">Slide 2</div>
-            <div class="swiper-slide" style="background: brown;">Slide 3</div>
+@if($slides)
+    <div>
+        <div class="swiper-container" style="height:500px;width: 100%;">
+            <div class="swiper-wrapper">
+                @foreach($slides as $item)
+                    {{--  <a target="{{$item->target}}" href="{{$item->link}}">--}}
+                    <div class="swiper-slide"
+                         style='height:500px;width:100%;background-image: url("{{storage_image_url($item->image)}}");background-size: 100% 100%;'>
+                        {!! $item->content !!}
+                    </div>
+                    {{--   </a>--}}
+                @endforeach
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
-        <!-- 如果需要分页器 -->
-        <div class="swiper-pagination"></div>
     </div>
+@endif
 
-</div>
 @section('script-swiper')
     <script>
-        window.onload = function(){
-            // var mySwiper = new Swiper ('.swiper-container')
-            var mySwiper = new Swiper('.swiper-container',{
-                autoplay : 5000,//可选选项，自动滑动
-                loop : true,//可选选项，开启循环
+        $(document).ready(function () {
+            var mySwiper = new Swiper('.swiper-container', {
+                autoplay: true,
+                direction: 'horizontal', // 垂直切换选项
+                loop: true, // 循环模式选项
+                speed: 500,
+
+                // 如果需要分页器
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // 如果需要前进后退按钮
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
             })
-        }
+        });
     </script>
 @endsection

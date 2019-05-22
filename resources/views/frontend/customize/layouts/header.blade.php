@@ -24,7 +24,6 @@
             @php
             $navigation = \App\Models\Navigation::where(['category'=>'desktop'])->get()->toArray();
             $navigations = frontend_navigation('desktop');
-
             @endphp
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">

@@ -36,10 +36,9 @@
                         </div>
 
                         <div class="form-group has-feedback  has-icon-right">
-                            <label for="link" class="col-md-2 col-sm-2 control-label required">链接</label>
+                            <label for="link" class="col-md-2 col-sm-2 control-label">链接</label>
                             <div class="col-md-5 col-sm-10">
                             <input type="text" class="form-control" id="link" name="link" autocomplete="off" placeholder="" value="{{ old('link',$slide->link) }}"
-                                   required
                                    data-fv-trigger="blur"
                                    minlength="1"
                                    maxlength="128"
@@ -76,7 +75,7 @@
                         </div>
 
                         <div class="form-group has-feedback  has-icon-right">
-                            <label for="content" class="col-md-2 col-sm-2 control-label required">显示内容</label>
+                            <label for="content" class="col-md-2 col-sm-2 control-label">显示内容</label>
                             <div class="col-md-8 col-sm-10">
                                 <textarea name="content" id="content" class="form-control editor" >{{  old('content', $slide->content) }}</textarea>
                             </div>

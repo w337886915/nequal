@@ -18,8 +18,8 @@
 @include('frontend.customize.layouts.header')
 <!-- banner -->
 @section('swipper')
-@include('frontend.customize.layouts.swipper')
-@endsection
+    @include('frontend.customize.layouts.swipper')
+@show
 <!--content-->
 <div class="container-fixed">
     @yield('content')

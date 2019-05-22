@@ -34,13 +34,9 @@ class WelcomeController extends Controller
      */
     public function index(Slide $slide)
     {
-        $slides_list = $slide->where('group',1)->where('status','1')->orderby('order','desc')->get();
-        $slides_list = $slides_list->toArray();
-        //解决方案
-        
-        //dd($slides_list);
-//        return frontend_view('welcome');
-        return frontend_view('index',compact('slides_list'));
+        $slides = get_block("2018_03_04_224524_index_slide_block");
+        $slides = $slides->data;
+        return frontend_view('index',compact('slides'));
     }
 
     /**
