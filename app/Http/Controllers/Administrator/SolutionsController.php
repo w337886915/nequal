@@ -57,7 +57,7 @@ class SolutionsController extends Controller
     public function store(SolutionRequest $request, Solution $solution)
     {
         $this->authorize('create', $solution);
-
+        //dd($request->all());
         $solution = Solution::create($request->all());
 
         return redirect()->route('solutions.index')->with('success', '添加成功.');

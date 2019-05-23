@@ -27,7 +27,7 @@ return [
     ],
 
     // ueditor , simditor
-    'editor' => 'ueditor',
+    'editor' => 'simditor',
 
     /**
      * 后台菜单数组

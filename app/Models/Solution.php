@@ -9,7 +9,7 @@ class Solution extends Model
 {
    use SoftDeletes;
 
-    protected $fillable = ['id','name','sub_name','introduction', 'advantage', 'thumb', 'order','status','email', 'tel', 'brand_ids'];
+    protected $fillable = ['id','name','sub_name','introduction', 'advantage', 'thumb', 'order','status','email', 'tel'];
 
     protected $dates = ['created_at', 'updated_at', 'deleted_at'];
 
@@ -18,7 +18,7 @@ class Solution extends Model
         'sub_name' => 'array',
         'introduction' => 'array',
         'advantage' => 'array',
-        'brand_ids' => 'array'
+
     ];
 
     public $dispatchesEvents  = [
