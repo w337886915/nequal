@@ -9,9 +9,8 @@
     <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
-
     <link rel="stylesheet" href="{{asset('css/common.css')}}">
-
+    @yield('style')
 </head>
 <body>
 <!-- header -->

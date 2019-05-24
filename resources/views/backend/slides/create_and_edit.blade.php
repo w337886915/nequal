@@ -122,7 +122,9 @@
         </div>
     </div>
 @endsection
-
+@section('styles')
+    @include('backend::common._editor_styles')
+@stop
 @section('scripts')
     @include('backend::common._editor_scripts',[ 'folder'=>'slide', 'object_id'=>$object_id ])
 
