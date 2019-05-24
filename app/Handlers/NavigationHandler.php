@@ -66,6 +66,7 @@ class NavigationHandler
     {
         static $newNavigations = [];
         foreach($navigations as $navigation){
+            $navigation->title = fieldCN($navigation->title); // 只需要中文名
             if($navigation->parent == $parent){
                 $navigation->parentName = $parentName ? ($parentName . ' / ' . $navigation->title) : $navigation->title;
                 $newNavigations[$navigation->id] = $navigation->parentName;
@@ -87,12 +88,11 @@ class NavigationHandler
         $key = 'navigation_cache_'.$category;
 
         $navigation = \Cache::get($key);
-
         if( \App::environment('production') && $navigation ){
             return $navigation;
         }
 
-        $navigation = app(Navigation::class)->ordered()->recent('asc')->where('category','=', $category)->where('is_show', '=', '1')->get();
+        $navigation = app(Navigation::class)->ordered()->recent('asc')->where('category', $category)->where('is_show', '1')->get();
 
         if(\App::environment('production')){
             $expiredAt = now()->addMinutes(config('cache.expired.navigation', 10));

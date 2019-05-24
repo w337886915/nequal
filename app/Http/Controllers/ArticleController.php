@@ -57,7 +57,7 @@ class ArticleController extends Controller
     public function index($navigation = 0, Category $articleCategory, Article $article)
     {
         $category = $articleCategory;
-        $articles = $category->articles()->active()->ordered()->recent()->paginate(10);
+        $articles = $category->articles()->active()->ordered()->recent()->paginate(6);
 
         return frontend_view('article.'.$articleCategory->getTemplate('list'), compact('navigation','category','articles'));
     }

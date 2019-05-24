@@ -30,20 +30,29 @@
                 </ul>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-3 footer-item">
-                <img src="{{asset('vendor/laracms/images/logo.png')}}" alt="" style="height:30px;width:30px;background: #fff;margin-bottom: 30px;"><br>
-                <img src="{{asset('vendor/laracms/images/logo.png')}}" alt="" style="height:30px;width:30px;background: #fff;margin-bottom: 30px;"><br>
-                <img src="{{asset('vendor/laracms/images/logo.png')}}" alt="" style="height:30px;width:30px;background: #fff;margin-bottom: 30px;"><br>
+                <img src="{{asset('images/wx.png')}}" alt="nEqual">
+                <img src="{{asset('images/weibo.png')}}" alt="nEqual">
+                <img src="{{asset('images/youxiang.png')}}" alt="nEqual">
             </div>
         </div>
     </div>
     <div class="copyright">
         <div class="container">
             <div class="row">
-                <div class="col-xs-6 col-sm-6 col-md-3"><a href="/"><img src="{{asset('vendor/laracms/images/logo.png')}}" alt="layui"></a></div>
-                <div class="col-xs-6 col-sm-6 col-md-9">
-                    <span>Copyright {{config("system.common.basic.create_year")}} - {{date('Y')}} {{ config("system.common.basic.copyright") }} All Rights Reserved</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="">数据安全及隐私保护</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="{{ config("system.common.basic.icp_link") }}" target="_blank">{{ config("system.common.basic.icp") }}</a>
+                <div class="col-xs-4 col-sm-4 col-md-4"><a href="/"><img src="{{asset('images/logo_footer.png')}}" alt="nEqual"></a></div>
+                <div class="col-xs-4 col-sm-4 col-md-4" style="text-align: center;">
+                    <span>Copyright {{config("system.common.basic.create_year")}} - {{date('Y')}} {{ config("system.common.basic.copyright") }} All Rights Reserved</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 {{--   <a href="{{ config("system.common.basic.icp_link") }}" target="_blank">{{ config("system.common.basic.icp") }}</a>--}}
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 dropdown" style="text-align: right;padding-right:40px;">
+                        <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="{{asset('images/yuyan_f.png')}}" alt="nEqual">
+                            <span style="vertical-align: middle;">{{trans('page.'.app()->getLocale())}}</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="text-align: center;line-height: 25px;">
+                            <a class="dropdown-item" href="/lang/en">{{trans('page.en')}}</a>
+                            <a class="dropdown-item" href="/lang/cn">{{trans('page.cn')}}</a>
+                        </div>
                 </div>
             </div>
         </div>

@@ -66,7 +66,7 @@
                             <div class="col-md-5 col-sm-10">
                             <div class="panel">
                                 <div class="panel-body">
-                                    <img src="{{ storage_image_url($solution->thumb) }}" id="image_image" class="img-rounded" width="380px" height="200px" alt="">
+                                    <img src="{{ storage_image_url($solution->thumb) }}" id="image_image" class="img-rounded" width="380px" height="200px" alt="nEqual"="">
                                     <input type="hidden" name="thumb" id="form_image" required value="{{ old('thumb',$solution->thumb) }}" />
                                     <button id="upload_image" type="button" class="btn btn-info uploader-btn-browse"><i class="icon icon-upload"></i> 上传</button>
                                     <button id="delete_thumb" type="button" class="btn btn-danger"><i class="icon icon-remove-sign"></i> 删除</button>

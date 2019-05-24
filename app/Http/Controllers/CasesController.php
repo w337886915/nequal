@@ -12,6 +12,7 @@ class CasesController extends Controller
 
     // 案例首页
     public function index(CategoryHandler $categoryHandler, Category $category){
+        $active = '成功案例';
         // 服务品牌分类ID
         $brandId = 15;
         $caseId = 2;

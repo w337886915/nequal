@@ -34,9 +34,8 @@ class WelcomeController extends Controller
      */
     public function index(Slide $slide)
     {
-        $slides = get_block("2018_03_04_224524_index_slide_block");
-        $slides = $slides->data;
-        return frontend_view('index',compact('slides'));
+        $active = 'index';
+        return frontend_view('index',compact('slides' ,'active'));
     }
 
     /**

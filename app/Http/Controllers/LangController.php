@@ -18,12 +18,12 @@ class LangController extends Controller
         }
         $lang = $request->get('lang');
         switch ($lang){
-            case 'zh-CN':
+            case 'cn':
                 $now = 'en'; break;
             case 'en':
-                $now = 'zh-CN'; break;
+                $now = 'cn'; break;
             default:
-                $now = 'zh-CN'; break;
+                $now = 'cn'; break;
         }
         app()->setLocale($now);
         $request->session()->put('lang', $now);

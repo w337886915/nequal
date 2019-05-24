@@ -48,7 +48,8 @@ class ArticleRequest extends Request
                     'weight' => 'nullable|integer',
                     'top' => 'nullable|'.Rule::in(['0','1']),
                     'is_link' => 'nullable|'.Rule::in(['0','1']),
-                    'link' => 'nullable|alpha_dash|unique:article|max:191',
+//                    'link' => 'nullable|alpha_dash||max:191',
+                    'link' => 'nullable|url|unique:articles|max:191',
                 ];
             }
             // UPDATE
@@ -74,7 +75,8 @@ class ArticleRequest extends Request
                     'weight' => 'nullable|integer',
                     'top' => 'nullable|'.Rule::in(['0','1']),
                     'is_link' => 'nullable|'.Rule::in(['0','1']),
-                    'link' => 'nullable|alpha_dash|unique:article|max:191',
+//                    'link' => 'nullable|alpha_dash|unique:article|max:191',
+                    'link' => 'nullable|url|max:191',
                 ];
             }
             case 'GET':

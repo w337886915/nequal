@@ -1,75 +1,61 @@
-body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div {
-    margin: 0;
-    padding: 0;
-    border: 0;
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div{
+    margin: 0;padding: 0;border: 0;
+}
+body {background: #fff;color: #333;font-size: medium;font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif}
+ul,li, ol {list-style-type: none;}
+select, input, img, select {vertical-align: middle;}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
 }
 
-body {
+
+a { color: #333; text-decoration: none;}
+a:link,a:visited { color: #333;}
+a:hover, a:active, a:focus {color: #333;text-decoration: underline;}
+
+
+/* empty*/
+.empty{ min-height: 300px; text-align: center; width: 100%; font-size: 30px;}
+
+/* 导航选中样式 */
+.active {  border-bottom: 5px solid #16508e; color: #16508e !important;}
+
+/* 案例子导航样式*/
+.child-active{  background: #fff; border-bottom:1px solid #e4e4e4 ;position: relative; }
+.child-active a{color:#16508e !important;}
+.child-nav{ background-color: #144d8a; }
+.child-nav .container{ text-align: center; }
+.child-nav .container ul{height:80px;font-size:0 }
+.child-nav .container ul li{display: inline-block;height:80px;line-height:80px;width:280px;text-align: center;font-size: 22px;}
+.child-nav .container ul li a{color:#fff;opacity: 0.7;}
+.child-nav .container ul li a img{ width: 33px; height: 30px;  opacity: 0.7;vertical-align: middle;margin-right: 15px;}
+/*三角形*/
+.child-active > .triangle_border_up{
+    display: block;
+    height: 15px;
+    border-left: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    transform: rotate(45deg);
+    width: 15px;
     background: #fff;
-    color: #333;
-    font-size: medium;
-    margin-top: 5px;
-    font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif
+    position: absolute;
+    bottom: -8px;
+    left:130px;
 }
-
-
-ul,li, ol {
-    list-style-type: none;
-}
-
-select, input, img, select {
-    vertical-align: middle;
-}
-
-
-a {
-    text-decoration: none;
-}
-
-a:link {
-    color: #009;
-}
-
-a:visited {
-    color: #800080;
-}
-
-a:hover, a:active, a:focus {
-    color: #c00;
-    text-decoration: underline;
-}
+/* 案例子导航样式 END */
 
 
 /* -----底部样式------ */
-.fly-footer {
-    line-height: 30px;
-    color: #A4A5A6;
-    background: #2B2F32;
-}
-
-.fly-footer .list {
-    padding: 50px 15px;
-}
-
-.fly-footer .footer-item {
-    padding: 0 0 0 15px;
-}
-.fly-footer h6 {
-    line-height: 35px;
-}
-.fly-footer .footer-item a{
-    color: #fff;
-}
-
-.fly-footer .copyright {
-    padding: 15px 0;
-    border-top: 1px solid #7d7d7a;
-    line-height: 37px;
-}
-
-.fly-footer .copyright a {
-    font-weight: 300;
-    color: #A4A5A6 !important;
-}
-
+.fly-footer { line-height: 30px; color: #A4A5A6; background: #2B2F32;}
+.fly-footer .list { padding: 50px 15px;}
+.fly-footer .footer-item { padding: 0 0 0 15px; }
+.fly-footer .footer-item>img{margin-right:68px;}
+.fly-footer .footer-item>img:last-child{margin-right:0;}
+.fly-footer h6 { line-height: 35px; }
+.fly-footer .footer-item a{color: #fff;}
+.fly-footer .copyright {padding: 15px 0;  border-top: 1px solid #7d7d7a;line-height: 37px;}
+.fly-footer .copyright a { font-weight: 300;  color: #A4A5A6 !important}
 /* 底部 END*/

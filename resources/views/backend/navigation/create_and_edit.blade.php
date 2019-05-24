@@ -47,7 +47,7 @@
                                 <option value=""></option>
                                 <option @if($parent == 0) selected @endif value="0">/</option>
                                 @foreach($navigationItems as $key => $value)
-                                    <option @if($parent == $key) selected @endif value="{{$key}}">/ {{$value['cn']}}</option>
+                                    <option @if($parent == $key) selected @endif value="{{$key}}">/ {{$value}}</option>
                                 @endforeach
                             </select>
                             </div>
@@ -63,17 +63,17 @@
                                     <input type="radio" name="type" value="link" v-model="type" required > 链接
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="type" value="article" v-model="type" required > 文章
+                                    <input type="radio" name="type" value="article" v-model="type" required > 文章(分类)
                                 </label>
                                 <label class="radio-inline">
                                     <input type="radio" name="type" value="page" v-model="type" required > 页面
                                 </label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="type" value="category" v-model="type" required > 栏目
-                                </label>
-                                <label class="radio-inline">
+                               {{-- <label class="radio-inline">
+                                    <input type="radio" name="type" value="category" v-model="type" required > 分类
+                                </label>--}}
+                                {{--<label class="radio-inline">
                                     <input type="radio" name="type" value="navigation" v-model="type" required > 导航
-                                </label>
+                                </label>--}}
                             </div>
                             </div>
                         </div>
@@ -149,17 +149,17 @@
                             </div>
                         </div>
 
-                        <div v-if="type == 'navigation'" class="form-group has-feedback  has-icon-right">
+           {{--             <div v-if="type == 'navigation'" class="form-group has-feedback  has-icon-right">
                             <label for="parent" class="col-md-2 col-sm-2 control-label required">导航</label>
                             <div class="col-md-5 col-sm-10">
                             <select class="form-control" name="params[link]">
                                 <option value=""></option>
                                 @foreach($navigationItemsByResult as $item)
-                                    <option @if($navigation->link == $item->link) selected @endif value="{{$item->link}}">11111</option>
+                                    <option @if($navigation->link == $item->link) selected @endif value="{{$item->link}}"></option>
                                 @endforeach
                             </select>
                             </div>
-                        </div>
+                        </div>--}}
 
                         <div v-if="type == 'page'" class="form-group has-feedback  has-icon-right">
                             <label for="parent" class="col-md-2 col-sm-2 control-label required">页面</label>
@@ -167,7 +167,7 @@
                             <select class="form-control" name="params[page_id]">
                                 <option value="">请选择</option>
                                 @foreach($pageItems as $key => $value)
-                                    <option @if($page_id == $key) selected @endif value="{{$key}}">{{$value}}</option>
+                                    <option @if($page_id == $key) selected @endif value="{{$key}}">{{fieldCN($value)}}</option>
                                 @endforeach
                             </select>
                             </div>

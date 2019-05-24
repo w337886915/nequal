@@ -100,7 +100,7 @@
                         </div>
 
                         <div class="form-group has-feedback  has-icon-right">
-                            <label for="link" class="col-md-2 col-sm-2 control-label">链接</label>
+                            <label for="link" class="col-md-2 col-sm-2 control-label">相关链接</label>
                             <div class="col-md-5 col-sm-10">
                             <input type="text" name="link" autocomplete="off" placeholder="请输入链接" class="form-control" value="{{ old('link',$category->link) }}"
                                    data-fv-trigger="blur"

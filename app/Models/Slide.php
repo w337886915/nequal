@@ -31,7 +31,16 @@ class Slide extends Model
     protected $fillable = ['id','object_id', 'group', 'title', 'description', 'target', 'link', 'image', 'content', 'order', 'status'];
     
     protected $dates = ['created_at', 'updated_at', 'deleted_at'];
-    
+
+    // 幻灯分组
+    const SLIDES_INDEX = 1;
+    const SLIDES_ABOUT = 2;
+    const SLIDES_SOLUTION = 3;
+    const SLIDES_CASE = 4;
+    const SLIDES_NEWS = 5;
+    const SLIDES_ACTIVITY = 6;
+    const SLIDES_JOIN = 7;
+
     /**
      * 追加过滤条件
      *

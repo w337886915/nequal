@@ -18,6 +18,9 @@
 @include('frontend.customize.layouts.header')
 <!-- banner -->
 @section('swipper')
+    @php
+        $slides = get_block("2018_03_04_224524_index_slide_block")->data;
+    @endphp
     @include('frontend.customize.layouts.swipper')
 @show
 <!--content-->
