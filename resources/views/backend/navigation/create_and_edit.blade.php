@@ -52,6 +52,7 @@
                             </select>
                             </div>
                         </div>
+
                         <div class="form-group has-feedback has-icon-right">
                             <label for="target" class="col-md-2 col-sm-2 control-label required">类型</label>
                             <div class="col-md-5 col-sm-10">
@@ -152,10 +153,11 @@
                         <div v-if="type == 'navigation'" class="form-group has-feedback  has-icon-right">
                             <label for="parent" class="col-md-2 col-sm-2 control-label required">导航</label>
                             <div class="col-md-5 col-sm-10">
+
                             <select class="form-control" name="params[link]">
                                 <option value=""></option>
                                 @foreach($navigationItemsByResult as $item)
-                                    <option @if($navigation->link == $item->link) selected @endif value="{{$item->link}}">11111</option>
+                                    <option @if($navigation->link == $item->link) selected @endif value="{{$item->link}}">{{$item->title['cn']}}</option>
                                 @endforeach
                             </select>
                             </div>
@@ -167,7 +169,7 @@
                             <select class="form-control" name="params[page_id]">
                                 <option value="">请选择</option>
                                 @foreach($pageItems as $key => $value)
-                                    <option @if($page_id == $key) selected @endif value="{{$key}}">{{$value}}</option>
+                                    <option @if($page_id == $key) selected @endif value="{{$key}}">{{$value['cn']}}</option>
                                 @endforeach
                             </select>
                             </div>

@@ -1,4 +1,4 @@
-@if($slides)
+@if(!empty($slides))
     <div>
         <div class="swiper-container" style="height:500px;width: 100%;">
             <div class="swiper-wrapper">
@@ -11,11 +11,13 @@
                     {{--   </a>--}}
                 @endforeach
             </div>
+            @if(count($slides)>1)
             <!-- 如果需要分页器 -->
             <div class="swiper-pagination"></div>
             <!-- 如果需要导航按钮 -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
+            @endif
         </div>
     </div>
 @endif
@@ -26,9 +28,6 @@
             var mySwiper = new Swiper('.swiper-container', {
                 autoplay: true,
                 direction: 'horizontal', // 垂直切换选项
-                loop: true, // 循环模式选项
-                speed: 500,
-
                 // 如果需要分页器
                 pagination: {
                     el: '.swiper-pagination',
