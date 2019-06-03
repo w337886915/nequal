@@ -290,7 +290,7 @@ class UploadHandler
      * @return mixed
      */
     public function checkFile($md5, $type, $folder){
-        return FileModel::where('md5','=',$md5)->where('type','=',$type)->first();
+        return FileModel::where('md5','=',$md5)->where('type','=',$type)->where('folder', $folder)->first();// 添加判断条件folder (19.5.30)
     }
 
     /**
@@ -310,7 +310,7 @@ class UploadHandler
      * @return mixed
      */
     public function saveFile($object_id, $type, $path, $mimeType, $md5, $title, $folder, $size, $width, $height, $editor = 0, $status = 1, $storage_id = null, $disks = null){
-        return FileModel::create([
+        return FileModel::Create([
             'storage_id' => $storage_id,
             'object_id' => $object_id,
             'type' => $type,

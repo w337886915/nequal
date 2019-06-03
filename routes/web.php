@@ -38,12 +38,6 @@ Route::group([ 'middleware' => ['laracms.frontend', 'toggleLang'], ], function (
 
     Route::get('/lang', 'LangController@index');
 
-//    // 成功案例
-//    Route::get('cases_{category}.html', 'CasesController@index')->name('cases.index');
-//    Route::get('cases/list_{category}_{child}.html', 'CasesController@category')->name('cases.category');
-//    Route::get('cases/list_{category}.html', 'CasesController@list')->name('cases.list');
-//    Route::get('cases/show_{article}.html', 'CasesController@info')->name('cases.info');
-
     # 文章列表页
     Route::get('article/list_{navigation}_{articleCategory}.html', 'ArticleController@index')->name('article.index');
 
@@ -54,10 +48,15 @@ Route::group([ 'middleware' => ['laracms.frontend', 'toggleLang'], ], function (
     Route::get('page/show_{navigation}_{safePage}.html', 'PageController@show')->name('page.show');
 
     # 在线留言
-    Route::get('message/show_{navigation}.html', 'WelcomeController@message')->name('message.index');
+//    Route::get('message/show_{navigation}.html', 'WelcomeController@message')->name('message.index');
 
     # 关于我们
-    Route::get('company/show_{navigation}.html', 'WelcomeController@company')->name('company.index');
+//    Route::get('company/show_{navigation}.html', 'WelcomeController@company')->name('company.index');//关于我们
+    Route::get('company/show_{navigation}.html', 'CompanyController@index')->name('company.index');
+    Route::get('company/contact.html', 'CompanyController@contact')->name('company.contact'); // 联系我们
+    Route::get('company/join.html', 'CompanyController@join')->name('company.join');//加入我们
+    Route::get('company/team.html', 'CompanyController@team')->name('company.team');//管理层
+
 
     # 站点地图
     Route::get('map/show_{navigation}.html', 'WelcomeController@map')->name('map.index');
@@ -75,6 +74,9 @@ Route::group([ 'middleware' => ['laracms.frontend', 'toggleLang'], ], function (
 
 # 文件上传相关路由
 Route::post('uploader', 'UploadController@uploader')->name('uploader');
+
+# 上传简历
+Route::post('resume/uploader', 'ResumeController@uploader')->name('resume.uploader');
 
 # 阿里云上传相关
 Route::post('uploader/aliyun/vod/auth', 'UploadController@getAliyunVodAuth')->name('uploader.aliyun.vod.auth');

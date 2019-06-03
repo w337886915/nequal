@@ -1,10 +1,10 @@
 @extends('backend::layouts.app')
 
-@section('title', $title = $brand->id ? '编辑友情链接' : '添加友情链接' )
+@section('title', $title = $brand->id ? '编辑服务品牌' : '添加服务品牌' )
 
 @section('breadcrumb')
-    <a href="">站点设置</a>
-    <a href="">友情链接</a>
+    <a href="">内容管理</a>
+    <a href="">服务品牌</a>
     <a href="">{{$title}}</a>
 @endsection
 
@@ -81,7 +81,7 @@
 
 @section('scripts')
 
-    @include('backend::common._upload_image_scripts',['elem' => '#upload_image', 'previewElem' => '#image_image', 'fieldElem' => '#form_image', 'folder'=>'link', 'object_id' => $brand->id ?? 0 ])
+    @include('backend::common._upload_image_scripts',['elem' => '#upload_image', 'previewElem' => '#image_image', 'fieldElem' => '#form_image', 'folder'=>'brand', 'object_id' => $brand->id ?? 0 ])
     @include('backend::common._delete_image_scripts',['elem' => '#delete_thumb', 'previewElem' => '#image_image', 'fieldElem' => '#form_image', ])
 
 @endsection

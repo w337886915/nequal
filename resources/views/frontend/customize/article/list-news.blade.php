@@ -32,7 +32,7 @@
                     <div class="info">{{field_locale($article->description)}}</div>
                     <div class="row more">
                         <div class="col-md-8"><span>{{$article->created_at}}</span> &nbsp;&nbsp; <span>东方头条</span></div>
-                        <div class="col-md-4" style="text-align: right;"><a href="{{$article->getLink()}}">了解详情 &raquo;</a></div>
+                        <div class="col-md-4" style="text-align: right;"><a href="{{$article->getLink(request('navigation', 0), request('articleCategory', 0))}}">了解详情 &raquo;</a></div>
                     </div>
                 </div>
                 <img src="{{storage_image_url($article->thumb)}}" alt="nEqual">

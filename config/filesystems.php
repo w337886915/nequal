@@ -113,7 +113,7 @@ return [
     // 配置的允许大小不能超过 PHP.ini 限制. 默认PHP POST 请求允许最大8MB，File Upload 最大 2MB
     'uploader' => [
 
-        'folder' => ['avatar', 'article', 'blog', 'page', 'website', 'slide', 'link', 'video', 'annex', 'voice', 'navigation','category'],
+        'folder' => ['avatar', 'article', 'blog', 'page', 'website', 'slide', 'link', 'video', 'annex', 'voice', 'navigation','category','brand','honor', 'team', 'resume'],
 
         // 图片
         'image' => [
@@ -132,7 +132,8 @@ return [
         // 文件
         'file' => [
             'size_limit' => 5242880, // 单位：字节，默认：5MB
-            'allowed_ext' => ['pdf','doc','docx','xls','xlsx','ppt','pptx'],
+//            'allowed_ext' => ['pdf','doc','docx','xls','xlsx','ppt','pptx'],
+            'allowed_ext' => ['pdf','doc','docx','ppt','pptx'],
         ],
 
         // 音频

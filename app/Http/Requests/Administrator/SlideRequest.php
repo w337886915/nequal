@@ -23,7 +23,7 @@ class SlideRequest extends Request
             'group' => 'required|integer',
             'title' => 'required|min:1|max:255',
             'image' => 'required|max:255',
-            'link' => 'required|url',
+            'link' => 'nullable|url',
             'description' => 'nullable|max:255',
             'target' => 'required|min:1,max:255',
             'order' => 'nullable|integer',

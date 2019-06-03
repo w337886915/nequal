@@ -29,7 +29,8 @@ a:hover, a:active, a:focus {color: #333;text-decoration: underline;}
 .child-nav{ background-color: #144d8a; }
 .child-nav .container{ text-align: center; }
 .child-nav .container ul{height:80px;font-size:0 }
-.child-nav .container ul li{display: inline-block;height:80px;line-height:80px;width:280px;text-align: center;font-size: 22px;}
+.child-nav .container ul li{display: inline-block;height:80px;line-height:80px;width:280px;text-align: center;font-size: 22px;border-right:1px solid #023F80;}
+.child-nav .container ul li:last-child{border-right: none !important;}
 .child-nav .container ul li a{color:#fff;opacity: 0.7;}
 .child-nav .container ul li a img{ width: 33px; height: 30px;  opacity: 0.7;vertical-align: middle;margin-right: 15px;}
 /*三角形*/

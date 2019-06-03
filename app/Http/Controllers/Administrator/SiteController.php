@@ -15,6 +15,9 @@
 
 namespace App\Http\Controllers\Administrator;
 
+use App\Http\Requests\Administrator\HonorRequest;
+use App\Models\File as FileModel;
+use App\Models\Honor;
 use Illuminate\Http\Request;
 use App\Models\Setting;
 

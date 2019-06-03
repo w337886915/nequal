@@ -6,12 +6,16 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background: #fff;
     border-bottom: 1px solid rgba(0,0,0, 0.1);
 }
-
-.header-wrapper .container {
+.header-wrapper .navbar{
     height: 80px;
+    position: relative;
+}
+.header-wrapper .navbar .navbar-collapse{
+    position: absolute;
+    right:0;
+    top:0;
 }
 
 .header-wrapper .logo {
@@ -20,7 +24,6 @@
 }
 
 .header-wrapper .contact-us {
- /*   width: 110px;*/
     height: 44px;
     background-color: #16508e;
     border-radius: 22px;
@@ -34,46 +37,82 @@
 }
 
 .header-wrapper .navbar-nav li {
-    margin: 0 15px;
+    padding: 0 10px;
     font-size: 16px;
-    font-weight: normal;
-    font-stretch: normal;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     color: #4b4a4b;
 }
 
-.header-wrapper .navbar-nav li>a {
+.header-wrapper .navbar-nav .nav-link {
     padding: 0 !important;
     line-height: 75px;
     font-size: 16px;
+    color: #fff;
+}
+
+.header-wrapper .navbar .navbar-collapse .dropdown{
+    margin:0 30px;
+}
+.header-wrapper .navbar .navbar-collapse .dropdown .lang-img{
+    height:16px;
+    width:16px;
+}
+.header-wrapper .navbar .navbar-collapse .dropdown .lang-now{
+     vertical-align: middle;
+}
+.header-wrapper .navbar .navbar-collapse .dropdown .dropdown-menu{
+    text-align: center;
+    line-height: 30px;
+}
+
+.header-wrapper .dropdown-menu{
+    min-width: 5rem;
+}
+.header-wrapper .lang-now{
+    color: #fff;
+}
+
+.nav-bg{
+    background: #fff;
+}
+.nav-bg .navbar-nav .nav-link{
+  color: #4b4a4b;
+}
+.nav-bg .dropdown .lang-now{
+    color: #4b4a4b ;
 }
 
 </style>
+@php
+    $navigations = frontend_navigation('desktop');
+@endphp
 <div class="container-fixed header-wrapper">
-<div class="container">
-<nav class="navbar navbar-expand-lg" style="height:80px;">
-<a class="navbar-brand" href="/"><img class="logo" src="{{asset('images/logo_header.png')}}" alt="nEqual"></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-</button>
-            @php
-                $navigation = \App\Models\Navigation::where(['category'=>'desktop'])->get()->toArray();
-                $navigations = frontend_navigation('desktop');
-            @endphp
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 200px;">
-                <ul class="navbar-nav mr-auto">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="/"><img class="logo" src="@if($active=='index'){{asset('images/logo_footer.png')}}@else {{asset('images/logo_header.png')}}@endif"  alt="nEqual"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
                     @foreach($navigations as $navigation)
                         <li class="nav-item">
-                            <a class="nav-link {{ $active == field_locale($navigation->title) ? 'active' : '' }}" target="{{$navigation->target}}" href="{{$navigation->link}}">{{field_locale($navigation->title)}}</a>
+                            <a class="nav-link {{ $active == field_locale($navigation->title) ? 'active' : '' }}"
+                               target="{{$navigation->target}}" href="{{$navigation->link}}">{{field_locale($navigation->title)}}</a>
                         </li>
                     @endforeach
                 </ul>
-                <div class="dropdown" style="line-height: 80px;margin:0 30px;">
+                <div class="dropdown">
                     <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="{{asset('images/yuyan_h.png')}}" alt="nEqual" style="height:16px; width:16px;">
-                        <span style="vertical-align: middle;">{{trans('page.'.app()->getLocale())}}</span>
+                        @if($active == 'index')
+                            <img class="lang-img" src="{{asset('images/yuyan_f.png')}}" alt="nEqual">
+                            <span class="lang-now">{{trans('page.'.app()->getLocale())}}</span>
+                        @else
+                            <img class="lang-img" src="{{asset('images/yuyan_h.png')}}" alt="nEqual">
+                            <span class="lang-now">{{trans('page.'.app()->getLocale())}}</span>
+                        @endif
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="text-align: center;line-height: 30px;">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="/lang/en">{{trans('page.en')}}</a>
                         <a class="dropdown-item" href="/lang/cn">{{trans('page.cn')}}</a>
                     </div>
@@ -85,3 +124,6 @@
         </nav>
     </div>
 </div>
+@section('script')
+
+@endsection

@@ -56,8 +56,28 @@ Route::group(['domain' => config('administrator.domain'), 'prefix' => config('ad
     Route::post('site/basic','SiteController@basicStore');
     Route::get('site/company','SiteController@company')->name('administrator.site.company');
     Route::post('site/company','SiteController@companyStore');
-    Route::get('site/contact','SiteController@contact')->name('administrator.site.contact');
-    Route::post('site/contact','SiteController@contactStore');
+//    Route::get('site/contact','SiteController@contact')->name('administrator.site.contact');
+//    Route::post('site/contact','SiteController@contactStore');
+
+    # 公司荣誉
+    Route::get('site/company/honor','HonorController@index')->name('administrator.company.honor');
+    Route::get('site/company/honor/create','HonorController@create')->name('administrator.company.honor.create');
+    Route::post('site/company/honor/store','HonorController@store')->name('administrator.company.honor.store');
+    Route::get('site/company/honor/edit/{honor}','HonorController@edit')->name('administrator.company.honor.edit');
+    Route::patch('site/company/honor/update/{honor}','HonorController@update')->name('administrator.company.honor.update');
+    Route::delete('site/company/honor/destroy/{honor}','HonorController@destroy')->name('administrator.company.honor.destroy');
+
+    # 联系我们
+    Route::resource('contacts', 'ContactController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+    Route::resource('joins', 'JoinController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+    Route::put('joins.order', 'JoinController@order')->name('joins.order');
+    Route::resource('teams', 'TeamController', ['only' => ['index', 'show', 'store', 'update', 'edit', 'destroy']]);
+    Route::get('teams/{group}/manage', 'TeamController@manage')->name('teams.manage');
+    Route::get('teams/{group}/create', 'TeamController@create')->name('teams.create');
+
+    # 简历管理
+    Route::resource('resumes', 'ResumeController', ['only' => ['index', 'show', 'destroy']]);
+
 
     # 用户相关路由
     Route::resource('user', 'UserController', ['only' => ['password', 'avatar', 'update', 'edit', 'destroy']]);

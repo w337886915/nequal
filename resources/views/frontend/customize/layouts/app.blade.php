@@ -1,11 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{app()->getLocale()}}">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>{{ config('system.common.basic.name', config('app.name', 'nEqual')) }} - @yield('title', config('system.common.basic.name', 'nEqual')) </title>
     <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
@@ -15,6 +14,7 @@
 <body>
 <!-- header -->
 @include('frontend.customize.layouts.header')
+
 <!-- banner -->
 @section('swipper')
     @php
@@ -40,5 +40,31 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
 @yield('script')
 @yield('script-swiper')
+<script>
+    $(function () {
+        var active = "{{ $active }}";
+        if( active== 'index'){
+            window.addEventListener('scroll', function () {
+                let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                if (scrollTop > 10) {
+                    $('.header-wrapper').addClass('nav-bg');
+                    $('.logo').attr("src","{{asset('images/logo_header.png')}}");
+                    $('.lang-img').attr("src","{{asset('images/yuyan_h.png')}}");
+                } else {
+                    $('.header-wrapper').removeClass('nav-bg');
+                    $('.logo').attr("src","{{asset('images/logo_footer.png')}}");
+                    $('.lang-img').attr("src","{{asset('images/yuyan_f.png')}}");
+                }
+            });
+        }else{
+            $('.header-wrapper').addClass('nav-bg');
+            $('.logo').attr("src","{{asset('images/logo_header.png')}}");
+            $('.lang-img').attr("src","{{asset('images/yuyan_h.png')}}");
+            $('.banner-wrapper').css('padding-top', '80px')
+        }
+
+    });
+
+</script>
 
 </html>

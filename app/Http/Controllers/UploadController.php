@@ -332,9 +332,11 @@ class UploadController extends Controller
             
             return $this->responseAjax(6,false, '上传失败');
         }
-        
+
+        dd($file_type,$file, $request->all());
         // 保存附件到文件系统
-        $result = $uploader->saveUploadFile( $file_type, intval($request->object_id ?? 0), $file, $request->folder, intval($request->editor ?? 0) );
+//        $result = $uploader->saveUploadFile( $file_type, intval($request->object_id ?? 0), $file, $request->folder, intval($request->editor ?? 0) );
+        $result = $uploader->saveUploadFile( $file_type,$request->object_id ?? 0, $file, $request->folder, $request->editor ?? 0 );
 
         // 判断是否为多图多附件上传
         if( $result && request('uploader_type', '') == 'multiple' ){
@@ -403,12 +405,12 @@ class UploadController extends Controller
             'path'              => $path,             // 文件相对地址
             'id'                => $id,               // 文件ID
             'multiple_id'       => $multiple_id,      // 文件ID
-            
+
             // 兼容 Simditor
           # 'success'           => $success,
             'msg'               => $message,
             'file_path'         => $url,
-    
+
             // 兼容 Zui Uploader
             'result'            => $success === true ? 'ok' : 'failed',
           # 'message'           => $message,
@@ -434,8 +436,8 @@ class UploadController extends Controller
             'size'              => $fileInfo->site ?? 0,
 
         ];
-        
-        
+
+
     }
 
 

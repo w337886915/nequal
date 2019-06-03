@@ -60,7 +60,9 @@ class SeedRolesAndPermissionsData extends Migration
 //        Permission::create(['name' => 'manage_media', 'remarks'=> '媒体管理']);
         Permission::create(['name' => 'manage_form', 'remarks'=> '表单管理']);
         Permission::create(['name' => 'manage_brands', 'remarks'=> '服务品牌']);
-        Permission::create(['name' => 'manage_solutions', 'remarks'=> '服务品牌']);
+        Permission::create(['name' => 'manage_solutions', 'remarks'=> '解决方案']);
+        Permission::create(['name' => 'manage_solutions', 'remarks'=> '解决方案']);
+        Permission::create(['name' => 'manage_company_honor', 'remarks'=> '公司荣誉']);
 
         // 创建超级管理角色，并赋予权限
         $administrator = Role::create(['name' => 'Administrator', 'remarks'=> '超级管理员']);
@@ -90,6 +92,7 @@ class SeedRolesAndPermissionsData extends Migration
         $administrator->givePermissionTo('manage_form');
         $administrator->givePermissionTo('manage_brands');
         $administrator->givePermissionTo('manage_solutions');
+        $administrator->givePermissionTo('manage_company_honor');
 
         // 创建站长角色，并赋予权限
         $founder = Role::create(['name' => 'Founder', 'remarks'=> '创始人']);
@@ -109,6 +112,7 @@ class SeedRolesAndPermissionsData extends Migration
         $founder->givePermissionTo('manage_form');
         $founder->givePermissionTo('manage_brands');
         $founder->givePermissionTo('manage_solutions');
+        $founder->givePermissionTo('manage_company_honor');
 
         // 创建管理员角色，并赋予权限
         $maintainer = Role::create(['name' => 'Maintainer', 'remarks'=> '站长']);
@@ -123,6 +127,7 @@ class SeedRolesAndPermissionsData extends Migration
         $maintainer->givePermissionTo('manage_form');
         $maintainer->givePermissionTo('manage_brands');
         $maintainer->givePermissionTo('manage_solutions');
+        $maintainer->givePermissionTo('manage_company_honor');
 
         // 创建管理员账户
         $user = User::create([

@@ -15,12 +15,21 @@
     .article-list-wrapper{padding:80px 0;}
     .article-list-wrapper .article-item{display: flex;margin-bottom: 62px;}
     .article-list-wrapper .article-item:last-child{margin-bottom: 0;}
-    .article-list-wrapper .article-item .article-item-content{ padding-top:34px;margin-left: 66px; border-bottom: 1px solid #e6e6e6;position: relative; flex:1;}
+    .article-list-wrapper .article-item .article-item-content{
+        margin-left: 66px; border-bottom: 1px solid #e6e6e6;position: relative; flex:1;
+    }
+    .article-list-wrapper .article-item .article-item-content h2{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
     .article-list-wrapper .article-item .article-item-content .desc{margin:25px 0;font-size: 16px;color: #888;line-height: 38px;
         overflow: hidden; text-overflow: ellipsis; display: -webkit-box;  -webkit-line-clamp: 3;  -webkit-box-orient: vertical;
     }
     .article-list-wrapper .article-item .article-item-content .more{
-        text-align: right;position: absolute;right:0;bottom:20px;
+        text-align: right;position: absolute;right:0;bottom:15px;
     }
     .article-list-wrapper .article-item .article-item-content .more a{
         color:#16508e;font-size:18px;font-weight: 600;
@@ -50,7 +59,7 @@
                             <div class="more">
                                 <a href="{{$article->getLink()}}"><img src="{{asset('images/baoming.png')}}" alt=""><span> 报名参会</span></a>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="{{$article->getLink()}}"><img src="{{asset('images/xiazai.png')}}" alt=""><span> 下载资料</span></a>
+                                <a href="{{$article->getLink(request('navigation', 0),  request('articleCategory', 0))}}"><img src="{{asset('images/xiazai.png')}}" alt=""><span> 下载资料</span></a>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,4 @@
 <style>
-
     .laypage-main, .laypage-main * {
         display: inline-block;
         *display: inline;
@@ -9,7 +8,6 @@
 
     .laypage-main {
         margin: 20px 0;
-        /*border: 1px solid #009e94;*/
         border-right: none;
         border-bottom: none;
         font-size: 0
@@ -18,8 +16,6 @@
     .laypage-main * {
         padding: 0 20px;
         line-height: 36px;
-        /*border-right: 1px solid #009e94;*/
-        /*border-bottom: 1px solid #009e94;*/
         font-size: 16px;
         font-family: MicrosoftYaHei;
     }
@@ -115,10 +111,8 @@
             if(page > maxPage) page =maxPage ;
             if(page < 1) page = 1;
             var url = window.location.href.split("page=");
-            window.location.href = url[0] + "page=" + page;
+            window.location.href = url[0] + "?page=" + page;
         });
-
-
     })
 </script>
 @endsection
