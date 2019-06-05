@@ -52,7 +52,7 @@
                         <div class="content">
                             <p class="info">{{field_locale($article->description)}}</p>
                             <p class="name">{{field_locale($article->subtitle)}}</p>
-                            <p class="case"><a href="{{$article->link}}">查看案例 >></a></p>
+                            <p class="case"><a href="{{$article->link['case']}}">查看案例 >></a></p>
                         </div>
                     </div>
                 </div>

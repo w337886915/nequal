@@ -64,17 +64,17 @@
                                     <input type="radio" name="type" value="link" v-model="type" required > 链接
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="type" value="article" v-model="type" required > 分类 {{--文章--}}
+                                    <input type="radio" name="type" value="article" v-model="type" required > 文章分类
                                 </label>
                                 <label class="radio-inline">
                                     <input type="radio" name="type" value="page" v-model="type" required > 页面
                                 </label>
-                               {{-- <label class="radio-inline">
-                                    <input type="radio" name="type" value="category" v-model="type" required > 栏目
-                                </label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="type" value="navigation" v-model="type" required > 导航
-                                </label>--}}
+                                {{-- <label class="radio-inline">
+                                     <input type="radio" name="type" value="category" v-model="type" required > 栏目分类
+                                 </label>
+                                  <label class="radio-inline">
+                                      <input type="radio" name="type" value="navigation" v-model="type" required > 导航
+                                  </label>--}}
                             </div>
                             </div>
                         </div>

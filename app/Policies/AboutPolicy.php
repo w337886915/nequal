@@ -16,33 +16,33 @@
 namespace App\Policies;
 
 use App\Models\User;
-use App\Models\Solution;
+use App\Models\About;
 
 /**
- * 解决方案授权策略
+ * 授权策略
  *
  * Class ArticlePolicy
  * @package App\Policies
  */
-class SolutionPolicy extends Policy
+class AboutPolicy extends Policy
 {
-    public function index(User $user, Solution $solution)
+    public function index(User $user, About $about)
     {
-        return $user->can('manage_solutions');
+        return $user->can('manage_about');
     }
 
-    public function create(User $user, Solution $solution)
+    public function create(User $user, About $about)
     {
-        return $user->can('manage_solutions');
+        return $user->can('manage_about');
     }
 
-    public function update(User $user, Solution $solution)
+    public function update(User $user, About $about)
     {
-        return $user->can('manage_solutions');
+        return $user->can('manage_about');
     }
 
-    public function destroy(User $user, Solution $solution)
+    public function destroy(User $user, About $about)
     {
-        return $user->can('manage_solutions');
+        return $user->can('manage_about');
     }
 }

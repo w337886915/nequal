@@ -53,8 +53,8 @@ a:hover, a:active, a:focus {color: #333;text-decoration: underline;}
 .fly-footer { line-height: 30px; color: #A4A5A6; background: #2B2F32;}
 .fly-footer .list { padding: 50px 15px;}
 .fly-footer .footer-item { padding: 0 0 0 15px; }
-.fly-footer .footer-item>img{margin-right:68px;}
-.fly-footer .footer-item>img:last-child{margin-right:0;}
+.fly-footer .footer-item .contact-icons{display: flex;justify-content: space-around;}
+.fly-footer .footer-item .icon-content{margin-top:30px;text-align: center;color: #fff;line-height: 150px;}
 .fly-footer h6 { line-height: 35px; }
 .fly-footer .footer-item a{color: #fff;}
 .fly-footer .copyright {padding: 15px 0;  border-top: 1px solid #7d7d7a;line-height: 37px;}

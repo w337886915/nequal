@@ -32,7 +32,7 @@
         <style>
             .contact-wrapper{padding: 80px 0;}
             .contact-wrapper .contact:nth-child(2n+1){background: #f2f6fa;}
-            .contact-wrapper .contact .container{padding: 50px 0;line-height: 36px;}
+            .contact-wrapper .contact .container{padding: 50px 15px;line-height: 36px;}
             .contact-wrapper .contact .container h5{font-size: 18px;}
             .contact-wrapper .contact .container p{color:#888;}
         </style>

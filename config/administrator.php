@@ -295,16 +295,6 @@ return [
                     "params" => [],
                     "query" => [],
                 ],
-                 "content.solutions" => [
-                    "id" => "content.solutions",
-                    "text" => "解决方案",
-                    "permission" => function(){ return Auth::user()->can('manage_solutions'); },
-                    "icon" => 'icon-ok',
-                    "link" => "",
-                    "route" => "solutions.index",
-                    "params" => [],
-                    "query" => [],
-                ],
 
 
                 /*

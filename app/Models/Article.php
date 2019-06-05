@@ -58,6 +58,7 @@ class Article extends Model
         'keywords' => 'array',
         'description' => 'array',
         'content' => 'array',
+        'link' =>'array'
     ];
 
 

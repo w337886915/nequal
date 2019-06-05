@@ -15,7 +15,9 @@
 
 namespace App\Http\Controllers\Administrator;
 
+use App\Http\Requests\Administrator\AboutRequest;
 use App\Http\Requests\Administrator\HonorRequest;
+use App\Models\About;
 use App\Models\File as FileModel;
 use App\Models\Honor;
 use Illuminate\Http\Request;
@@ -81,7 +83,9 @@ class SiteController extends Controller
 
         $site = $setting->take('company');
 
-        return backend_view('site/company',compact('site'));
+         $abouts = About::all();
+
+        return backend_view('company/company',compact('site', 'abouts'));
     }
 
     /**
@@ -95,7 +99,8 @@ class SiteController extends Controller
     public function companyStore(Request $request, Setting $setting){
         $this->authorize('company', $setting);
 
-        $data = $request->only('name', 'description', 'content', 'name_en', 'description_en', 'content_en');
+//        $data = $request->only('name', 'description', 'content', 'name_en', 'description_en', 'content_en');
+        $data = $request->only('name', 'name_en', 'vision', 'vision_en','visionDesc', 'visionDesc_en');
 
         $setting->store($data,'company','common','system');
 
@@ -134,5 +139,50 @@ class SiteController extends Controller
 
         return redirect()->route('administrator.site.contact')->with('success', '保存成功.');
     }
+
+
+    # 关于我们
+    public  function aboutCreate(About $about)
+    {
+        $this->authorize('create', $about);
+
+        return backend_view('company.create_and_edit' ,compact('about'));
+    }
+
+    public  function aboutStore(AboutRequest $request,About $about)
+    {
+        $this->authorize('create', $about);
+
+        About::create($request->all());
+
+        return $this->redirect('administrator.site.company')->with('success', '添加成功.');
+    }
+
+    public function aboutEdit(About $about)
+    {
+        $this->authorize('update', $about);
+
+        return backend_view('company.create_and_edit', compact('about'));
+    }
+
+    public function aboutUpdate(AboutRequest $request, About $about)
+    {
+        $this->authorize('update', $about);
+
+        $about->update($request->all());
+
+        return $this->redirect('administrator.site.company')->with('success', '更新成功.');
+    }
+
+    public function aboutDestroy(About $about)
+    {
+        $this->authorize('destroy', $about);
+
+        $about->delete();
+
+        return $this->redirect('administrator.site.company')->with('success', '删除成功.');
+    }
+
+
 
 }

@@ -5,9 +5,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\Contact;
 use App\Models\Honor;
 use App\Models\Join;
+use App\Models\Setting;
 use App\Models\Team;
 use Illuminate\Http\Request;
 use App\Models\Slide;
@@ -32,15 +34,24 @@ class CompanyController extends Controller
      *
      * @return mixed
      */
-    public function index()
+    public function index(Setting $setting)
     {
-        // 幻灯图片
-        $slides = $this->slides;
+        $company = $setting->take('company');
+        if (app()->getLocale() == 'cn') {
+            $vision = $company['vision'];
+            $visionDesc = $company['visionDesc'];
+        } else {
+            $vision = $company['vision_en'];
+            $visionDesc = $company['visionDesc_en'];
+        }
 
-        //公司荣誉图片
-        $honors = Honor::all();
-
-        return frontend_view('company.company',compact('slides','honors'));
+        return frontend_view('company.company', [
+            'slides' => $this->slides,
+            'abouts' => About::all(),
+            'honors' => Honor::all(),
+            'vision' => $vision,
+            'visionDesc' => $visionDesc
+        ]);
     }
 
     // 联系我们页面

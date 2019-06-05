@@ -31,7 +31,7 @@ Route::group([ 'middleware' => ['laracms.frontend', 'toggleLang'], ], function (
     Route::get('solutions/{id}', 'SolutionsController@show')->name('solutions.show') ;
     Route::post('consultation', 'ConsultationController@store')->name('consultation');
     #关于我们
-    Route::get('aboutus/{acticle}', 'AboutUsController@show')->name('aboutus.show');
+    #Route::get('aboutus/{acticle}', 'AboutUsController@show')->name('aboutus.show');
 
     # 栏目聚合页
     Route::get('category/show_{navigation}_{articleCategory}.html', 'ArticleController@category')->name('category.index');

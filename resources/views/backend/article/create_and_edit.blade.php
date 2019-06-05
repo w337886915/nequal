@@ -111,9 +111,34 @@
                             </div>
                         </div>
 
-                        @if($type)
-                            @includeIf('backend::article.template.'.$type,['article' => $article])
-                        @endif
+                       {{--@if($type)--}}
+                            {{--@includeIf('backend::article.template.'.$type,['article' => $article])--}}
+                        {{--@endif--}}
+
+                        {{--上传视频--}}
+                        @php
+                                $attribute = is_json($article->attribute) ? json_decode($article->attribute) : new \stdClass();
+                        @endphp
+                        <div class="form-group has-feedback  has-icon-right">
+                            <label class="col-md-2 col-sm-2 control-label">视频</label>
+                            <div class="col-md-5 col-sm-10">
+                                <div class="panel">
+                                    <div class="panel-body">
+                                        @if(!isset($attribute->video_path))
+                                            <img src="{{asset('images/video-none.png')}}" class="img-rounded" width="260px" height="200px" alt="">
+                                        @else
+                                        <h4 id="video_title_h4">{{ get_value($attribute, 'video_title', '') }}</h4>
+                                        <video src="{{  storage_video_url($attribute->video_path ?? null) }}" id="video_path" controls="controls" style="width: 300px;"></video>
+                                        @endif
+                                    {{--    <input id="upload_video_id" type="hidden" name="attribute[video_id]" value="{{ get_value($attribute, 'video_id', '') }}" >--}}
+                                        <input id="upload_video_path" type="hidden" name="attribute[video_path]" value="{{ get_value($attribute, 'video_path', '') }}" >
+                                        <input id="upload_video_title" type="hidden" name="attribute[video_title]" value="{{ get_value($attribute, 'video_title', '') }}" >
+                                        <button id="upload_video" type="button" class="btn btn-info uploader-btn-browse"><i class="icon icon-upload"></i> 上传</button>
+                                        {{--<button id="delete_video" type="button" class="btn btn-danger"><i class="icon icon-remove-sign"></i> 删除</button>--}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="form-group has-feedback has-icon-right">
                             <label for="author" class="col-md-2 col-sm-2 control-label">作者</label>
@@ -150,29 +175,49 @@
                             </select>
                             </div>
                         </div>
-
+                       {{--
                         <div class="form-group has-feedback has-icon-right">
-                            <label for="is_link" class="col-md-2 col-sm-2 control-label required">链接类型</label>
+                            <label for="is_link" class="col-md-2 col-sm-2 control-label">链接类型</label>
                             <div class="col-md-5 col-sm-10">
                             <div class="radio">
                                 <label class="radio-inline">
-                                    <input type="radio" name="is_link" value="0" @if($article->is_link == '0') checked="" @endif required> 内链
+                                    <input type="radio" name="is_link" value="0" @if($article->is_link == '0') checked="" @endif > 内链
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="is_link" value="1" @if($article->is_link == '1') checked="" @endif required> 外链
+                                    <input type="radio" name="is_link" value="1" @if($article->is_link == '1') checked="" @endif > 外链
                                 </label>
                             </div>
                             </div>
                         </div>
+--}}
 
-                        <div class="form-group has-feedback has-icon-right">
-                            <label for="link" class="col-md-2 col-sm-2 control-label">跳转链接</label>
+
+                       <div class="form-group has-feedback has-icon-right">
+                            <label for="link" class="col-md-2 col-sm-2 control-label">案例链接</label>
                             <div class="col-md-5 col-sm-10">
-                            <input type="text" name="link" autocomplete="off" placeholder="文章跳转链接" class="form-control" value="{{ old('link',$article->link) }}"
-                                   data-fv-trigger="blur"
-                                   minlength="1"
-                                   maxlength="255"
-                            ></div>
+                                <input type="text" name="link[case]" autocomplete="off" class="form-control" value="{{ old('link.case',$article->link['case']) }}"
+                                       data-fv-trigger="blur"
+                                       minlength="1"
+                                       maxlength="255"
+                                ></div>
+                        </div>
+                        <div class="form-group has-feedback has-icon-right">
+                            <label for="link" class="col-md-2 col-sm-2 control-label">参会链接</label>
+                            <div class="col-md-5 col-sm-10">
+                                <input type="text" name="link[attend]" autocomplete="off" class="form-control" value="{{ old('link.attend',$article->link['attend']) }}"
+                                       data-fv-trigger="blur"
+                                       minlength="1"
+                                       maxlength="255"
+                                ></div>
+                        </div>
+                        <div class="form-group has-feedback has-icon-right">
+                            <label for="link" class="col-md-2 col-sm-2 control-label">下载资料链接</label>
+                            <div class="col-md-5 col-sm-10">
+                                <input type="text" name="link[material]" autocomplete="off" class="form-control" value="{{ old('link.material',$article->link['material']) }}"
+                                       data-fv-trigger="blur"
+                                       minlength="1"
+                                       maxlength="255"
+                                ></div>
                         </div>
 
                         <div class="form-group has-feedback has-icon-right">
@@ -214,8 +259,6 @@
 
     @include('backend::common._upload_image_scripts',['elem' => '#upload_thumb', 'previewElem' => '#image_image', 'fieldElem' => '#form_thumb', 'folder'=>'article', 'object_id'=>$object_id])
     @include('backend::common._delete_image_scripts',['elem' => '#delete_thumb', 'previewElem' => '#image_image', 'fieldElem' => '#form_thumb', ])
-    {{--@include('backend::common._select_image_scripts',['elem' => '#select_thumb', 'previewElem' => '#image_image', 'fieldElem' => '#form_thumb', 'folder'=>'article', 'object_id'=>$object_id ])--}}
 
-    @include('backend::common._upload_aliyun_vod_scripts',['elem' => '#upload_video', 'previewElem' => '#video_title_h4', 'fieldIdElem' => '#upload_video_id', 'fieldTitleElem' => '#upload_video_title', 'fieldThumbElem' => '#upload_video_thumb', 'fieldImageElem' => '#video_thumb_image', 'folder'=>'article', 'object_id'=>$object_id])
-    @include('backend::common._delete_aliyun_vod_scripts',['elem' => '#delete_video', 'previewElem' => '#video_title_h4', 'fieldIdElem' => '#upload_video_id', 'fieldTitleElem' => '#upload_video_title', 'fieldThumbElem' => '#upload_video_thumb', 'fieldImageElem' => '#video_thumb_image', 'folder'=>'article', 'object_id'=>$object_id])
+    @include('backend::common._upload_video_scripts',['elem' => '#upload_video', 'previewElem' => '#video_title_h4', 'fieldTitleElem' => '#upload_video_title', 'fieldPathElem' => '#upload_video_path', 'fieldVideoElem' => '#video_path', 'folder'=>'video', 'object_id'=>$object_id])
 @stop

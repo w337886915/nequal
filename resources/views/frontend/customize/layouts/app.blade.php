@@ -60,8 +60,16 @@
             $('.header-wrapper').addClass('nav-bg');
             $('.logo').attr("src","{{asset('images/logo_header.png')}}");
             $('.lang-img').attr("src","{{asset('images/yuyan_h.png')}}");
-            $('.banner-wrapper').css('padding-top', '80px')
+           // $('.banner-wrapper').css('padding-top', '80px')
         }
+
+
+        $('#weixin').click(function(){
+            $('.icon-content').html('<img src="{{asset('images/qrcode.png')}}" alt="nEqual" style="height:150px;">');
+        });
+        $('#Email').click(function(){
+            $('.icon-content').html('邮箱：marketing@nequal.com');
+        })
 
     });
 

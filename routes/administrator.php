@@ -54,10 +54,19 @@ Route::group(['domain' => config('administrator.domain'), 'prefix' => config('ad
     # 站点设置相关路由
     Route::get('site/basic','SiteController@basic')->name('administrator.site.basic');
     Route::post('site/basic','SiteController@basicStore');
+
     Route::get('site/company','SiteController@company')->name('administrator.site.company');
     Route::post('site/company','SiteController@companyStore');
 //    Route::get('site/contact','SiteController@contact')->name('administrator.site.contact');
 //    Route::post('site/contact','SiteController@contactStore');
+
+    #关于我们的图文
+    Route::get('site/company/about/create','SiteController@aboutCreate')->name('administrator.company.about.create');
+    Route::post('site/company/about/store','SiteController@aboutStore')->name('administrator.company.about.store');
+    Route::get('site/company/about/edit/{about}','SiteController@aboutEdit')->name('administrator.company.about.edit');
+    Route::patch('site/company/about/update/{about}','SiteController@aboutUpdate')->name('administrator.company.about.update');
+    Route::delete('site/company/about/destroy/{about}','SiteController@aboutDestroy')->name('administrator.company.about.destroy');
+
 
     # 公司荣誉
     Route::get('site/company/honor','HonorController@index')->name('administrator.company.honor');
