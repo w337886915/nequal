@@ -15,6 +15,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use Illuminate\Http\Request;
 use App\Models\Article;
 use App\Models\Slide;
@@ -32,17 +33,14 @@ class WelcomeController extends Controller
      *
      * @return mixed
      */
-    public function index(Slide $slide)
+    public function index(Slide $slide, Brand $brand)
     {
         $active = 'index';
-        return frontend_view('index',compact('slides' ,'active'));
-    }
 
-    /**
-     * 关于我们
-     */
-    public function company(){
-        return frontend_view('company');
+        //获取服务品牌列表
+        $brands = $brand->ordered()->get();
+
+        return frontend_view('index',compact('slides' ,'active', 'brands'));
     }
 
     /**

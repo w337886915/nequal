@@ -46,7 +46,8 @@ class CreateArticlesTable extends Migration
             $table->json("attribute")->nullable()->comment('附加属性');
             $table->string("thumb",255)->nullable()->comment('封面');
             $table->enum("is_link",[0,1])->default(0)->comment('isLink');
-            $table->string("link",255)->nullable()->comment('Link');
+//            $table->string("link",255)->nullable()->comment('Link');
+            $table->json("link")->nullable()->comment('Link');
             $table->string("type",30)->comment('类型');
             $table->unsignedInteger("reply_count")->default(0)->comment("回复量");
             $table->unsignedInteger("views")->default(0)->comment("浏览数");

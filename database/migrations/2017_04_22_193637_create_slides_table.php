@@ -33,7 +33,7 @@ class CreateSlidesTable extends Migration
             $table->string("title",100)->comment('标题');
             $table->string("description",255)->default('')->comment('描述');
             $table->string('target',32)->default('_self')->comment("是否新建标签");
-            $table->string("link",255)->comment('URL');
+            $table->string("link",255)->nullable()->comment('URL');
             $table->string("image",255)->comment('图片');
             $table->text("content")->nullable()->comment('幻灯内容');
             $table->integer("order")->comment('排序');

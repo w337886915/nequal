@@ -30,21 +30,31 @@
                 </ul>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-3 footer-item">
-                <img src="{{asset('images/wx.png')}}" alt="nEqual">
-                <img src="{{asset('images/weibo.png')}}" alt="nEqual">
-                <img src="{{asset('images/youxiang.png')}}" alt="nEqual">
+                <div class="contact-icons">
+                    <img src="{{asset('images/wx.png')}}" alt="nEqual" id="weixin">
+                    <a href=""><img src="{{asset('images/weibo.png')}}" alt="nEqual"></a>
+                    <img src="{{asset('images/youxiang.png')}}" alt="nEqual" id="Email">
+                </div>
+
+                <div class="icon-content">
+                    {{--<img src="{{asset('images/qrcode.png')}}" alt="" style="height:150px;">--}}
+                </div>
+              {{--  <div class="icon-content">
+                    邮箱：marketing@nequal.com
+                </div>--}}
+
             </div>
         </div>
     </div>
     <div class="copyright">
         <div class="container">
             <div class="row">
-                <div class="col-xs-4 col-sm-4 col-md-4"><a href="/"><img src="{{asset('images/logo_footer.png')}}" alt="nEqual"></a></div>
-                <div class="col-xs-4 col-sm-4 col-md-4" style="text-align: center;">
-                    <span>Copyright {{config("system.common.basic.create_year")}} - {{date('Y')}} {{ config("system.common.basic.copyright") }} All Rights Reserved</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 {{--   <a href="{{ config("system.common.basic.icp_link") }}" target="_blank">{{ config("system.common.basic.icp") }}</a>--}}
+                <div class="col-xs-4 col-sm-4 col-md-3"><a href="/"><img src="{{asset('images/logo_footer.png')}}" alt="nEqual"></a></div>
+                <div class="col-xs-4 col-sm-4 col-md-6" style="text-align: center;">
+                    <span>Copyright {{config("system.common.basic.create_year")}} - {{date('Y')}} {{ config("system.common.basic.copyright") }} All Rights Reserved</span>
+                    {{--   <a href="{{ config("system.common.basic.icp_link") }}" target="_blank">{{ config("system.common.basic.icp") }}</a>--}}
                 </div>
-                <div class="col-xs-4 col-sm-4 col-md-4 dropdown" style="text-align: right;padding-right:40px;">
+                <div class="col-xs-4 col-sm-4 col-md-3 dropdown" style="text-align: right;padding-right:40px;">
                         <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img src="{{asset('images/yuyan_f.png')}}" alt="nEqual">
                             <span style="vertical-align: middle;">{{trans('page.'.app()->getLocale())}}</span>

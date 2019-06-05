@@ -1,4 +1,7 @@
 @extends('frontend.customize.layouts.app')
+
+@section('title', '新闻报道')
+
 @php
     if($category->parent){
          $active = app(\App\Models\Category::class)->find($category->parent);
@@ -9,6 +12,13 @@
        // 获取客户列的轮播
     $slides = app(\App\Models\Slide::class)->where('group', \App\Models\Slide::SLIDES_NEWS)->get();
 @endphp
+
+<!-- banner -->
+@section('swipper')
+    @include('frontend.customize.layouts.swipper', $slides)
+@stop
+
+
 <style>
     .news-wrapper{margin: 80px 0;}
     .news-item{padding:21px 18px 21px 46px;display: flex;margin-bottom: 80px;background-color: #ffffff; box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);border-radius: 12px;}
@@ -31,8 +41,8 @@
                     <p class="title">{{field_locale($article->title)}}</p>
                     <div class="info">{{field_locale($article->description)}}</div>
                     <div class="row more">
-                        <div class="col-md-8"><span>{{$article->created_at}}</span> &nbsp;&nbsp; <span>东方头条</span></div>
-                        <div class="col-md-4" style="text-align: right;"><a href="{{$article->getLink()}}">了解详情 &raquo;</a></div>
+                        <div class="col-md-8"><span>{{$article->created_at->toDateString()}}</span> &nbsp;&nbsp;{{-- <span>东方头条</span>--}}</div>
+                        <div class="col-md-4" style="text-align: right;"><a href="{{$article->getLink(request('navigation', 0), request('articleCategory', 0))}}">了解详情 &raquo;</a></div>
                     </div>
                 </div>
                 <img src="{{storage_image_url($article->thumb)}}" alt="nEqual">

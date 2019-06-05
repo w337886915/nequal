@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui, user-scalable=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', config('app.name', 'LaraCMS')) - {{ config('app.name', 'LaraCMS')  }}</title>
+    <title>@yield('title', config('app.name', 'nEqual')) - {{ config('app.name', 'nEqual')  }}</title>
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token()

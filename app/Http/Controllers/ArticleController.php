@@ -75,7 +75,8 @@ class ArticleController extends Controller
         $article = $safeArticle;
         $article->increment('views');
 
-        return frontend_view('article.'.$article->getTemplate($category), compact('article'));
+//        return frontend_view('article.'.$article->getTemplate($category), compact('article'));
+        return frontend_view('article.show', compact('article'));
     }
 
 }

@@ -38,7 +38,7 @@ class Slide extends Model
     const SLIDES_SOLUTION = 3;
     const SLIDES_CASE = 4;
     const SLIDES_NEWS = 5;
-    const SLIDES_ACTIVITY = 6;
+    const SLIDES_CONFERENCE = 6;
     const SLIDES_JOIN = 7;
 
     /**

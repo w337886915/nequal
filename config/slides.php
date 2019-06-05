@@ -44,8 +44,8 @@ return [
 
     6 => [
         'id' => 6,
-        'mark' => 'SLIDES_ACTIVITY',
-        'name' => '活动中心幻灯',
+        'mark' => 'SLIDES_CONFERENCE',
+        'name' => '行业会议幻灯',
         'description' => '',
     ],
 

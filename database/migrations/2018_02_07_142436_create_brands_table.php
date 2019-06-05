@@ -26,9 +26,8 @@ class CreateBrandsTable extends Migration
             $table->string('name',128)->comment('品牌名称');
             $table->string('url',255)->nullable()->comment('品牌链接地址');
             $table->string('image',255)->comment('服务品牌图标');
-            $table->integer('order')->default(9999)->comment('排序');
+            $table->integer('order')->default(999)->comment('排序');
             $table->timestamps();
-            
             $table->index('order','order_index');
         });
 	}
