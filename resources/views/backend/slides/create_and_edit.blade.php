@@ -34,7 +34,7 @@
                                    maxlength="100"
                             ></div>
                         </div>
-
+{{--
                         <div class="form-group has-feedback  has-icon-right">
                             <label for="link" class="col-md-2 col-sm-2 control-label">链接</label>
                             <div class="col-md-5 col-sm-10">
@@ -58,7 +58,7 @@
                             </div>
                             </div>
                         </div>
-
+                        --}}
                         <div class="form-group">
                             <label for="" class="col-md-2 col-sm-2 control-label">图片</label>
                             <div class="col-md-8 col-sm-10">

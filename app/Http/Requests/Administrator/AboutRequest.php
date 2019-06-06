@@ -11,6 +11,7 @@ class AboutRequest extends Request
             'sub_title' => 'required|array',
             'position' => 'required|'.Rule::in(['left','right']),
             'content' => 'required|array',
+            'content.*' => 'required|min:1',
             'thumb' => 'required|max:255',
         ];
     }

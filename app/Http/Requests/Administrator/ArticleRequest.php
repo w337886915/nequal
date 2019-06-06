@@ -33,6 +33,7 @@ class ArticleRequest extends Request
                     'category_id' => 'required|array',
                     'category_id.*' => 'integer',
                     'title' => 'required|array|min:1|max:191',
+                    'title.*' => 'required|min:1',
                     'object_id' => 'required|alpha_dash|unique:articles|min:1|max:64',
                     'keywords' => 'nullable|max:191',
                     'description' => 'nullable|max:191',
@@ -50,6 +51,7 @@ class ArticleRequest extends Request
                     'is_link' => 'nullable|'.Rule::in(['0','1']),
 //                    'link' => 'nullable|alpha_dash||max:191',
                     'link' => 'nullable|array',
+                    'link.*' =>'nullable|url',
                 ];
             }
             // UPDATE
@@ -59,7 +61,8 @@ class ArticleRequest extends Request
                 return [
                     'category_id' => 'required|array',
                     'category_id.*' => 'integer',
-                    'title' => 'required|min:1|max:191',
+                    'title' => 'required|array',
+                    'title.*' => 'required|min:1',
                     'object_id' => 'required|alpha_dash|unique:articles,object_id,'.$this->article->id.'|min:1|max:64',
                     'keywords' => 'nullable|max:191',
                     'description' => 'nullable|max:191',
@@ -77,6 +80,7 @@ class ArticleRequest extends Request
                     'is_link' => 'nullable|'.Rule::in(['0','1']),
 //                    'link' => 'nullable|alpha_dash|unique:article|max:191',
                     'link' => 'nullable|array',
+                    'link.*' => 'nullable|url',
                 ];
             }
             case 'GET':
@@ -92,7 +96,8 @@ class ArticleRequest extends Request
     {
         return [
             'category_id' => '分类',
-            'content.*' => '内容(中/英)'
+            'content.*' => '内容(中/英)',
+            'link.*' => '链接',
         ];
     }
 }

@@ -25,7 +25,7 @@ class SlideRequest extends Request
             'image' => 'required|max:255',
             'link' => 'nullable|url',
             'description' => 'nullable|max:255',
-            'target' => 'required|min:1,max:255',
+            'target' => 'nullable|min:1,max:255',
             'order' => 'nullable|integer',
             'status' => 'nullable|integer',
             'content' => 'nullable|min:1|max:65535',

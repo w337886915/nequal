@@ -19,7 +19,7 @@ class CreateContactsTable extends Migration
             $table->json('address')->comment('地址');
             $table->string('email', 100)->comment('邮箱');
             $table->string('tel',50)->comment('联系电话');
-            $table->string('zip_code',6)->comment('联系电话');
+            $table->string('zip_code',6)->comment('邮编');
             $table->timestamps();
         });
     }
