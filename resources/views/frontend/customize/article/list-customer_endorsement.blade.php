@@ -60,7 +60,7 @@
                     <p class="empty">No data found.</p>
                 @endforelse
                     {{-- 分页 --}}
-                    <div style="text-align: right;">
+                    <div class="text-right">
                         {{ $articles->links('pagination::frontend') }}
                     </div>
             </div>

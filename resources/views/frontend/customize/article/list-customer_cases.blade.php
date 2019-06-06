@@ -67,7 +67,7 @@
         <div class="container">
             <div class="article-list-wrapper">
                 @forelse ($articles as $article)
-                    <div class="article-item" style="">
+                    <div class="article-item">
                         <img src="{{storage_image_url($article->thumb)}}" alt="" style="height:260px;width:420px;">
                         <div class="article-item-content">
                             <h2>{{field_locale($article->title)}}</h2>
@@ -83,7 +83,7 @@
                     <p class="empty">No data found.</p>
                 @endforelse
                 {{-- 分页 --}}
-                <div style="text-align: right;">
+                <div class="text-right">
                     {{ $articles->links('pagination::frontend') }}
                 </div>
             </div>

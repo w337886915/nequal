@@ -20,7 +20,7 @@
 
 
 <style>
-    .news-wrapper{margin: 80px 0;}
+    .news-wrapper{padding: 80px 0;}
     .news-item{padding:21px 18px 21px 46px;display: flex;margin-bottom: 80px;background-color: #ffffff; box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);border-radius: 12px;}
     .news-item:last-child{margin-bottom:0;}
     .news-item a{color: #16508e !important; font-weight: 600;}
@@ -33,7 +33,7 @@
 </style>
 
 @section('content')
-<div class="container-fixed">
+<div class="container-fixed" style='background: #F2F6FA;'>
     <div class="container news-wrapper">
         @forelse ($articles as $article)
             <div class="news-item">
@@ -42,7 +42,7 @@
                     <div class="info">{{field_locale($article->description)}}</div>
                     <div class="row more">
                         <div class="col-md-8"><span>{{$article->created_at->toDateString()}}</span> &nbsp;&nbsp;{{-- <span>东方头条</span>--}}</div>
-                        <div class="col-md-4" style="text-align: right;"><a href="{{$article->getLink(request('navigation', 0), request('articleCategory', 0))}}">了解详情 &raquo;</a></div>
+                        <div class="col-md-4 text-right"><a href="{{$article->getLink(request('navigation', 0), request('articleCategory', 0))}}">了解详情 &raquo;</a></div>
                     </div>
                 </div>
                 <img src="{{storage_image_url($article->thumb)}}" alt="nEqual">
@@ -51,7 +51,7 @@
             <p class="empty">No data found.</p>
         @endforelse
             {{-- 分页 --}}
-            <div style="text-align: right;">
+            <div class="text-right">
                 {{ $articles->links('pagination::frontend') }}
             </div>
     </div>

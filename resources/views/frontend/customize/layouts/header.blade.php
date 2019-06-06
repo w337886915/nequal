@@ -61,7 +61,6 @@
      vertical-align: middle;
 }
 .header-wrapper .navbar .navbar-collapse .dropdown .dropdown-menu{
-    text-align: center;
     line-height: 30px;
 }
 
@@ -112,7 +111,7 @@
                             <span class="lang-now">{{trans('page.'.app()->getLocale())}}</span>
                         @endif
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="/lang/en">{{trans('page.en')}}</a>
                         <a class="dropdown-item" href="/lang/cn">{{trans('page.cn')}}</a>
                     </div>

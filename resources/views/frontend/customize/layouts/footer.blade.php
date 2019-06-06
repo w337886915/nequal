@@ -31,9 +31,9 @@
             </div>
             <div class="col-xs-6 col-sm-6 col-md-3 footer-item">
                 <div class="contact-icons">
-                    <img src="{{asset('images/wx.png')}}" alt="nEqual" id="weixin">
-                    <a href=""><img src="{{asset('images/weibo.png')}}" alt="nEqual"></a>
-                    <img src="{{asset('images/youxiang.png')}}" alt="nEqual" id="Email">
+                    <img src="{{asset('images/wx.png')}}" alt="nEqual" id="weixin" width="29" height="22">
+                    <a href=""><img src="{{asset('images/weibo.png')}}" alt="nEqual" width="27" height="22"></a>
+                    <img src="{{asset('images/youxiang.png')}}" alt="nEqual" id="Email" width="22" height="18">
                 </div>
 
                 <div class="icon-content">
@@ -42,7 +42,6 @@
               {{--  <div class="icon-content">
                     邮箱：marketing@nequal.com
                 </div>--}}
-
             </div>
         </div>
     </div>
@@ -50,16 +49,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-4 col-sm-4 col-md-3"><a href="/"><img src="{{asset('images/logo_footer.png')}}" alt="nEqual"></a></div>
-                <div class="col-xs-4 col-sm-4 col-md-6" style="text-align: center;">
+                <div class="col-xs-4 col-sm-4 col-md-6 text-center">
                     <span>Copyright {{config("system.common.basic.create_year")}} - {{date('Y')}} {{ config("system.common.basic.copyright") }} All Rights Reserved</span>
                     {{--   <a href="{{ config("system.common.basic.icp_link") }}" target="_blank">{{ config("system.common.basic.icp") }}</a>--}}
                 </div>
-                <div class="col-xs-4 col-sm-4 col-md-3 dropdown" style="text-align: right;padding-right:40px;">
+                <div class="col-xs-4 col-sm-4 col-md-3 dropdown text-right pr-3">
                         <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img src="{{asset('images/yuyan_f.png')}}" alt="nEqual">
                             <span style="vertical-align: middle;">{{trans('page.'.app()->getLocale())}}</span>
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="text-align: center;line-height: 25px;">
+                        <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton" style="line-height: 25px;">
                             <a class="dropdown-item" href="/lang/en">{{trans('page.en')}}</a>
                             <a class="dropdown-item" href="/lang/cn">{{trans('page.cn')}}</a>
                         </div>

@@ -35,7 +35,7 @@
                         @endforeach
                     </ul>
 
-                    <div style="text-align: center">
+                    <div class="text-center">
                         {{ $articles->links('pagination::frontend') }}
                     </div>
 
