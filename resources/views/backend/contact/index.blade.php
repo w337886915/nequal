@@ -55,7 +55,7 @@
                             <td class="text-center">{{ fieldCN($item->address)}}</td>
                             <td class="text-center">
                                 <a href="{{ route('contacts.edit', $item->id) }}" class="btn btn-xs btn-primary">编辑</a>
-                         {{--       <a href="javascript:;" data-url="{{ route('contacts.destroy', $item->id) }}" class="btn btn-xs btn-danger form-delete">删除</a>--}}
+                                <a href="javascript:;" data-url="{{ route('contacts.destroy', $item->id) }}" class="btn btn-xs btn-danger form-delete">删除</a>
                             </td>
                         </tr>
                     @endforeach

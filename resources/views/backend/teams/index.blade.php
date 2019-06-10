@@ -18,35 +18,34 @@
                 <div class="pull-right" style="width: 250px;">
                 </div>
                 <div class="tools-group">
+                    <a href="{{ route('teams.create') }}" class="btn btn-primary"><i class="icon icon-plus-sign"></i> 添加</a>
                 </div>
             </div>
             @if($teams->count())
                 <table class="table table-bordered">
                     <colgroup>
                         <col width="50">
-                        <col width="200">
-                        <col width="300">
+                        <col width="100">
                         <col>
                         <col width="120">
                     </colgroup>
                     <thead>
                     <tr>
                         <th class="text-center">#</th>
-                        <th class="text-center">标识</th>
+                        <th class="text-center">排序</th>
                         <th class="text-center">名称</th>
-                        <th class="text-center">描述</th>
                         <th class="text-center">操作</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach($teams as $index => $team)
                         <tr>
-                            <td class="text-center">{{ $team['id'] }}</td>
-                            <td>{{ $team['mark']}}</td>
-                            <td>{{ $team['name']}}</td>
-                            <td>{{ $team['description']}}</td>
+                            <td class="text-center">{{ $team->id }}</td>
+                            <td class="text-center">{{ $team->order }}</td>
+                            <td>{{ $team->name['cn']}}</td>
                             <td class="text-center">
-                                <a href="{{ route('teams.manage', $team['id']) }}" class="btn btn-xs btn-primary">管理</a>
+                                <a href="{{ route('teams.edit', $team->id) }}" class="btn btn-xs btn-primary">编辑</a>
+                                <a href="javascript:;" data-url="{{ route('teams.destroy', $team->id) }}" class="btn btn-xs btn-danger form-delete">删除</a>
                             </td>
                         </tr>
                     @endforeach
@@ -60,5 +59,5 @@
 @endsection
 
 @section('scripts')
-
+    @include('backend::layouts._paginate',[ 'count' => $teams->total(), ])
 @endsection

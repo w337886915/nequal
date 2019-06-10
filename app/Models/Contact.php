@@ -15,6 +15,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
 use App\Events\BehaviorLogEvent;
 
@@ -27,6 +28,8 @@ use App\Events\BehaviorLogEvent;
  */
 class Contact extends Model
 {
+    use SoftDeletes;
+
     protected $fillable = ['id', 'name', 'address', 'email', 'tel', 'zip_code'];
 
     protected $dates = ['created_at', 'updated_at'];
@@ -44,5 +47,15 @@ class Contact extends Model
     public function titleName()
     {
         return 'name';
+    }
+
+    public function canDestroy()
+    {
+        // 检查是否有发布的职位
+        $count = Join::where('place_id', $this->id)->count();
+        if($count){
+            return '该联系方式下有发布的职位,无法删除！';
+        }
+        return true;
     }
 }

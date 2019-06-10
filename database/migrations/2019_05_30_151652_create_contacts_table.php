@@ -21,6 +21,7 @@ class CreateContactsTable extends Migration
             $table->string('tel',50)->comment('联系电话');
             $table->string('zip_code',6)->comment('邮编');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

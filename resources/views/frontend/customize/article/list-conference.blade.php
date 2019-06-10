@@ -1,12 +1,12 @@
 @extends('frontend.customize.layouts.app')
+@section('title', $title = '行业会议')
 @php
     if($category->parent){
          $active = app(\App\Models\Category::class)->find($category->parent);
          $active = field_locale($active->name);
     }else{
-         $active =field_locale($category->name);
+         $active = field_locale($category->name);
     }
-
        // 获取客户列的轮播
     $slides = app(\App\Models\Slide::class)->where('group', \App\Models\Slide::SLIDES_CONFERENCE)->get();
 @endphp

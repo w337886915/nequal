@@ -1,6 +1,6 @@
 @extends('frontend.customize.layouts.app')
 
-@section('title', '新闻报道')
+
 
 @php
     if($category->parent){
@@ -12,6 +12,7 @@
        // 获取客户列的轮播
     $slides = app(\App\Models\Slide::class)->where('group', \App\Models\Slide::SLIDES_NEWS)->get();
 @endphp
+@section('title', $active)
 
 <!-- banner -->
 @section('swipper')

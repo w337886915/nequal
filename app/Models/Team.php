@@ -15,6 +15,8 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 /**
  * 公司管理层模型
  *
@@ -23,9 +25,11 @@ namespace App\Models;
  */
 class Team extends Model
 {
-    protected $fillable = ['id', 'group', 'name', 'description', 'image', 'order'];
+    use SoftDeletes;
 
-    protected $dates = ['created_at', 'updated_at'];
+    protected $fillable = ['id', 'name', 'description', 'image', 'order'];
+
+    protected $dates = ['created_at', 'updated_at', 'deleted_at'];
 
     protected $casts = [
         'name' => 'array',

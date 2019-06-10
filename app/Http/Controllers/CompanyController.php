@@ -64,29 +64,23 @@ class CompanyController extends Controller
     }
 
     // 加入我们页面
-    public function join()
+    public function join(Join $join)
     {
         // 幻灯图片
         $slides = $this->slides;
 
-        $place_id = request('id')?? 1;
+        $jobs = $join->ordered()->recent()->paginate(10);
 
-        $places = Contact::pluck('name', 'id');
-
-        $jobs = Join::where('place_id', $place_id)->ordered()->recent()->paginate(10);
-
-        return frontend_view('company.join', compact('places', 'place_id', 'jobs', 'slides'));
+        return frontend_view('company.join', compact('jobs', 'slides'));
     }
 
     // 管理团队页面
-    public function team()
+    public function team(Team $team)
     {
         // 幻灯图片
         $slides = $this->slides;
 
-        $team_group_id= request('id')?? 1;
-
-        $teams = Team::where('group', $team_group_id)->ordered()->recent()->paginate(5);
+        $teams = $team->ordered()->recent()->paginate(5);
 
         return frontend_view('company.team', compact('team_group_id', 'jobs', 'teams', 'slides'));
     }

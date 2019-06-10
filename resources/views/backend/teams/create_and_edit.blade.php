@@ -1,12 +1,10 @@
 @extends('backend::layouts.app')
 
-@section('title', $title = ($team->id ? '编辑' : '添加') . $teamConfig['name'] )
+@section('title', $title = ($team->id ? '编辑' : '添加').'管理团队')
 
 @section('breadcrumb')
-    <li><a href="javascript:;">内容管理</a></li>
-    <li><a href="javascript:;">幻灯管理</a></li>
-    <li><a href="javascript:;">幻灯片</a></li>
-    <li><a href="javascript:;">{{$teamConfig['name']}}管理</a></li>
+    <li><a href="javascript:;">站点设置</a></li>
+    <li><a href="javascript:;">管理团队</a></li>
     <li>{{$title}}</li>
 @endsection
 
@@ -82,7 +80,6 @@
 
                         <div class="form-group">
                             <div class="col-md-offset-2 col-md-5 col-sm-10">
-                                <input type="hidden" name="group" value="{{$group}}" />
                                 <button type="submit" class="btn btn-primary">提交</button>
                                 <button type="reset" class="btn btn-default">重置</button>
                             </div>

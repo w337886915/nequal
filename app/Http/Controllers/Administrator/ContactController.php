@@ -98,13 +98,18 @@ class ContactController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Contact $contact
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
     public function destroy(Contact $contact)
     {
         $this->authorize('destroy', $contact);
 
+        $can = $contact->canDestroy();
+        if (is_string($can)) {
+            return $this->redirect()->with('message', $can);
+        }
         $contact->delete();
 
         return $this->redirect()->with('success', '删除成功.');

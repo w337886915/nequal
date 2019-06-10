@@ -35,29 +35,9 @@ class TeamController extends Controller
     {
         $this->authorize('index', $team);
 
-        $teams = collect(config('teams'));
+        $teams = $team->ordered()->recent()->paginate((config('administrator.paginate.limit')));
 
         return backend_view('teams.index', compact('teams'));
-    }
-
-    /**
-     * 管理
-     *
-     * @param $group
-     * @param Request $request
-     * @param Team $team
-     * @return mixed
-     * @throws \Illuminate\Auth\Access\AuthorizationException
-     */
-    public function manage($group, Request $request, Team $team)
-    {
-        $this->authorize('manage', $team);
-
-        $teamConfig = $this->checkGroup($group);
-
-        $teams = $team->where('group', $group)->ordered()->recent()->paginate((config('administrator.paginate.limit')));
-
-        return backend_view('teams.manage', compact('teams', 'teamConfig', 'group'));
     }
 
     /**
@@ -68,13 +48,11 @@ class TeamController extends Controller
      * @return mixed
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function create($group, Team $team)
+    public function create(Team $team)
     {
         $this->authorize('create', $team);
 
-        $teamConfig = $this->checkGroup($group);
-
-        return backend_view('teams.create_and_edit', compact('team','teamConfig', 'group'));
+        return backend_view('teams.create_and_edit', compact('team'));
     }
 
     /**
@@ -91,7 +69,7 @@ class TeamController extends Controller
 
         $team = Team::create($request->all());
 
-        return redirect()->route('teams.manage', $team->group)->with('success', '添加成功.');
+        return redirect()->route('teams.index')->with('success', '添加成功.');
     }
 
     /**
@@ -104,11 +82,8 @@ class TeamController extends Controller
     public function edit(Team $team)
     {
         $this->authorize('update', $team);
-        $group = $team->group;
 
-        $teamConfig = $this->checkGroup($group);
-
-        return backend_view('teams.create_and_edit', compact('team','teamConfig', 'group'));
+        return backend_view('teams.create_and_edit', compact('team'));
     }
 
     /**
@@ -125,7 +100,7 @@ class TeamController extends Controller
 
         $team->update($request->all());
 
-        return redirect()->route('teams.manage', $team->group)->with('success', '更新成功.');
+        return redirect()->route('teams.index')->with('success', '更新成功.');
     }
 
     /**
@@ -140,26 +115,9 @@ class TeamController extends Controller
     {
         $this->authorize('destroy', $team);
 
-        $group = $team->group;
         $team->delete();
 
         return $this->redirect()->with('success', '删除成功.');
     }
-
-    /**
-     * 检查分组
-     *
-     * @param $group
-     * @return \Illuminate\Config\Repository|mixed
-     */
-    private function checkGroup($group){
-        if( !($teamConfig = config('teams.'.$group)) ){
-            abort(404);
-        }
-
-        return $teamConfig;
-    }
-
-
 
 }

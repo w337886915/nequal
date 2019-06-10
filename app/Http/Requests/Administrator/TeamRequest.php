@@ -20,10 +20,11 @@ class TeamRequest extends Request
     public function rules()
     {
         return [
-            'group' => 'required|integer',
             'name' => 'required|array',
+            'name.*' => 'required|min:1|max:100',
             'image' => 'required|max:255',
             'description' => 'required|array',
+            'description.*' => 'required|min:1',
             'order' => 'nullable|integer',
         ];
     }

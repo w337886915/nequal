@@ -80,9 +80,9 @@ Route::group(['domain' => config('administrator.domain'), 'prefix' => config('ad
     Route::resource('contacts', 'ContactController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
     Route::resource('joins', 'JoinController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
     Route::put('joins.order', 'JoinController@order')->name('joins.order');
-    Route::resource('teams', 'TeamController', ['only' => ['index', 'show', 'store', 'update', 'edit', 'destroy']]);
-    Route::get('teams/{group}/manage', 'TeamController@manage')->name('teams.manage');
-    Route::get('teams/{group}/create', 'TeamController@create')->name('teams.create');
+    Route::resource('teams', 'TeamController', ['only' => ['index', 'show','create', 'store', 'update', 'edit', 'destroy']]);
+//    Route::get('teams/{group}/manage', 'TeamController@manage')->name('teams.manage');
+//    Route::get('teams/{group}/create', 'TeamController@create')->name('teams.create');
 
     # 简历管理
     Route::resource('resumes', 'ResumeController', ['only' => ['index', 'show', 'destroy']]);

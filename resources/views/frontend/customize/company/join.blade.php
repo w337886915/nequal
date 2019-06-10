@@ -10,20 +10,14 @@
 @stop
 
 <style>
-    .third-nav li{display:inline-block;height: 80px;line-height: 80px;margin:0 31px;}
-    .third-nav li a{display:block;line-height: 75px; font-size: 16px;}
-    .third-nav li a:hover{text-decoration: none;}
-
-    .jobs-wrapper{background: #eee;}
+    .jobs-wrapper{background: #F2F6FA;;}
     .jobs-wrapper .container{padding:80px 0;}
     .jobs-wrapper .job-item{display: flex;align-items: center;padding: 50px 10px;border-bottom: 1px solid #e4e4e4;}
     .jobs-wrapper .job-item .job-info{flex:1;}
     .jobs-wrapper .job-item .job-info .title{line-height: 36px;font-size: 32px;margin-bottom: 40px;}
     .jobs-wrapper .job-item .job-info .where{line-height: 36px;font-size: 18px;color:#888;   margin-bottom: 26px;}
     .jobs-wrapper .job-item .job-info .keywords-wrapper{height:40px;line-height: 40px;}
-    .jobs-wrapper .job-item .job-info .keywords {vertical-align: middle;padding: 0 27px; font-size: 16px;display: inline-block;
-        background-color: #ffffff;border-radius: 25px;margin-left: 30px;
-    }
+    .jobs-wrapper .job-item .job-info .keywords {vertical-align: middle;padding: 0 27px; font-size: 16px;display: inline-block;background-color: #fff;border-radius: 25px;margin-left: 30px;}
     .jobs-wrapper .job-item .send-resume-btn{width: 140px;height: 60px;background-color: #16508e;border-radius: 6px;color:#fff;line-height: 60px;text-align: center;font-size: 24px;}
 </style>
 
@@ -34,18 +28,16 @@
             <ul>
                 <li> <a href="{{route('company.index',7)}}"><img src="{{asset('images/gongsijieshao-unsel.png')}}" alt=""> <span>公司介绍</span></a></li>
                 <li> <a href="{{route('company.team')}}"><img src="{{asset('images/guanli-unsel.png')}}" alt=""><span>管理团队</span></a></li>
-                <li class="child-active"><a href="{{route('company.join')}}?id=1"><img src="{{asset('images/jiaru-sel.png')}}" alt=""><span>加入我们</span></a><span class="triangle_border_up"></span></li>
+                <li class="child-active">
+                    <a href="{{route('company.join')}}"><img src="{{asset('images/jiaru-sel.png')}}" alt=""><span>加入我们</span></a>
+                    <span class="triangle_border_up" style="background:#F2F6FA;"></span>
+                </li>
                 <li><a href="{{route('company.contact')}}"><img src="{{asset('images/lianxi-unsel.png')}}" alt=""><span>联系我们</span></a></li>
             </ul>
         </div>
     </div>
 
     <div class="container-fixed">
-        <ul class="container-fixed third-nav" style="text-align: center;">
-            @foreach($places as $id => $name)
-                <li class="@if($id == (int)$place_id) active @endif}}"><a href="{{route('company.join')}}?id={{$id}}">{{field_locale($name)}}</a></li>
-            @endforeach
-        </ul>
         <div class="container-fixed jobs-wrapper">
             <div class="container">
                 @forelse ($jobs as $job)

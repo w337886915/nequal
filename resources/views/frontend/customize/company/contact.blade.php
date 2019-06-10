@@ -48,6 +48,10 @@
             @empty
                 <p>No posts found.</p>
             @endforelse
+
+            <div style="display: flex;justify-content: center;margin-top:80px;">
+                <p class="text-center" style="background: #16508e;color: #fff;font-size: 20px; width:140px;height:60px;line-height: 60px;border-radius: 6px;">联系我们</p>
+            </div>
         </div>
     </div>
 
