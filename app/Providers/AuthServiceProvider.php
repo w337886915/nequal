@@ -36,6 +36,7 @@ class AuthServiceProvider extends ServiceProvider
          \App\Models\Team::class                            => \App\Policies\TeamPolicy::class,
          \App\Models\Resume::class                            => \App\Policies\ResumePolicy::class,
          \App\Models\About::class                            => \App\Policies\AboutPolicy::class,
+         \App\Models\Consultation::class                     => \App\Policies\ConsultationPolicy::class,
 
          \Spatie\Permission\Models\Role::class                             => \App\Policies\RolePolicy::class,
          \Spatie\Permission\Models\Permission::class                       => \App\Policies\PermissionPolicy::class,

@@ -199,7 +199,8 @@ Route::group(['domain' => config('administrator.domain'), 'prefix' => config('ad
     Route::get('form/{form}/{type}', 'FormController@show')->name('form.show');
     Route::delete('form/{form}/{type}', 'FormController@destroy')->name('form.destroy');
     # 咨询申请
-    Route::resource('consultations','ConsultationController');
+    Route::resource('consultations', 'ConsultationController', ['only' => ['index', 'show','destroy']]);
+    Route::put('consultations/update', 'ConsultationController@update')->name('consultations.update');
 
     # 服务品牌相关路由
     Route::resource('brands', 'BrandsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
