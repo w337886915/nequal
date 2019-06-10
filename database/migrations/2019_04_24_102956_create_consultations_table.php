@@ -15,15 +15,15 @@ class CreateConsultationsTable extends Migration
     {
         Schema::create('consultations', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('content',255)->comment('×ÉÑ¯ÄÚÈÝ');
-            $table->char('company',255)->nullable()->comment('¹«Ë¾Ãû³Æ');
-            $table->char('name',255)->comment('³Æºô');
-            $table->char('phone',255)->comment('µç»°');
-            $table->char('province',255)->comment('µØÇø');
-            $table->char('salesman_phone',255)->nullable()->comment('ÒµÎñÔ±µç»°');
-            $table->char('category',255)->comment('×ÉÑ¯ÀàÄ¿');
-            $table->tinyInteger('isread')->default(0)->comment('ÊÇ·ñÒÔ²é¿´');
+            $table->string('name',255)->comment('å§“å');
+            $table->string('phone',50)->comment('ç”µè¯');
+            $table->string('email',100)->comment('é‚®ç®±');
+            $table->string('company',255)->comment('å…¬å¸');
+            $table->string('position',255)->comment('èŒä½');
+            $table->char('demand',255)->comment('éœ€æ±‚');
+            $table->tinyInteger('is_read')->default(0)->comment('æ˜¯å¦å·²è¯»');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

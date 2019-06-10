@@ -49,13 +49,113 @@
                 <p>No posts found.</p>
             @endforelse
 
-            <div style="display: flex;justify-content: center;margin-top:80px;">
-                <p class="text-center" style="background: #16508e;color: #fff;font-size: 20px; width:140px;height:60px;line-height: 60px;border-radius: 6px;">联系我们</p>
+        </div>
+
+        <style>
+           .contact-form-wrapper  .contact-form input:before{font-size: 17px; color: #ea644a;content:'*' !important;  }
+           .contact-form-wrapper  .contact-form .mandatory{ font-size: 17px; color: #ea644a;  }
+           .contact-form-wrapper .contact-form .form-group .form-control:focus{
+               outline: none !important;
+           }
+           .contact-form-wrapper .contact-form .form-control{width:100%;height: 55px;background-color: #f8f8f8;border: solid 1px rgba(34, 34, 34, 0.1);outline: none;}
+
+        </style>
+
+        {{-- 联系我们表单 --}}
+        <div class="container-fixed contact-form-wrapper" style="background: #fff;padding:100px 0;">
+            <div class="container">
+                <div class="form-header text-center" style="display:flex;justify-content: center; ">
+                   <p style="width:300px;height:60px;line-height:60px;font-size: 24px;color: #003c7e;font-family: PingFang-SC-Bold;background:url('{{asset('images/contact_header_bg.png')}}') no-repeat;">联系我们</p>
+                </div>
+                <div style="font-size: 24px;margin:40px 0 50px 0;" class="text-center">请留下您的正确信息,以便我们更好的了解您的需求和帮助您</div>
+
+                <form id="consultForm" method="post" action="{{route('consult')}}" class="contact-form" style="margin: auto;">
+                    {{csrf_field()}}
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-6">
+                            <input type="text" class="form-control required" required name="name" autocomplete="off" placeholder="姓名" style="outline: none;">
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <input type="text" class="form-control required" required  name="phone" autocomplete="off" placeholder="电话">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-6">
+                            <input type="email" class="form-control required" required name="email" autocomplete="off" placeholder="邮箱">
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <input type="text" class="form-control required" required name="company" autocomplete="off" placeholder="公司">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-12 col-md-12">
+                            <input type="text" class="form-control required" required name="position"autocomplete="off" placeholder="职位">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-12 col-sm-12">
+                            <textarea name="demand" id="" rows="30" class="form-control required" required autocomplete="off" style="height:250px;border: solid 1px rgba(34, 34, 34, 0.1);background-color: #f8f8f8;" required
+                            placeholder="请输入您的需求"></textarea>
+                        </div>
+            </div>
+
+                    <div class="form-group text-center" style="margin-top: 92px;">
+                            <button type="button" id="contact-form-submit" class="btn btn-primary" style="background: #16508e;width:140px;height:60px;font-size: 24px;border-radius: 6px;">提 交</button>
+                    </div>
+
+                </form>
             </div>
         </div>
     </div>
 
 @endsection
 
-@section('scripts')
+@section('script')
+    <script>
+        $(document).ready(function () {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $('#contact-form-submit').click(function () {
+                var name = $('input[name=name]').val();
+                var phone = $('input[name=phone]').val();
+                var email = $('input[name=email]').val();
+                var company = $('input[name=company]').val();
+                var position = $('input[name=position]').val();
+                var demand = $('textarea[name=demand]').val();
+                $.ajax({
+                    type: "POST",//方法类型
+                    url: "{{route('consult')}}",
+                    data: {
+                        name: name,
+                        phone: phone,
+                        email: email,
+                        company: company,
+                        position: position,
+                        demand: demand
+                    },
+                    success: function (result) {
+                       if(result.status){
+                           $('input[name=name]').val('');
+                           $('input[name=phone]').val('');
+                           $('input[name=email]').val('');
+                           $('input[name=company]').val('');
+                           $('input[name=position]').val('');
+                           $('textarea[name=demand]').val('');
+                           return alert('提交成功');
+                       }else {
+                           return alert(result.message);
+                       }
+                    },
+                    error: function () {
+                        alert("异常！");
+                    }
+                });
+            });
+        })
+    </script>
 @endsection

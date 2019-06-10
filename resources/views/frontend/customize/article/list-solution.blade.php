@@ -1,5 +1,5 @@
 @php
-    $active = 'solution';
+    $active = '解决方案';
     //获得同级分类
     if($category->parent > 0){
         $articleCategory = new \App\Models\Category;
@@ -8,6 +8,8 @@
     }
 
 @endphp
+@section('title', $active)
+
 @extends('frontend.customize.layouts.app')
 @section('style')
     <style>

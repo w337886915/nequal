@@ -3,9 +3,10 @@
 
 <style>
     #index-swiper{ height:300px; }
-    #index-swiper .swiper-slide{background-color: #ffffff;box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);border-radius: 6px;height:260px; padding:10px 25px;}
+    #index-swiper .swiper-slide{background-color: #ffffff;box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);border-radius: 6px;height:260px; padding:10px 25px;position: relative;}
     #index-swiper .swiper-slide .title{font-size: 20px;line-height: 38px;color: #151515;}
     #index-swiper .swiper-slide .desc{ font-size: 16px; line-height: 24px; color: #888;width: 180px;}
+    #index-swiper .swiper-slide>img{position: absolute;right:10px;bottom: 30px;}
     .index-swiper-button-prev,.index-swiper-button-next{
         border: 1px solid #dde4ee; line-height:94px;width: 46px; text-align: center;border-radius: 25px;display: flex;align-items: center;justify-content: center;
     }
@@ -24,14 +25,17 @@
                     <div class="swiper-slide">
                         <p class="title">Brand Data Hub</p>
                         <p class="desc">近70% 知名企业数字化转型使用的数据智能平台</p>
+                        <img src="{{asset('images/index_s1.png')}}" alt="">
                     </div>
                     <div class="swiper-slide">
                         <p class="title">Serving</p>
                         <p class="desc">近70% 知名企业数字化转型使用的数据智能平台</p>
+                        <img src="{{asset('images/index_s2.png')}}" alt="">
                     </div>
                     <div class="swiper-slide">
                         <p class="title">Customer Experience Management</p>
                         <p class="desc">近70% 知名企业数字化转型使用的数据智能平台</p>
+                        <img src="{{asset('images/index_s3.png')}}" alt="">
                     </div>
                 </div>
             </div>

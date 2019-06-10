@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Consultation extends Model
 {
-    //
-    protected  $fillable = ['content','company','name','phone','province','salesman_phone','category'];
+    protected $fillable = ['name', 'phone', 'email', 'company', 'position', 'demand', 'is_read'];
+
     protected $appends = ['isreadname'];
 
-    public function getIsreadnameAttribute(){
-        if(isset($this->attributes['isread'])){
-            return $this->attributes['isread']?"已审阅":"未审阅";
-        }else{
-            return "未审阅";
+    public function getIsreadnameAttribute()
+    {
+        if (isset($this->attributes['is_read'])) {
+            return $this->attributes['isread'] ? "已读" : "未读";
+        } else {
+            return "未读";
         }
-
     }
 }

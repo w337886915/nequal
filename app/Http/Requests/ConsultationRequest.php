@@ -29,10 +29,12 @@ class ConsultationRequest extends Request
             case 'POST':
                 {
                     return [
-                        'content'=>'required',
                         'name'=>'required',
-                        'phone'=>'required|regex:/^1[3456789]\d{9}$/',
-                        'province'=>'required'
+                        'phone'=>'required',
+                        'company'=>'required',
+                        'email'=>'required|email',
+                        'position'=>'required',
+                        'demand'=>'required'
                     ];
                 }
             default:
@@ -44,11 +46,12 @@ class ConsultationRequest extends Request
     public function messages()
     {
         $message = [
-            'phone.required'      =>'手机号码不能为空',
-            'phone.regex'      =>'手机号码不正确',
-            'content.required'      =>'咨询内容不能为空',
-            'province.required'      =>'所在地不能为空',
-            'name.required'      =>'称呼不能为空'
+            'name.required'      =>'姓名不能为空',
+            'phone.required'      =>'电话不能为空',
+            'email.required'      =>'邮箱不能为空',
+            'company.required'      =>'公司不能为空',
+            'position.required'      =>'职位不能为空',
+            'demand.required'      =>'需求不能为空'
         ];
         return $message;
     }
