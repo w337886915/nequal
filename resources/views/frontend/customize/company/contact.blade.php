@@ -14,15 +14,15 @@
 
 @section('content')
     <div class="container-fixed">
-        <div class="container-fixed child-nav">
-            <div class="container">
-                <ul>
-                    <li>
+       <div class="container-fixed child-nav">
+            <div class="container text-center">
+                <ul class="row">
+                    <li class="col-6 col-sm-3">
                         <a href="{{route('company.index', 7)}}"><img src="{{asset('images/gongsijieshao-unsel.png')}}" alt=""> <span>公司介绍</span></a>
                     </li>
-                    <li><a href="{{route('company.team')}}"><img src="{{asset('images/guanli-unsel.png')}}" alt=""><span>管理团队</span></a></li>
-                    <li><a href="{{route('company.join')}}"><img src="{{asset('images/jiaru-unsel.png')}}" alt=""><span>加入我们</span></a></li>
-                    <li class="child-active">
+                    <li class="col-6 col-sm-3"><a href="{{route('company.team')}}"><img src="{{asset('images/guanli-unsel.png')}}" alt=""><span>管理团队</span></a></li>
+                    <li class="col-6 col-sm-3"><a href="{{route('company.join')}}"><img src="{{asset('images/jiaru-unsel.png')}}" alt=""><span>加入我们</span></a></li>
+                    <li class="col-6 col-sm-3 child-active">
                         <a href="{{route('company.contact')}}"><img src="{{asset('images/lianxi-sel.png')}}" alt=""><span>联系我们</span></a>
                         <span class="triangle_border_up"></span>
                     </li>
@@ -30,19 +30,23 @@
             </div>
         </div>
         <style>
-            .contact-wrapper{margin-top: 80px;height: 902px;background: #f2f6fa;background: url("{{asset('images/ditu_bg.png')}}") no-repeat;background: cover;}
-            .contact-wrapper .container{padding-top:250px;}
+            .contact-wrapper{margin-top: 80px;background: #f2f6fa;background: url("{{asset('images/ditu_bg.png')}}") no-repeat;background-size: 100% 100%;}
+            .contact-wrapper .container{padding:10% 0;}
             .contact-wrapper .contact{margin-bottom: 78px;line-height: 36px;}
+            .contact-wrapper .contact:last-child{margin-bottom:0;}
             .contact-wrapper .contact h5{font-size: 18px; color:#000;font-family: PingFangSC-Medium;font-weight:600;}
-            .contact-wrapper .contact p{color:#888;font-size: 18px;font-family: AdobeHeitiStd-Regular;}
+            .contact-wrapper .contact p{color:#888;font-size: 18px;font-family: AdobeHeitiStd-Regular;margin: 0}
         </style>
         <div class="container-fixed contact-wrapper">
-            <div class="container">
+            <div class="container pl-2 pr-2">
             @forelse ($contacts as $item)
                 <div class="contact">
                     <h5>{{field_locale($item->name)}}</h5>
-                    <p>{{field_locale($item->address)}} ({{$item->zip_code}})<br>
-                        <span>电话: {{$item->tel}}</span> <span style="padding-left: 100px;">E-mail: {{$item->email}}</span>
+                    <p>
+                        {{field_locale($item->address)}} ({{$item->zip_code}})
+                    </p>
+                    <p class="row">
+                        <span class="col-12 col-sm-5 col-lg-3 p-0">电话: {{$item->tel}}</span>  <span class="col-12 col-sm-5 col-lg-3 p-0">E-mail: {{$item->email}}</span>
                     </p>
                 </div>
             @empty
@@ -51,12 +55,10 @@
             </div>
         </div>
 
-
-
         <style>
-            .contact-form-wrapper .guidance{font-size: 24px;margin:40px 0 50px 0;}
+            .contact-form-wrapper .guidance{font-size: 1.5rem;margin:40px 0 50px 0;}
             .contact-form-wrapper .form-header{display:flex;justify-content: center;}
-            .contact-form-wrapper .form-header p{width:300px;height:60px;line-height:60px;font-size: 24px;color: #003c7e;font-family: PingFang-SC-Bold;background:url('{{asset('images/contact_header_bg.png')}}') no-repeat;}
+            .contact-form-wrapper .form-header p{width:18.75rem;height:60px;line-height:60px;font-size: 1.5rem;color: #003c7e;font-family: PingFang-SC-Bold;background:url('{{asset('images/contact_header_bg.png')}}') no-repeat;background-size: 100% 100%;}
 
             .contact-form-wrapper .triangle-wrapper{display: flex;align-items: center;position: relative;justify-content: center}
             .contact-form-wrapper .triangle-wrapper .triangle_border_down{ display: block;width: 32px;height: 32px;transform: rotate(45deg);background: #f2f6fa;position: absolute;top: -120px;}
@@ -108,15 +110,15 @@
                         </div>
                     </div>
 
-                    <div class="form-group text-center" style="margin-top: 92px;">
-                            <button type="submit" id="contact-form-submit" class="btn btn-primary" style="background: #16508e;width:140px;height:60px;font-size: 24px;border-radius: 6px;">提 交</button>
+                    <div class="form-group text-center" style="margin-top: 60px;">
+                           {{-- <button type="submit" id="contact-form-submit" class="btn btn-primary" style="background: #16508e;width:140px;height:60px;font-size: 24px;border-radius: 6px;">提 交</button>--}}
+                            <button type="submit" id="contact-form-submit" class="btn btn-primary" style="background: #16508e; width:8.75rem;height:3.75rem;font-size: 1.5rem;border-radius: 6px;">提 交</button>
                     </div>
 
                 </form>
             </div>
         </div>
     </div>
-
 @endsection
 
 @section('script')
