@@ -117,7 +117,7 @@
                     </div>
                 </div>
                 <div class="contact-us">
-                    <a target="" href="">{{trans('page.contact_us')}}</a>
+                    <a target="_self" href="{{route('company.contact')}}">{{trans('page.contact_us')}}</a>
                 </div>
             </div>
         </nav>

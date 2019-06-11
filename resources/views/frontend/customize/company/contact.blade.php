@@ -30,79 +30,86 @@
             </div>
         </div>
         <style>
-            .contact-wrapper{padding: 80px 0;}
-            .contact-wrapper .contact:nth-child(2n+1){background: #f2f6fa;}
-            .contact-wrapper .contact .container{padding: 50px 15px;line-height: 36px;}
-            .contact-wrapper .contact .container h5{font-size: 18px;}
-            .contact-wrapper .contact .container p{color:#888;}
+            .contact-wrapper{margin-top: 80px;height: 902px;background: #f2f6fa;background: url("{{asset('images/ditu_bg.png')}}") no-repeat;background: cover;}
+            .contact-wrapper .container{padding-top:250px;}
+            .contact-wrapper .contact{margin-bottom: 78px;line-height: 36px;}
+            .contact-wrapper .contact h5{font-size: 18px; color:#000;font-family: PingFangSC-Medium;font-weight:600;}
+            .contact-wrapper .contact p{color:#888;font-size: 18px;font-family: AdobeHeitiStd-Regular;}
         </style>
         <div class="container-fixed contact-wrapper">
+            <div class="container">
             @forelse ($contacts as $item)
-                <div class="container-fixed contact">
-                    <div class="container" >
-                        <h5>{{field_locale($item->name)}}</h5>
-                        <p>{{field_locale($item->address)}}</p>
-                        <p><span>电话: {{$item->tel}}</span> <span style="padding-left: 100px;">E-mail: {{$item->email}}</span></p>
-                    </div>
+                <div class="contact">
+                    <h5>{{field_locale($item->name)}}</h5>
+                    <p>{{field_locale($item->address)}} ({{$item->zip_code}})<br>
+                        <span>电话: {{$item->tel}}</span> <span style="padding-left: 100px;">E-mail: {{$item->email}}</span>
+                    </p>
                 </div>
             @empty
                 <p>No posts found.</p>
             @endforelse
-
+            </div>
         </div>
 
+
+
         <style>
-           .contact-form-wrapper  .contact-form input:before{font-size: 17px; color: #ea644a;content:'*' !important;  }
-           .contact-form-wrapper  .contact-form .mandatory{ font-size: 17px; color: #ea644a;  }
-           .contact-form-wrapper .contact-form .form-group .form-control:focus{
-               outline: none !important;
-           }
-           .contact-form-wrapper .contact-form .form-control{width:100%;height: 55px;background-color: #f8f8f8;border: solid 1px rgba(34, 34, 34, 0.1);outline: none;}
+            .contact-form-wrapper .guidance{font-size: 24px;margin:40px 0 50px 0;}
+            .contact-form-wrapper .form-header{display:flex;justify-content: center;}
+            .contact-form-wrapper .form-header p{width:300px;height:60px;line-height:60px;font-size: 24px;color: #003c7e;font-family: PingFang-SC-Bold;background:url('{{asset('images/contact_header_bg.png')}}') no-repeat;}
+
+            .contact-form-wrapper .triangle-wrapper{display: flex;align-items: center;position: relative;justify-content: center}
+            .contact-form-wrapper .triangle-wrapper .triangle_border_down{ display: block;width: 32px;height: 32px;transform: rotate(45deg);background: #f2f6fa;position: absolute;top: -120px;}
+
+            #consultForm .form-control{height: 55px;background-color: #f8f8f8;border: solid 1px rgba(34, 34, 34, 0.1);outline: none;}
+            #consultForm .form-group>div{position: relative;}
+            #consultForm .form-group input:focus{outline: red !important;}
+            #consultForm .form-group>div::after {display: block; position: absolute;top: 20px;right:5px;content:"*";font-size: 17px ;color: #ea644a;}
 
         </style>
-
         {{-- 联系我们表单 --}}
         <div class="container-fixed contact-form-wrapper" style="background: #fff;padding:100px 0;">
+            <div class="triangle-wrapper">
+                <span class="triangle_border_down"></span>
+            </div>
             <div class="container">
-                <div class="form-header text-center" style="display:flex;justify-content: center; ">
-                   <p style="width:300px;height:60px;line-height:60px;font-size: 24px;color: #003c7e;font-family: PingFang-SC-Bold;background:url('{{asset('images/contact_header_bg.png')}}') no-repeat;">联系我们</p>
+                <div class="form-header text-center">
+                   <p>联系我们</p>
                 </div>
-                <div style="font-size: 24px;margin:40px 0 50px 0;" class="text-center">请留下您的正确信息,以便我们更好的了解您的需求和帮助您</div>
-
+                <div class="guidance text-center">请留下您的正确信息,以便我们更好的了解您的需求和帮助您</div>
                 <form id="consultForm" method="post" action="{{route('consult')}}" class="contact-form" style="margin: auto;">
                     {{csrf_field()}}
                     <div class="form-group row">
-                        <div class="col-sm-12 col-md-6">
-                            <input type="text" class="form-control required" required name="name" autocomplete="off" placeholder="姓名" style="outline: none;">
+                        <div class="col-sm-12 col-md-6 required">
+                            <input type="text" class="form-control" required name="name" autocomplete="off" placeholder="姓名">
                         </div>
-                        <div class="col-sm-12 col-md-6">
-                            <input type="text" class="form-control required" required  name="phone" autocomplete="off" placeholder="电话">
+                        <div class="col-sm-12 col-md-6 required">
+                            <input type="text" class="form-control" required  name="phone" autocomplete="off" placeholder="电话">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <div class="col-sm-12 col-md-6">
-                            <input type="email" class="form-control required" required name="email" autocomplete="off" placeholder="邮箱">
+                        <div class="col-sm-12 col-md-6 required">
+                            <input type="email" class="form-control" required name="email" autocomplete="off" placeholder="邮箱">
                         </div>
-                        <div class="col-sm-12 col-md-6">
-                            <input type="text" class="form-control required" required name="company" autocomplete="off" placeholder="公司">
+                        <div class="col-sm-12 col-md-6 required">
+                            <input type="text" class="form-control" required name="company" autocomplete="off" placeholder="公司">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-sm-12 col-md-12">
-                            <input type="text" class="form-control required" required name="position"autocomplete="off" placeholder="职位">
+                        <div class="col-sm-12 col-md-12 required">
+                            <input type="text" class="form-control" required name="position"autocomplete="off" placeholder="职位">
                         </div>
                     </div>
-
                     <div class="form-group row">
                         <div class="col-md-12 col-sm-12">
-                            <textarea name="demand" id="" rows="30" class="form-control required" required autocomplete="off" style="height:250px;border: solid 1px rgba(34, 34, 34, 0.1);background-color: #f8f8f8;" required
+                            <textarea name="demand" id="" rows="30" class="form-control required" required autocomplete="off" style="height:250px;border: solid 1px rgba(34, 34, 34, 0.1);background-color: #f8f8f8;"
                             placeholder="请输入您的需求"></textarea>
                         </div>
-            </div>
+                    </div>
 
                     <div class="form-group text-center" style="margin-top: 92px;">
-                            <button type="button" id="contact-form-submit" class="btn btn-primary" style="background: #16508e;width:140px;height:60px;font-size: 24px;border-radius: 6px;">提 交</button>
+                            <button type="submit" id="contact-form-submit" class="btn btn-primary" style="background: #16508e;width:140px;height:60px;font-size: 24px;border-radius: 6px;">提 交</button>
                     </div>
 
                 </form>
@@ -115,46 +122,49 @@
 @section('script')
     <script>
         $(document).ready(function () {
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-            $('#contact-form-submit').click(function () {
+            $('#consultForm').bind("submit", function(){
                 var name = $('input[name=name]').val();
                 var phone = $('input[name=phone]').val();
                 var email = $('input[name=email]').val();
                 var company = $('input[name=company]').val();
                 var position = $('input[name=position]').val();
                 var demand = $('textarea[name=demand]').val();
-                $.ajax({
-                    type: "POST",//方法类型
+                if(name == ""){ return false; }
+                if(phone == ""){ return false; }
+                if(email == ""){ return false; }
+                if(company == ""){ return false; }
+                if(position == ""){ return false; }
+                if(demand == ""){ return false; }
+
+                var options = {
                     url: "{{route('consult')}}",
-                    data: {
-                        name: name,
-                        phone: phone,
-                        email: email,
-                        company: company,
-                        position: position,
-                        demand: demand
-                    },
+                    type: 'post',
+                    dataType: 'json',
+                    data: $("#consultForm").serialize(),
                     success: function (result) {
-                       if(result.status){
-                           $('input[name=name]').val('');
-                           $('input[name=phone]').val('');
-                           $('input[name=email]').val('');
-                           $('input[name=company]').val('');
-                           $('input[name=position]').val('');
-                           $('textarea[name=demand]').val('');
-                           return alert('提交成功');
-                       }else {
-                           return alert(result.message);
-                       }
+                        if(result.status){
+                            $('input[name=name]').val('');
+                            $('input[name=phone]').val('');
+                            $('input[name=email]').val('');
+                            $('input[name=company]').val('');
+                            $('input[name=position]').val('');
+                            $('textarea[name=demand]').val('');
+                            return alert('提交成功');
+                        }else {
+                            return alert(result.message);
+                        }
                     },
-                    error: function () {
-                        alert("异常！");
+                    error:function (err) {
+                        alert('提交失败:' + err.responseJSON.message);
+                        return false;
                     }
-                });
+                };
+                $.ajax(options);
+                return false;
+            });
+
+            $('#search').click(function(){
+                $('#contact-form-submit').submit();
             });
         })
     </script>

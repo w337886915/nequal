@@ -32,7 +32,7 @@ class ConsultationController extends Controller
 
         $consultation->where('id', $request->get('id'))->update(['is_read' => 1]);
 
-        return $this->redirect()->with('success', '更新成功.');
+        return $this->redirect('consultations.index')->with('success', '更新成功.');
     }
 
     // 删除

@@ -90,8 +90,6 @@
             border-bottom: 2px solid #e6e6e6;
             position: relative;
             overflow-y: hidden;
-
-
         }
 
         .nav .active:after {
@@ -118,11 +116,11 @@
         }
 
         .solution-block h2 {
-            padding-bottom: 50px;
+            padding-bottom: 23px;
         }
 
         .solution-block h6 {
-            font-size: 14px;
+            font-size: 18px;
             color: #16508e;
         }
 
@@ -142,7 +140,7 @@
         }
 
         .product-advantage {
-            padding-top: 50px;
+            padding: 50px 0;
             background-color: #f2f6fa;
         }
 
@@ -159,7 +157,7 @@
             width: 50%;
             float: left;
             margin-bottom: 20px;
-
+            padding-right: 20px;
         }
 
         .product-advantage .content ul li ul li {
@@ -236,12 +234,10 @@
                 <div class="col col-lg-3 ">
                     <a class=""  href="{{route('article.index',[$navigation, $v['id']], false)}}">
                     <div class="table @if($v['id'] == $category->id) active @endif">
-
                         <div class="table-cell">
                             <p>{{$v['name']['cn']}}</p>
                             <p>{{$v['name']['en']}}</p>
                         </div>
-
                     </div>
                     </a>
                 </div>
@@ -249,7 +245,46 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid solution-block">
+
+    @if($articles->count() > 0)
+        @foreach($articles as $article)
+            <div class="container-fluid solution-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-10 title">
+                            <h2>{{field_locale($article->title)}}</h2>
+                            <h6>{{field_locale($article->subtitle)}}</h6>
+                        </div>
+                        <div class="col col-lg-2">
+                            <a href=""> <button class="btn btn-shiyong">申请试用</button></a>
+                        </div>
+                    </div>
+                    <h2>产品概述</h2>
+                    <div class="row">
+                        <div class="col col-lg-6">
+                            <ul class="product-overview">
+                               {!! field_locale($article->description) !!}
+                            </ul>
+                        </div>
+                        <div class="col col-lg-6 text-center right-img">
+                            <img src="{{storage_image_url($article->thumb)}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid product-advantage">
+                    <div class="container">
+                        <h2>产品优势</h2>
+                        <div class="content">
+                            {!! field_locale($article->content) !!}
+                        </div>
+                    </div>
+                </div>
+            </div>
+    @endforeach
+    @endif
+
+
+   {{-- <div class="container-fluid solution-block">
         <div class="container">
             <div class="row">
                 <div class="col col-lg-10 title">
@@ -317,84 +352,9 @@
                     </ul>
                 </div>
             </div>
-
-
         </div>
+    </div>--}}
 
-    </div>
-    <div class="container-fluid solution-block">
-        <div class="container">
-            <div class="row">
-                <div class="col col-lg-10 title">
-                    <h2>Brand Data Hub</h2>
-                    <h6>为近70%国内、国际知名品牌企业数字化转型提供数据智能应用和曾理服务</h6>
-                </div>
-                <div class="col col-lg-2">
-                    <button class="btn btn-shiyong">申请试用</button>
-                </div>
-            </div>
-            <h2>产品概述</h2>
-            <div class="row">
-                <div class="col col-lg-6">
-                    <ul class="product-overview">
-                        <li>近70%知名企业数字化转型使用的数智能平台</li>
-                        <li>始终保持国内领先和创新的数据收集、跨设备及渠道闭环打通和应用、安全管理的数据枢纽平台。一站式智能连接 nequal旗下多个数据闭环应用产品,实现据无闭环应用和效果提升</li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-                <div class="col col-lg-6 right-img">
-                    <img src="{{asset('images/productimg.png')}}">
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid product-advantage">
-            <div class="container">
-                <h2>产品优势</h2>
-                <div class="content">
-                    <ul>
-                        <li>
-                            <p>企业碎片化数据的连接枢纽</p>
-                            <ul>
-                                <li>多维度、全方位线上、线下数据采集能力;</li>
-                                <li>领跑行业的跨设备打通消费者唯一标识能力,支持数据消费者全路径数据闭环打通管理;</li>
-                                <li>经验丰富的异常数据清洗和去噪能力</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p>企业碎片化数据的连接枢纽</p>
-                            <ul>
-                                <li>多维度、全方位线上、线下数据采集能力;</li>
-                                <li>领跑行业的跨设备打通消费者唯一标识能力,支持数据消费者全路径数据闭环打通管理;</li>
-                                <li>经验丰富的异常数据清洗和去噪能力</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p>企业碎片化数据的连接枢纽</p>
-                            <ul>
-                                <li>多维度、全方位线上、线下数据采集能力;</li>
-                                <li>领跑行业的跨设备打通消费者唯一标识能力,支持数据消费者全路径数据闭环打通管理;</li>
-                                <li>经验丰富的异常数据清洗和去噪能力</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p>企业碎片化数据的连接枢纽</p>
-                            <ul>
-                                <li>多维度、全方位线上、线下数据采集能力;</li>
-                                <li>领跑行业的跨设备打通消费者唯一标识能力,支持数据消费者全路径数据闭环打通管理;</li>
-                                <li>经验丰富的异常数据清洗和去噪能力</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-
-        </div>
-
-    </div>
     <div class="container customers">
         <h2>服务客户
             <p>

@@ -4,8 +4,8 @@ body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div
 body {background: #fff;color: #333;font-size: medium;font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif}
 ul,li, ol {list-style-type: none;}
 select, input, img, select {vertical-align: middle;}
-input,select,option,textarea{outline: none !important;}
-input:focus,select:focus,option:focus,textarea:focus{outline: none !important;}
+input,select,option,textarea{outline: none !important;box-shadow:none !important;}
+input:focus, textarea:focus, button:focus{outline: none !important;box-shadow:none !important;}
 
 @media (min-width: 1200px) {
     .container {

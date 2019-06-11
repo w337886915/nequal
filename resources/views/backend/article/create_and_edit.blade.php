@@ -195,7 +195,7 @@
                        <div class="form-group has-feedback has-icon-right">
                             <label for="link" class="col-md-2 col-sm-2 control-label">案例链接</label>
                             <div class="col-md-5 col-sm-10">
-                                <input type="text" name="link[case]" autocomplete="off" class="form-control" value="{{ old('link.case',$article->link['case']) }}"
+                                <input type="text" name="link[case]" autocomplete="off" class="form-control" value="{{ old('link.case',$article->link['case']??'') }}"
                                        data-fv-trigger="blur"
                                        minlength="1"
                                        maxlength="255"
@@ -204,7 +204,7 @@
                         <div class="form-group has-feedback has-icon-right">
                             <label for="link" class="col-md-2 col-sm-2 control-label">参会链接</label>
                             <div class="col-md-5 col-sm-10">
-                                <input type="text" name="link[attend]" autocomplete="off" class="form-control" value="{{ old('link.attend',$article->link['attend']) }}"
+                                <input type="text" name="link[attend]" autocomplete="off" class="form-control" value="{{ old('link.attend',$article->link['attend']??'') }}"
                                        data-fv-trigger="blur"
                                        minlength="1"
                                        maxlength="255"
@@ -213,7 +213,16 @@
                         <div class="form-group has-feedback has-icon-right">
                             <label for="link" class="col-md-2 col-sm-2 control-label">下载资料链接</label>
                             <div class="col-md-5 col-sm-10">
-                                <input type="text" name="link[material]" autocomplete="off" class="form-control" value="{{ old('link.material',$article->link['material']) }}"
+                                <input type="text" name="link[material]" autocomplete="off" class="form-control" value="{{ old('link.material',$article->link['material']??'') }}"
+                                       data-fv-trigger="blur"
+                                       minlength="1"
+                                       maxlength="255"
+                                ></div>
+                        </div>
+                        <div class="form-group has-feedback has-icon-right">
+                            <label for="link" class="col-md-2 col-sm-2 control-label">申请链接</label>
+                            <div class="col-md-5 col-sm-10">
+                                <input type="text" name="link[apply]" autocomplete="off" class="form-control" value="{{ old('link.apply',$article->link['apply']??'') }}"
                                        data-fv-trigger="blur"
                                        minlength="1"
                                        maxlength="255"

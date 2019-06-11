@@ -4,29 +4,28 @@
             <div class="col-xs-6 col-sm-6 col-md-3 footer-item">
                 <h6>关于nEqual</h6>
                 <ul>
-                    <li><a href="">公司介绍</a></li>
-                    <li><a href="">管理团队</a></li>
-                    <li><a href="">新闻报道</a></li>
-                    <li><a href="">行业会议</a></li>
-                    <li><a href="">加入我们</a></li>
-                    <li><a href="">联系我们</a></li>
+                    <li><a href="{{route('company.index',7)}}">公司介绍</a></li>
+                    <li><a href="{{route('company.team')}}">管理团队</a></li>
+                    <li><a href="{{route('article.index', ['navigation'=>5, 'articleCategory'=>5])}}">新闻报道</a></li>
+                    <li><a href="{{route('article.index', ['navigation'=>6, 'articleCategory'=>6])}}">行业会议</a></li>
+                    <li><a href="{{route('company.join')}}">加入我们</a></li>
+                    <li><a href="{{route('company.contact')}}">联系我们</a></li>
                 </ul>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-3 footer-item">
                 <h6>解决方案</h6>
                 <ul>
-                    <li><a href="">Brand Data Hub</a></li>
-                    <li><a href="">Serving</a></li>
-                    <li><a href="">Customer Experience Management</a></li>
-                    <li><a href="">Brand Trading Desk</a></li>
-                    <li><a href="">Data Govement</a></li>
+                    <li><a href="{{route('article.index', ['navigation'=>1, 'articleCategory'=>7])}}">营销云</a></li>
+                    <li><a href="{{route('article.index', ['navigation'=>1, 'articleCategory'=>8])}}">品牌数据中台</a></li>
+                    <li><a href="{{route('article.index', ['navigation'=>1, 'articleCategory'=>9])}}">智能广告系统</a></li>
+                    <li><a href="{{route('article.index', ['navigation'=>1, 'articleCategory'=>10])}}">客户体验管理</a></li>
                 </ul>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-3 footer-item">
                 <h6>成功案例</h6>
                 <ul>
-                    <li><a href="">客户案例</a></li>
-                    <li><a href="">客户背书</a></li>
+                    <li><a href="{{route('article.index', ['navigation'=>2, 'articleCategory'=>3])}}">客户案例</a></li>
+                    <li><a href="{{route('article.index', ['navigation'=>2, 'articleCategory'=>4])}}">客户背书</a></li>
                 </ul>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-3 footer-item">
