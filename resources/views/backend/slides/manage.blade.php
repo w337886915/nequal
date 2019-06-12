@@ -29,8 +29,8 @@
                         <col width="60">
                         <col width="220">
                         <col>
-                        <col>
-                        <col width="100">
+                        {{--<col>
+                        <col width="100">--}}
                         <col width="70">
                         <col width="120">
                     </colgroup>
@@ -40,8 +40,8 @@
                         <th class="text-center">排序</th>
                         <th class="text-center">图片</th>
                         <th class="text-center">标题</th>
-                        <th class="text-center">链接</th>
-                        <th class="text-center">打开方式</th>
+                        {{--<th class="text-center">链接</th>
+                        <th class="text-center">打开方式</th>--}}
                         <th class="text-center">状态</th>
                         <th class="text-center">操作</th>
                     </tr>
@@ -53,11 +53,11 @@
                             <td class="text-center">{{ $slide->order}}</td>
                             <td><img class="layui-upload-img" src="{{ storage_image_url($slide->image) }}" width="204" height="57"></td>
                             <td>{{ $slide->title}}</td>
-                            <td>{{ $slide->link}}</td>
+                           {{-- <td>{{ $slide->link}}</td>
                             <td class="text-center">@switch($slide->target)
                                     @case('_self')<span class="label label-badge label-primary">当前窗口</span>@break
                                     @case('_blank')<span class="label label-badge  label-success">新开窗口</span>@break
-                                @endswitch</td>
+                                @endswitch</td>--}}
                             <td class="text-center">@switch($slide->status)
                                     @case(0)<span class="label label-badge label-danger">隐藏</span>@break
                                     @case(1)<span class="label label-badge label-success">正常</span>@break

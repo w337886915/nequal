@@ -1,7 +1,7 @@
 <div class="fly-footer">
     <div class="container list">
         <div class="row">
-            <div class="col-6 col-sm-6 col-md-3 footer-item  mb-3">
+            <div class="col-6 col-sm-6 col-md-3 footer-item mb-3">
                 <h6>关于nEqual</h6>
                 <ul>
                     <li><a href="{{route('company.index',7)}}">公司介绍</a></li>
@@ -34,10 +34,7 @@
                     <a href=""><img src="{{asset('images/weibo.png')}}" alt="nEqual" width="27" height="22"></a>
                     <img src="{{asset('images/youxiang.png')}}" alt="nEqual" id="Email" width="22" height="18">
                 </div>
-
-                <div class="icon-content" style="line-height: 20px;">
-                    {{--<img src="{{asset('images/qrcode.png')}}" alt="" style="height:150px;">--}}
-                </div>
+                <div class="icon-content" style="line-height: 20px;"></div>
             </div>
         </div>
     </div>
@@ -47,7 +44,6 @@
                 <div class="col-xs-12 col-md-2 text-center"><a href="/"><img src="{{asset('images/logo_footer.png')}}" alt="nEqual"></a></div>
                 <div class="col-xs-12 col-md-8 text-center">
                     <span>Copyright {{config("system.common.basic.create_year")}} - {{date('Y')}} {{ config("system.common.basic.copyright") }} All Rights Reserved</span>
-                    {{--   <a href="{{ config("system.common.basic.icp_link") }}" target="_blank">{{ config("system.common.basic.icp") }}</a>--}}
                 </div>
                 <div class="col-xs-12 col-md-2 dropdown text-center">
                         <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

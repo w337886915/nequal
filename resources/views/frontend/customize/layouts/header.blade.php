@@ -1,7 +1,7 @@
 <style>
 .header-wrapper {
     height: 80px;
-    position: fixed;
+   position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -11,11 +11,6 @@
 .header-wrapper .navbar{
     height: 80px;
     position: relative;
-}
-.header-wrapper .navbar .navbar-collapse{
-    position: absolute;
-    right:0;
-    top:0;
 }
 
 .header-wrapper .logo {
@@ -30,6 +25,7 @@
     line-height: 44px;
     text-align: center;
     padding: 0 20px;
+    margin-left: 20px;
 }
 
 .header-wrapper .contact-us a {
@@ -50,9 +46,6 @@
     color: #fff;
 }
 
-.header-wrapper .navbar .navbar-collapse .dropdown{
-    margin:0 30px;
-}
 .header-wrapper .navbar .navbar-collapse .dropdown .lang-img{
     height:16px;
     width:16px;
@@ -87,12 +80,15 @@
 @endphp
 <div class="container-fixed header-wrapper">
     <div class="container">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-md fixed-top @if($active=='index') navbar-dark @else navbar-light @endif">
             <a class="navbar-brand" href="/"><img class="logo" src="@if($active=='index'){{asset('images/logo_footer.png')}}@else {{asset('images/logo_header.png')}}@endif"  alt="nEqual"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar" style="justify-content: flex-end;@if($active !== 'index') background:fff; @endif">
                 <ul class="navbar-nav">
                     @foreach($navigations as $navigation)
                         <li class="nav-item">
@@ -100,22 +96,22 @@
                                target="{{$navigation->target}}" href="{{$navigation->link}}">{{field_locale($navigation->title)}}</a>
                         </li>
                     @endforeach
+                    <li class="nav-item dropdown" style="line-height: 75px;">
+                            <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                @if($active == 'index')
+                                    <img class="lang-img" src="{{asset('images/yuyan_f.png')}}" alt="nEqual">
+                                    <span class="lang-now">{{trans('page.'.app()->getLocale())}}</span>
+                                @else
+                                    <img class="lang-img" src="{{asset('images/yuyan_h.png')}}" alt="nEqual">
+                                    <span class="lang-now">{{trans('page.'.app()->getLocale())}}</span>
+                                @endif
+                            </a>
+                            <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="/lang/en">{{trans('page.en')}}</a>
+                                <a class="dropdown-item" href="/lang/cn">{{trans('page.cn')}}</a>
+                            </div>
+                    </li>
                 </ul>
-                <div class="dropdown">
-                    <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        @if($active == 'index')
-                            <img class="lang-img" src="{{asset('images/yuyan_f.png')}}" alt="nEqual">
-                            <span class="lang-now">{{trans('page.'.app()->getLocale())}}</span>
-                        @else
-                            <img class="lang-img" src="{{asset('images/yuyan_h.png')}}" alt="nEqual">
-                            <span class="lang-now">{{trans('page.'.app()->getLocale())}}</span>
-                        @endif
-                    </a>
-                    <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="/lang/en">{{trans('page.en')}}</a>
-                        <a class="dropdown-item" href="/lang/cn">{{trans('page.cn')}}</a>
-                    </div>
-                </div>
                 <div class="contact-us">
                     <a target="_self" href="{{route('company.contact')}}">{{trans('page.contact_us')}}</a>
                 </div>

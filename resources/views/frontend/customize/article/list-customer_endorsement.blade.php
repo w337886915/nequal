@@ -11,15 +11,27 @@
 @section('title',  $active)
 
 <style>
-    .endorsement-wrapper{padding:100px 0;}
-    .endorsement {position: relative;margin: 90px 30px;padding: 45px;border-radius: 20px;box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06); }
-    .endorsement img{position: absolute;height:160px;width:160px;border-radius: 50%;border: 1px solid #DEE3E6;top: -80px;background-color: #DEE3E6;}
+    .endorsement-wrapper{padding:50px 0;}
+    .endorsement {position: relative;margin: 40px 0px;padding: 45px;border-radius: 20px;box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06); }
+    .endorsement img{position: absolute;height:100px;width:100px;border-radius: 50%;border: 1px solid #DEE3E6;top: -50px;background-color: #DEE3E6;}
     .endorsement>.name{text-align: right;font-weight: 600;color:#4b4a4b;}
     .endorsement .content{color:#A1A1A1;}
-    .endorsement .content p{margin:38px 0; color:#888;line-height: 38px;font-size: 18px;}
-    .endorsement .content .info{height:380px;overflow: hidden; text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 10; -webkit-box-orient: vertical;}
+    .endorsement .content p{margin:10px 0; color:#888;line-height: 32px;font-size:1rem;}
+    .endorsement .content .info{overflow: hidden; text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 10; -webkit-box-orient: vertical;}
     .endorsement .content .case{margin-bottom: 0;;}
     .endorsement .content .case a{color: #16508e;font-weight: 600;}
+
+    @media screen and (min-width: 576px) {
+        .endorsement-wrapper{padding:100px 0;}
+        .endorsement {position: relative;margin: 90px 30px;padding: 45px;border-radius: 20px;box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06); }
+        .endorsement img{position: absolute;height:160px;width:160px;border-radius: 50%;border: 1px solid #DEE3E6;top: -80px;background-color: #DEE3E6;}
+        .endorsement>.name{text-align: right;font-weight: 600;color:#4b4a4b;}
+        .endorsement .content{color:#A1A1A1;}
+        .endorsement .content p{margin:38px 0; color:#888;line-height: 38px;font-size: 18px;}
+        .endorsement .content .info{height:380px;overflow: hidden; text-overflow: ellipsis;display: -webkit-box; -webkit-line-clamp: 10; -webkit-box-orient: vertical;}
+        .endorsement .content .case{margin-bottom: 0;;}
+        .endorsement .content .case a{color: #16508e;font-weight: 600;}
+    }
 
 </style>
 
@@ -30,12 +42,12 @@
 @section('content')
     <div class="container-fixed">
         <div class="container-fixed child-nav">
-            <div class="container">
-                <ul>
-                    <li>
-                        <a href="{{route('article.index',['navigation' => 2, 'articleCategory'=>3])}}"><img src="{{asset('images/anli-unsel.png')}}" alt=""><span>客户案例</span></a>
+            <div class="container text-center">
+                <ul class="row">
+                    <li class="col-6 col-sm-3 offset-md-3">
+                        <a href="{{route('article.index',['navigation' => 2, 'articleCategory'=>3])}}"><img src="{{asset('images/anli-unsel.png')}}" alt=""> <span>客户案例</span></a>
                     </li>
-                    <li  class="child-active">
+                    <li class="col-6 col-sm-3 child-active">
                         <a href="{{route('article.index',['navigation' => 2, 'articleCategory'=>4])}}"><img src="{{asset('images/beishu-sel.png')}}" alt=""><span>客户背书</span></a>
                         <span class="triangle_border_up"></span>
                     </li>

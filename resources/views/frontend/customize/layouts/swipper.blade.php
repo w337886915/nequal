@@ -1,29 +1,22 @@
 <style>
-    .height800{
-        height: 800px !important;
+    .banner-wrapper{height: 300px;position: relative;display: flex;align-items: center;}
+    .banner-wrapper .swiper-pagination{position: absolute;bottom: 90px;}
+    .banner-wrapper .swiper-pagination .swiper-pagination-bullet{width: 70px !important;height: 6px !important;display: inline-block;
+        background: #fff;opacity: 0.4;border-radius: 3px;
     }
-    .height640{
-        height: 640px !important;
+    .banner-wrapper .swiper-pagination .swiper-pagination-bullet-active{background: #fff !important;opacity: 1;}
+
+    @media screen and (min-width: 768px) {
+        .height800{height: 800px !important;}
+        .height640{ height: 640px !important;}
+        .banner-wrapper{position: relative;}
+        .banner-wrapper .swiper-pagination{position: absolute;bottom: 90px;}
+        .banner-wrapper .swiper-pagination .swiper-pagination-bullet{width: 70px !important;height: 6px !important;display: inline-block;
+            background: #fff;opacity: 0.4;border-radius: 3px;
+        }
+        .banner-wrapper .swiper-pagination .swiper-pagination-bullet-active{background: #fff !important;opacity: 1;}
     }
-    .banner-wrapper{
-        position: relative;
-    }
-    .banner-wrapper .swiper-pagination{
-        position: absolute;
-        bottom: 90px;
-    }
-    .banner-wrapper .swiper-pagination .swiper-pagination-bullet{
-        width: 70px !important;
-        height: 6px !important;
-        display: inline-block;
-        background: #fff;
-        opacity: 0.4;
-        border-radius: 3px;
-    }
-    .banner-wrapper .swiper-pagination .swiper-pagination-bullet-active{
-        background: #fff !important;
-        opacity: 1;
-    }
+
 
 </style>
 

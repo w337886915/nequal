@@ -21,6 +21,7 @@
             @if($forms->count())
                 <form name="form-consult-list" id="form-consult-list" class="" method="POST" action="{{route('consultations.update')}}">
                     <input type="hidden" name="_method" value="PUT">
+                    <input type="hidden" name="id" value="">
                     {{ csrf_field() }}
                 <table class="table table-bordered">
                     <colgroup>
@@ -58,13 +59,12 @@
                             <td class="text-center">{{ $value->email }}</td>
                             <td class="text-center">{{ $value->company}}</td>
                             <td class="text-center">{{ $value->position}}</td>
-                            <td class="text-center">{{ $value->demand}}</td>
+                            <td>{{ $value->demand}}</td>
                             <td class="text-center">{{ $value->created_at}}</td>
                             <td class="text-center">{{ $value->isread_name}}</td>
                             <td class="text-center">
                                 @if((int)$value->is_read < 1)
-                                    <input type="hidden" name="id" value="{{$value->id}}">
-                                    <a href="javascript:;" data-url="{{route('consultations.update')}}" class="btn btn-xs btn-primary form-read">设为已查看</a>
+                                    <a href="javascript:;" data-url="{{route('consultations.update')}}" data-id="{{$value->id}}" class="btn btn-xs btn-primary form-read">设为已查看</a>
                                 @endif
                                 <a href="javascript:;" data-url="{{ route('consultations.destroy', $value->id) }}" class="btn btn-xs btn-danger form-delete">删除</a>
                             </td>
@@ -88,7 +88,8 @@
     <script>
         $("a.form-read").click(function () {
             var tUrl = $(this).attr('data-url');
-
+            var id = $(this).attr('data-id');
+            $('input[name=id]').val(id);
             bootbox.confirm({
                 size: "small",
                 title: "系统提示",
